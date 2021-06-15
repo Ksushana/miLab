@@ -1,0 +1,82 @@
+.footer {
+  font-family: $font-family-IBM;
+  margin-top: auto;
+  margin-bottom: 105px;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint-down($breakpoint-md-max) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+    @include breakpoint-down($breakpoint-md-max) {
+      width: 100%;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    width: 354px;
+    justify-content: space-between;
+
+    @include breakpoint-down($breakpoint-md-max) {
+      width: 100%;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__lists {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    @include breakpoint-down($breakpoint-md-max) {
+      max-width: 500px;
+      margin: 0 auto 36px 0;
+    }
+  }
+
+  &__list-title {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    margin-top: 0;
+  }
+
+  &__list-item {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+  }
+
+  &__copyright {
+    width: 50%;
+    margin-top: -30px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint-down($breakpoint-md-max) {
+      width: 100%;
+      margin-top: 36px;
+    }
+
+    p {
+      margin: 0 59px 0 0;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
