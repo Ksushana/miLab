@@ -1,0 +1,52 @@
+.kit {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
+  background-blend-mode: soft-light, normal;
+  border-radius: $border-radius;
+  width: 375px;
+  height: 542px;
+  background-size: contain;
+  padding: 52px 94px 38px 0;
+
+  &__header {
+    padding: 20px 40px;
+    height: 180px;
+    border-radius: 0px 20px 20px 0px;
+
+    &--pink {
+      background-color: $color-kit-pink;
+    }
+    &--orange {
+      background-color: $color-kit-orange;
+    }
+    &--purple {
+      background-color: $color-kit-purple;
+    }
+    &--blue {
+      background-color: $color-kit-blue;
+    }
+    &--green {
+      background-color: $color-kit-green;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 13px;
+    font-family: $font-family-IBM;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 40px;
+    font-family: $font-family-IBM;
+  }
+
+  &__list {
+    @include list-style-none;
+    padding: 20px 0 26px 45px;
+    font-family: $font-family-IBM;
+  }
+}
