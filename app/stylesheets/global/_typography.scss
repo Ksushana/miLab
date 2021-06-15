@@ -1,0 +1,27 @@
+html {
+  font-size: 1em;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  @include font-smoothing;
+}
+
+body {
+  font-size: rem($font-size-base);
+  line-height: rem($line-height-base);
+  font-family: $font-family-base;
+  color: $color-base;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  transition: color $transition-duration;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+a[href^="tel:"] {
+  border: 0;
+}
