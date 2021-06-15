@@ -1,0 +1,18 @@
+.bordered-link {
+  font-family: $font-family-IBM;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  // padding: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color-base;
+  border-radius: 10px;
+
+  &--black {
+    background-color: $color-base;
+    color: $color-white;
+  }
+}

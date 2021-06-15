@@ -90,10 +90,13 @@
 /*!************************!*\
   !*** ./scripts/App.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_mobile_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/mobile-menu */ "./scripts/modules/mobile-menu.js");
+/* harmony import */ var _modules_mobile_menu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_mobile_menu__WEBPACK_IMPORTED_MODULE_0__);
 
 /*========================================
 // Polyfills
@@ -106,7 +109,7 @@
 /*========================================
 // Modules
 ========================================*/
-// import navTabs from './modules/nav-tabs';
+
 
 /*========================================
 // Run Application
@@ -149,6 +152,42 @@ __webpack_require__(/*! ./App.js */ "./scripts/App.js");
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! ./bundle.js */ "./scripts/bundle.js");
+
+/***/ }),
+
+/***/ "./scripts/modules/mobile-menu.js":
+/*!****************************************!*\
+  !*** ./scripts/modules/mobile-menu.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function () {
+  var openBtn = document.querySelector(".header__burger button");
+  var open = document.querySelector(".header__burger");
+  var closeBtn = document.querySelector(".header__close button");
+  var close = document.querySelector(".header__close");
+  var menu = document.querySelector(".header__menu");
+
+  var openCatalogMenu = function openCatalogMenu() {
+    menu.classList.add('is-shown');
+    close.classList.remove('visually-hidden');
+    close.classList.add('is-shown');
+    open.classList.add('visually-hidden');
+    open.classList.add('is-hidden');
+  };
+
+  var closeCatalogMenu = function closeCatalogMenu() {
+    menu.classList.remove('is-shown');
+    close.classList.add('visually-hidden');
+    close.classList.remove('is-shown');
+    open.classList.remove('visually-hidden');
+    open.classList.remove('is-hidden');
+  };
+
+  openBtn.addEventListener("click", openCatalogMenu);
+  closeBtn.addEventListener("click", closeCatalogMenu);
+})();
 
 /***/ }),
 

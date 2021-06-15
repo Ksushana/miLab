@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  background-color: $color-background-grey;
 }
 
 .visually-hidden {

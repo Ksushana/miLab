@@ -1,8 +1,30 @@
 header.header(id="top")
   .header__container.container
-    .header__retailer-block
-      .header__contacts-us
-        .header__location
-          button(type="button")
-            //- include ./../../inline-svgs/pin.svg
-            | Санкт-Петербург
+    .header__logo
+      include ./../../inline-svgs/logo.svg
+    .header__burger
+      button( type="button" )
+        include ./../../inline-svgs/burger.svg
+    .header__close.visually-hidden
+        button( type="button" )
+          include ./../../inline-svgs/cross.svg
+    .header__menu
+
+      .header__links
+        .header__link
+            a(href="#") Software
+        .header__link
+            a(href="#") Kits
+        .header__link
+            a(href="#") Services
+        .header__link
+          a(href="#") Custom R&amp;D
+        .header__link
+            a(href="#") About
+        .header__link
+          a(href="#") Publications
+      .header__contact-link.bordered-link
+        a(href="#") Contact
+      .header__mobile-bottom
+        p © 2016-2020 All rights reserved
+        include ./../../inline-svgs/sk.svg

@@ -14,7 +14,7 @@
 // Modules
 ========================================*/
 
-// import navTabs from './modules/nav-tabs';
+import mobileMenu from './modules/mobile-menu';
 
 
 

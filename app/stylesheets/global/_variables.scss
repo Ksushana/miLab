@@ -5,42 +5,50 @@
 $color-black: #000;
 $color-white: #fff;
 
-$color-blue: #03f;
-$color-grey: #7A8292;
-$color-purple: #682EFF;
-$color-purple-light: #8252FF;
-$color-grey-dark: #1D1D1D;
-// $color-grey-dark: #7A8292;
-$color-light-grey: #F2F2F2;
-$color-bg-grey: #C4C4C4;
-$color-grey-modern: #F4F7FA;
-$color-orange: #FF7439;
-$color-digital-orange: #F9733A;
-$color-light-orange: #FFB156;
-$color-bullet-grey: #DADADA;
+$color-base: #0F0E12;
+$color-orange: #FC5B1F;
+$color-grey: #C1C1C1;;
+$color-dark-grey: #89928F;
 
-$color-base: $color-black;
+$color-background-grey: #DEDEDE;
+$color-background-green:#1DC286;
+$color-background-orange: #E9BC93;
 
-$color-link: $color-purple;
-$color-link-hover: lighten($color-purple, 16%);
+$color-kit-pink: rgba(232, 164, 180, 0.6);
+$color-kit-orange: rgba(233, 188, 147, 0.6);
+$color-kit-blue: rgba(105, 199, 220, 0.6);
+$color-kit-green:rgba(190, 232, 164, 0.6);
+$color-kit-purple: rgba(147, 156, 233, 0.6);
 
+$color-tag-IGH: #FFCA7A;
+$color-tag-IGK: #CB98FF;
+$color-tag-IGL: #FF9393;
+$color-tag-IgM: #9FC6FF;
+$color-tag-IgD: #F8FFA9;
+$color-tag-IgG1: #FFCA7A;
+$color-tag-IG2: #9FD7E4;
+$color-tag-IgG3: #CB98FF;
+$color-tag-IgG4: #FFDBB9;
+$color-tag-IgA: #BFFFA9;
+$color-tag-IgE: #9FC6FF;
 
 /*========================================
 // Fonts
 ========================================*/
 
-$font-family-lab-grotesque: "Lab Grotesque", Helvetica, Arial, sans-serif;
-$font-family-base: $font-family-lab-grotesque;
+$font-family-manrope: "Manrope", Helvetica, Arial, sans-serif;
+$font-family-IBM: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-manrope;
 
-$font-size-base: 14px;
-$line-height-base: 18px;
+$font-size-base: 20px;
+$line-height-base: 30px;
 
 
 /*========================================
 // Radius
 ========================================*/
 
-$border-radius: 3px;
+$border-radius: 22px;
 
 
 /*========================================
@@ -92,7 +100,7 @@ $grid-columns: 12;
 $grid-gutter-width: 30px;
 
 $container-gap: 40px;
-$container-max-width: 1160px;
+$container-max-width: 1230px;
 
 
 /*========================================

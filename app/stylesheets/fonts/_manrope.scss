@@ -1,0 +1,32 @@
+// Example
+@font-face {
+  font-family: 'Manrope';
+  src: url('#{$font-path}/Manrope-Semibold.woff2') format('woff2'),
+       url('#{$font-path}/Manrope-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('#{$font-path}/Manrope-Bold.woff2') format('woff2'),
+       url('#{$font-path}/Manrope-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('#{$font-path}/Manrope-Medium.woff2') format('woff2'),
+       url('#{$font-path}/Manrope-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('#{$font-path}/Manrope-Regular.woff2') format('woff2'),
+       url('#{$font-path}/Manrope-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
