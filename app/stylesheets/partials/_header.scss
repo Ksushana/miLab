@@ -14,6 +14,10 @@
     svg {
 
     }
+
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-left: 10px;
+    }
   }
 
   &__menu {

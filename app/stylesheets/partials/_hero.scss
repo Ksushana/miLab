@@ -1,13 +1,48 @@
 .hero {
   display: grid;
   grid-template-columns: auto 480px;
-  margin-bottom: 200px;
+  @include breakpoint-down($breakpoint-lg-max) {
+    grid-template-columns: auto 380px;
+  }
+  @include breakpoint-down($breakpoint-sm-max) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  // margin-bottom: 200px;
   &__title {
     font-weight: 600;
     font-size: 92px;
     line-height: 115%;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    margin: 181px 0 0;
+    margin: 185px 0 0;
+    padding-right: 30px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      font-size: 70px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      font-size: 50px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      font-size: 43px;
+      line-height: 110%;
+      margin-bottom: 43px;
+      margin-top: 0;
+      padding-right: 0;
+    }
+  }
+  &__animation {
+    height: 700px;
+    display: flex;
+    @include breakpoint-down($breakpoint-sm-max) {
+      height: 395px;
+      justify-content: center;
+    }
+    img {
+      width: 100%;
+      @include breakpoint-down($breakpoint-sm-max) {
+        max-width: 400px;
+      }
+    }
   }
 }

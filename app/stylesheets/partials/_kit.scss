@@ -5,12 +5,15 @@
   width: 375px;
   height: 542px;
   background-size: contain;
-  padding: 52px 94px 38px 0;
+  padding: 52px 0 38px;
+  display: flex;
+  flex-direction: column;
 
   &__header {
     padding: 20px 40px;
     height: 180px;
     border-radius: 0px 20px 20px 0px;
+    margin-right: 94px;
 
     &--pink {
       background-color: $color-kit-pink;
@@ -46,7 +49,21 @@
 
   &__list {
     @include list-style-none;
-    padding: 20px 0 26px 45px;
+    padding: 33px 0 26px 45px;
     font-family: $font-family-IBM;
+    margin-right: 94px;
+    font-size: 14px;
+line-height: 180%;
+letter-spacing: -0.01em;
+  }
+
+  &__btns {
+    margin-top: auto;
+    padding-left: 41px;
+  }
+
+  &__button {
+    margin-right: 20px;
+    padding: 11px 19px 13px;
   }
 }

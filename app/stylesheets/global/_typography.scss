@@ -36,9 +36,12 @@ text-transform: uppercase;
 
 .text-sm {
   font-size: 20px;
-line-height: 155%;
-color: rgba(#0F0E12, 0.9);
-margin: 0;
+  line-height: 155%;
+  color: rgba(#0F0E12, 0.9);
+  margin: 0;
+  @include breakpoint-down($breakpoint-sm-max) {
+    font-size: 15px;
+  }
 }
 
 .text-md {
@@ -47,6 +50,9 @@ font-size: 28px;
 line-height: 142%;
 color: rgba(#0F0E12, 0.9);
 margin: 0;
+@include breakpoint-down($breakpoint-sm-max) {
+  font-size: 20px;
+}
 }
 
 .title-md {
@@ -56,21 +62,76 @@ margin: 0;
   text-transform: uppercase;
 }
 
+.title-sm {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 142%;
+  color: rgba(#0F0E12, 0.9);
+  margin-top: 0;
+  @include breakpoint-down($breakpoint-sm-max) {
+    font-size: 24px;
+  }
+}
+
 .mb-sm {
   margin-bottom: 28px;
+  @include breakpoint-down($breakpoint-sm-max) {
+    margin-bottom: 20px;
+  }
 }
 
 .mb-md {
   margin-bottom: 48px;
+  @include breakpoint-down($breakpoint-sm-max) {
+    margin-bottom: 36px;
+  }
 }
 
 .grid50 {
   display: grid;
   grid-template-columns: 50% 50%;
+  @include breakpoint-down($breakpoint-sm-max) {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__part {
-    // &:first-child {
-    //   border-right: 1px solid #0F0E12;
-    // }
+    display: flex;
+    flex-direction: column;
+    &-first {
+      padding-right: 11%;
+      @include breakpoint-down($breakpoint-sm-max) {
+        padding-right: 0;
+      }
+    }
+    &-last {
+      padding-left: 11%;
+      @include breakpoint-down($breakpoint-sm-max) {
+        padding-left: 0;
+        padding-top: 30px;
+      }
+    }
+    &-bordered {
+      border-right: 1px solid #0F0E12;
+      @include breakpoint-down($breakpoint-sm-max) {
+        border-bottom: 1px solid #0F0E12;
+        border-right: none;
+      }
+    }
+
+    .text-sm {
+      margin-bottom: 40px;
+      @include breakpoint-down($breakpoint-sm-max) {
+        margin-bottom: 25px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      margin-top: auto;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 155%;
+    }
   }
 }

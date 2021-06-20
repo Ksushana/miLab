@@ -1,7 +1,45 @@
 .about {
-  margin-bottom: 135px;
+  margin-bottom: 100px;
+  @include breakpoint-down($breakpoint-sm-max) {
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+  }
   &__link {
-
+    width: fit-content;
     padding: 11px 16px;
+    margin-top: 10px;
+    &--centered {
+      margin-top: 0;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-top: 0;
+      &--centered {
+        margin: 0px auto 0;
+        padding: 11px 11px 13px;
+      }
+    }
+  }
+
+  &__bordered {
+    border-bottom: 1px solid $color-base;
+    padding-bottom: 48px;
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-bottom: 0;
+    }
+  }
+
+  .title-sm {
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-top: 15px;
+    }
+  }
+
+  &__date {
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-top: -5px !important;
+      margin-bottom: 20px;
+      display: block !important;
+    }
   }
 }

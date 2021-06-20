@@ -2,6 +2,9 @@
   font-family: $font-family-IBM;
   margin-top: auto;
   margin-bottom: 105px;
+  @include breakpoint-down($breakpoint-md-max) {
+    padding-top: 40px;
+  }
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -20,6 +23,13 @@
     }
   }
 
+  &__right {
+    padding: 0 23px 0 15px;
+    @include breakpoint-down($breakpoint-md-max) {
+      padding: 0;
+    }
+  }
+
   &__logos {
     display: flex;
     width: 354px;
@@ -28,6 +38,7 @@
     @include breakpoint-down($breakpoint-md-max) {
       width: 100%;
       margin-bottom: 36px;
+      align-items: center;
     }
   }
 
@@ -37,7 +48,14 @@
     justify-content: space-between;
     @include breakpoint-down($breakpoint-md-max) {
       max-width: 500px;
-      margin: 0 auto 36px 0;
+      margin: 0 auto 30px 0;
+    }
+  }
+
+  &__list {
+    padding-right: 20px;
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-right: 0;
     }
   }
 
@@ -54,11 +72,12 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.01em;
+    margin-bottom: 5px;
   }
 
   &__copyright {
     width: 50%;
-    margin-top: -30px;
+    margin-top: -20px;
     font-weight: 300;
     font-size: 12px;
     line-height: 16px;
@@ -68,7 +87,9 @@
 
     @include breakpoint-down($breakpoint-md-max) {
       width: 100%;
-      margin-top: 36px;
+      margin-top: 0;
+      font-size: 10px;
+    line-height: 13px;
     }
 
     p {

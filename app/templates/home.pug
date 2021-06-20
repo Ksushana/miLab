@@ -10,17 +10,19 @@ block content
   .hero.container
     h1.hero__title Organising adaptive immunity data
     .hero__animation
+      img(src="assets/anim.svg", alt="")
   .about.container
     .subtitle.mb-md
       span About
     .grid50
-      .about__text.grid50__part
+      .about__text.grid50__part.grid50__part-first
         p.mb-sm.text-md We bring together the best wet lab and data analysis solutions, towards universal customizable network for the most informative immune repertoire data analysis and meaningful inerpretation.
         p.text-sm.mb-md We develop state-of-the-art bioinformatics solutions helping scientists and clinicians to probe adaptive immunity in health and disease. Backed up by our extensive experience in the analysis of immune repertoire sequencing data, we aim at delivering reliable and efficient software tools that can be easily employed by immunologists with little or no computational background.
         a.about__link.bordered-link(href="") FinD out more ↳
   .navigation
-    .subtitle.container.mb-md
-      span NAVIGATION
+    .container
+      .subtitle.mb-md
+        span NAVIGATION
     .navigation__list
       .container
         .navigation__list-item
@@ -43,16 +45,16 @@ block content
   .about.container
     .subtitle.mb-md
       span What’s new
-    .grid50
-      .about__text
-        p.mb-sm.text-md ENPICOM and MiLaboratories join forces
-        p.text-sm.mb-md ENPICOM B.V↗, an innovative bioinformatics software engineering company, and MiLaboratories LLC, a technology leader in profiling the adaptive immune system, announced a strategic partnership↗ to enable efficient MiXCR integration into ENPICOM’s cloud-based IGX Platform↗. The partnership will allow MiXCR users to leverage its intuitive user interface and unique data management capabilities to store, analyze, visualize, and interpret immune repertoire sequencing data...
-        span 15 December, 2020
-      .about__text
-        p.mb-sm.text-md MiLaboratories LLC launches TCR profiling for non-human primates
-        p.text-sm.mb-md Service available for rhesus macaque (Macaca mulatta) and cynomolgus (crab-eating macaque, Macaca fascicularis). Phylogenetic closeness to humans makes non-human primates a model of choice for assessing the safety and efficiency of novel monoclonal antibodies and immunotherapeutic approaches. UMI-based TCR profiling allows to track the clonotype fates and alterations in TCR repertoire with the highest precision....
-        span 7 November, 2020
-    a.about__link.bordered-link(href="") FinD out more ↳
+    .grid50.mb-md.about__bordered
+      .about__text.grid50__part.grid50__part-first.grid50__part-bordered
+        p.mb-sm.title-sm ENPICOM and MiLaboratories<br> join forces
+        p.text-sm ENPICOM B.V↗, an innovative bioinformatics software engineering company, and MiLaboratories LLC, a technology leader in profiling the adaptive immune system, announced a strategic partnership↗ to enable efficient MiXCR integration into ENPICOM’s cloud-based IGX Platform↗. The partnership will allow MiXCR users to leverage its intuitive user interface and unique data management capabilities to store, analyze, visualize, and interpret immune repertoire sequencing data...
+        span.about__date 15 December, 2020
+      .about__text.grid50__part.grid50__part-last
+        p.mb-sm.title-sm MiLaboratories LLC launches TCR profiling for non-human primates
+        p.text-sm Service available for rhesus macaque (Macaca mulatta) and cynomolgus (crab-eating macaque, Macaca fascicularis). Phylogenetic closeness to humans makes non-human primates a model of choice for assessing the safety and efficiency of novel monoclonal antibodies and immunotherapeutic approaches. UMI-based TCR profiling allows to track the clonotype fates and alterations in TCR repertoire with the highest precision....
+        span.about__date 7 November, 2020
+    a.about__link.about__link--centered.bordered-link(href="") Show more news ↓
 
 
 block bodyEnd
