@@ -1,0 +1,48 @@
+.navigation {
+  margin-bottom: 88px;
+  &__list {
+    background-color: $color-light-black;
+    color: $color-white;
+    padding-bottom: 115px;
+    padding-top: 20px;
+  }
+
+  &__list-item {
+    padding: 60px 0 70px;
+    border-bottom: 1px solid rgba(#FFFFFF,0.1);
+    position: relative;
+
+    &:last-child {
+      border-bottom: 1px solid rgba(#FFFFFF,1);
+    }
+  }
+
+  &__list-title {
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 95%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  &__list0text {
+    font-family: $font-family-IBM;
+  }
+
+  &__list-number {
+    font-family: $font-family-IBM;
+    font-size: 20px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+  }
+  &__list-next {
+    position: absolute;
+    right: 10px;
+    bottom: 60px;
+    font-size: 30px;
+line-height: 95%;
+font-family: $font-family-IBM;
+  }
+}

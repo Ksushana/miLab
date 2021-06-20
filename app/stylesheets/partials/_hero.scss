@@ -1,0 +1,13 @@
+.hero {
+  display: grid;
+  grid-template-columns: auto 480px;
+  margin-bottom: 200px;
+  &__title {
+    font-weight: 600;
+    font-size: 92px;
+    line-height: 115%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin: 181px 0 0;
+  }
+}

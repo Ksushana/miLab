@@ -25,3 +25,52 @@ a {
 a[href^="tel:"] {
   border: 0;
 }
+
+.text-xs {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+text-transform: uppercase;
+}
+
+.text-sm {
+  font-size: 20px;
+line-height: 155%;
+color: rgba(#0F0E12, 0.9);
+margin: 0;
+}
+
+.text-md {
+  font-weight: 600;
+font-size: 28px;
+line-height: 142%;
+color: rgba(#0F0E12, 0.9);
+margin: 0;
+}
+
+.title-md {
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 80px;
+  text-transform: uppercase;
+}
+
+.mb-sm {
+  margin-bottom: 28px;
+}
+
+.mb-md {
+  margin-bottom: 48px;
+}
+
+.grid50 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  &__part {
+    // &:first-child {
+    //   border-right: 1px solid #0F0E12;
+    // }
+  }
+}

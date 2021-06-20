@@ -9,6 +9,11 @@
 
   &__logo {
     z-index: 1000;
+    width: 162px;
+      height: 38px;
+    svg {
+
+    }
   }
 
   &__menu {
@@ -58,6 +63,7 @@
     align-items: center;
     flex-grow: 1;
     justify-content: center;
+    margin-right: 9%;
     @include breakpoint-down($breakpoint-md-max) {
       display: block;
       margin: 0 24px;
