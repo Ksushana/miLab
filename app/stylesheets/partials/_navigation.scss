@@ -27,10 +27,7 @@
     }
 
     &:last-child {
-      border-bottom: 1px solid rgba(#FFFFFF,1);
-      @include breakpoint-down($breakpoint-sm-max) {
-        border-bottom: 1px solid rgba(#FFFFFF,0.1);
-      }
+      border-bottom: 1px solid rgba(#FFFFFF,0.1);
     }
   }
 

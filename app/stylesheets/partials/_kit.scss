@@ -1,19 +1,30 @@
 .kit {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
   background-blend-mode: soft-light, normal;
+  background-repeat: no-repeat;
   border-radius: $border-radius;
   width: 375px;
   height: 542px;
-  background-size: contain;
+  background-size: cover;
   padding: 52px 0 38px;
   display: flex;
   flex-direction: column;
+  @include breakpoint-down($breakpoint-sm-max) {
+    width: 335px;
+    height: 462px;
+    padding: 33px 0 36px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob.png);
+  }
 
   &__header {
     padding: 20px 40px;
     height: 180px;
     border-radius: 0px 20px 20px 0px;
     margin-right: 94px;
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-left: 36px;
+      height: 160px;
+    }
 
     &--pink {
       background-color: $color-kit-pink;
@@ -44,7 +55,7 @@
     font-weight: bold;
     font-size: 42px;
     line-height: 40px;
-    font-family: $font-family-IBM;
+    text-transform: uppercase;
   }
 
   &__list {
@@ -53,8 +64,13 @@
     font-family: $font-family-IBM;
     margin-right: 94px;
     font-size: 14px;
-line-height: 180%;
-letter-spacing: -0.01em;
+    line-height: 180%;
+    letter-spacing: -0.01em;
+    @include breakpoint-down($breakpoint-sm-max) {
+      font-size: 12px;
+      line-height: 180%;
+      padding: 18px 0 18px 40px;
+    }
   }
 
   &__btns {
@@ -65,5 +81,13 @@ letter-spacing: -0.01em;
   &__button {
     margin-right: 20px;
     padding: 11px 19px 13px;
+  }
+
+  &--no-btns {
+    .kit__list {
+      padding: 36px 0 26px 45px;
+      font-size: 14px;
+line-height: 220%;
+    }
   }
 }

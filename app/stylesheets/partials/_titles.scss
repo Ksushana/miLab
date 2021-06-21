@@ -3,6 +3,9 @@
   border-bottom: 1px solid $color-base;
   position: relative;
   display: flex;
+  @include breakpoint-down($breakpoint-sm-max) {
+    flex-wrap: wrap;
+  }
 
   span {
     background-color: $color-background-grey;
@@ -27,6 +30,20 @@
     border-right: 1px solid $color-base;
     width: 521px;
     flex-shrink: 0;
+    @include breakpoint-down($breakpoint-lg-max) {
+      width: 400px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      width: 320px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid $color-base;
+      padding: 48px 0 42px 0;
+      font-size: 48px;
+line-height: 95%;
+    }
   }
 
   &__full {
@@ -41,6 +58,12 @@
   &__right {
     padding: 48px 0 48px 60px;
     color: rgba($color-base, 0.9);
+    @include breakpoint-down($breakpoint-sm-max) {
+      width: 100%;
+      padding: 28px 0 28px;
+      font-size: 18px;
+line-height: 150%;
+    }
   }
 
   &--small {

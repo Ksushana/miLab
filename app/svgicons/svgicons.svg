@@ -18,7 +18,7 @@
 </symbol><symbol id="icon-list" viewbox="0 0 20 20">
   <path d="M 4 5 A 1.0001 1.0001 0 1 0 4 7 L 5 7 A 1.0001 1.0001 0 1 0 5 5 L 4 5 z M 8 5 L 8 7 L 16 7 L 16 5 L 8 5 z M 4 9 A 1.0001 1.0001 0 1 0 4 11 L 5 11 A 1.0001 1.0001 0 1 0 5 9 L 4 9 z M 8 9 L 8 11 L 16 11 L 16 9 L 8 9 z M 4 13 A 1.0001 1.0001 0 1 0 4 15 L 5 15 A 1.0001 1.0001 0 1 0 5 13 L 4 13 z M 8 13 L 8 15 L 16 15 L 16 13 L 8 13 z "/>
 </symbol>
-<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482 433" id="anim">
+<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482 433" id="icon-anim">
     <path d="M257.851 431.5H225m16.5-20.5v20M1 121h480v290H1z" stroke="#0F0E12" stroke-width="1.5"></path>
     <circle cx="93" cy="361" r="7" fill="#FF7740"></circle>
     <path d="M1.37 331.5H481" stroke="#0F0E12" stroke-width="1.5"></path>
@@ -171,4 +171,12 @@
         <stop offset="1" stop-color="#0F0E12"></stop>
       </radialGradient>
     </defs>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" id="icon-file-btn">
+    <path clip-rule="evenodd" d="M7.749.5h-5.25A1.5 1.5 0 00.999 2v12a1.5 1.5 0 001.5 1.5h9a1.5 1.5 0 001.5-1.5V5.75L7.748.5z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M7.751.5v5.25h5.25" stroke="#0F0E12" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16" id="icon-sidebar">
+    <rect x="15.875" y="1" width="14" height="14" rx="2" transform="rotate(90 15.875 1)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></rect>
+    <path d="M15.125 5.666h-14" stroke="#0F0E12" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol></svg>
