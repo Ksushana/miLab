@@ -30,7 +30,7 @@
     &--scroll {
       @include breakpoint-down($breakpoint-md-max) {
         flex-direction: row;
-        grid-gap: 13px;
+        grid-gap: 30px;
         margin: 0 -20px;
         padding-left: 20px;
         overflow: scroll;
@@ -46,6 +46,30 @@
             right: -20px;
             top: 0;
           }
+        }
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        grid-gap: 13px;
+      }
+
+      @include breakpoint-down($breakpoint-sm-max) {
+        .kit {
+          width: 269px;
+          height: 414px;
+          padding: 28px 0 32px;
+          background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob-scroll.png);
+        }
+        .kit__header {
+          margin-right: 50px;
+          padding-left: 15px;
+        }
+        .kit__list,
+        .kit__btns {
+          padding-left: 15px;
+        }
+        .kit__button {
+          margin-right: 16px;
+          padding: 11px;
         }
       }
     }

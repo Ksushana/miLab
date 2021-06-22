@@ -15,6 +15,12 @@
     padding: 33px 0 36px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob.png);
   }
+  @include breakpoint-down($breakpoint-xxs-max) {
+    width: 269px;
+    height: 414px;
+    padding: 28px 0 32px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob-scroll.png);
+  }
 
   &__header {
     padding: 20px 40px;
@@ -24,6 +30,10 @@
     @include breakpoint-down($breakpoint-sm-max) {
       padding-left: 36px;
       height: 160px;
+    }
+    @include breakpoint-down($breakpoint-xxs-max) {
+      margin-right: 50px;
+      padding-left: 15px;
     }
 
     &--pink {
@@ -71,11 +81,17 @@
       line-height: 180%;
       padding: 18px 0 18px 40px;
     }
+    @include breakpoint-down($breakpoint-xxs-max) {
+      padding: 14px 0 16px 15px;
+    }
   }
 
   &__btns {
     margin-top: auto;
     padding-left: 41px;
+    @include breakpoint-down($breakpoint-xxs-max) {
+      padding-left: 15px;
+    }
   }
 
   &__button {
@@ -87,7 +103,28 @@
     .kit__list {
       padding: 36px 0 26px 45px;
       font-size: 14px;
-line-height: 220%;
+      line-height: 220%;
+      @include breakpoint-down($breakpoint-xxs-max) {
+        padding: 14px 0 16px 15px;
+      }
+    }
+
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding: 52px 0 38px;
+      .kit__header {
+        margin-right: 54px;
+        height: 180px;
+        padding-bottom: 48px;
+      }
+      .kit__list {
+        padding: 25px 0 26px 41px;
+        font-size: 14px;
+        line-height: 220%;
+        @include breakpoint-down($breakpoint-xxs-max) {
+          padding: 14px 0 16px 15px;
+          line-height: 140%;
+        }
+      }
     }
   }
 }

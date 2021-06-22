@@ -65,7 +65,7 @@ $browser-context: 16;
 
 // Min
 // Extra small screen / phone
-$breakpoint-xs-min: 0;
+$breakpoint-xs-min: 375px;
 
 // Small screen / phone
 $breakpoint-sm-min: 544px;
@@ -80,6 +80,7 @@ $breakpoint-lg-min: 992px;
 $breakpoint-xl-min: 1200px;
 
 // Max
+$breakpoint-xxs-max: $breakpoint-xs-min - 1;
 // Extra small screen / phone
 $breakpoint-xs-max: $breakpoint-sm-min - 1;
 

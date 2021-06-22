@@ -32,7 +32,6 @@
     z-index: -1;
     @include breakpoint-down($breakpoint-sm-max) {
       left: 10px;
-      width: calc(100% + 20px);
       top: 55%;
     }
   }

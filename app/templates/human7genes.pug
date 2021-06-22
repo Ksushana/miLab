@@ -1,6 +1,7 @@
 extends ./layout/layout.pug
 
 block globalVars
+  - var CURRENT_PAGE = 'human7genes';
 
 block headEnd
 
@@ -13,9 +14,9 @@ block content
     .full-info__grid
       .full-info__kit
         .kit.kit--no-btns
-          .kit__header.kit__header--pink
+          .kit__header.kit__header--blue
             .kit__subtitle 24 Reactions
-            .kit__title Human TCR
+            .kit__title Human 7 Genes
           ul.kit__list
             li UMI 5’Race
             li IG heavy &amp; light
@@ -25,12 +26,11 @@ block content
             li High accuracy
 
       .full-info__info
-        h1.full-info__title.title-md  Human TCR Kit
+        h1.full-info__title.title-md  Human 7 Genes Kit
         p.full-info__text
           | The Monkey TCR Kit is designed for unbiased amplification of TCR alpha and beta cDNA libraries using 5’RACE with unique molecular identifiers (UMI) incorporated within template switch oligo.
         .full-info__links
           button(type="button").bordered-link.bordered-link--black Buy, $2000
-          span.full-info__links-helper
           a(href="").bordered-link
             +svgicon('sidebar')
             span MixCR.Pro
@@ -39,31 +39,13 @@ block content
             span Kit manual
         .full-info__table
           .full-info__table-item
-            .full-info__table-title Title
+            .full-info__table-title Species
             .full-info__table-data
-              span Human
+              span Monkey
           .full-info__table-item
-            .full-info__table-title Antibodies
+            .full-info__table-title Chains
             .full-info__table-data
-              span.colored.color-tag-IGH IGH
-              span.colored.color-tag-IGK IGK
-              span.colored.color-tag-IGL IGL
-          .full-info__table-item
-            .full-info__table-title Isotypes
-            .full-info__table-data
-              span.colored.color-tag-IgM IgM
-              span.colored.color-tag-IgD IgD
-              span.colored.color-tag-IgG1 IgG1
-              span.colored.color-tag-IG2 IG2
-              span.colored.color-tag-IgG3 IgG3
-              span.colored.color-tag-IgG4 IgG4
-              span.colored.color-tag-IgA IgA
-              span.colored.color-tag-IgE IgE
-
-          .full-info__table-item
-            .full-info__table-title Title
-            .full-info__table-data
-              span Full length
+              span Both TCR Alpha and Beta chains
           .full-info__table-item
             .full-info__table-title Title
             .full-info__table-data
