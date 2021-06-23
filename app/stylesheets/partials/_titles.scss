@@ -3,6 +3,7 @@
   position: relative;
   display: flex;
   margin-top: -13px;
+
   @include breakpoint-down($breakpoint-sm-max) {
     flex-wrap: wrap;
   }
@@ -35,12 +36,13 @@
     }
     @include breakpoint-down($breakpoint-md-max) {
       width: 320px;
+
     }
     @include breakpoint-down($breakpoint-sm-max) {
       width: 100%;
       border-right: none;
       border-bottom: 1px solid $color-base;
-      padding: 48px 0 42px 0;
+      padding: 35px 0 42px 0;
       font-size: 48px;
 line-height: 95%;
     }

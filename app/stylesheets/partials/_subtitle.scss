@@ -5,6 +5,7 @@
   position: relative;
   width: 100%;
   font-family: $font-family-IBM;
+  z-index: 1;
 
   @include breakpoint-down($breakpoint-sm-max) {
     font-size: 14px;
