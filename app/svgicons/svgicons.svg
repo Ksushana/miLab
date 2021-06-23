@@ -174,9 +174,9 @@
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" id="icon-file-btn">
     <path clip-rule="evenodd" d="M7.749.5h-5.25A1.5 1.5 0 00.999 2v12a1.5 1.5 0 001.5 1.5h9a1.5 1.5 0 001.5-1.5V5.75L7.748.5z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-    <path d="M7.751.5v5.25h5.25" stroke="#0F0E12" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M7.751.5v5.25h5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16" id="icon-sidebar">
     <rect x="15.875" y="1" width="14" height="14" rx="2" transform="rotate(90 15.875 1)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></rect>
-    <path d="M15.125 5.666h-14" stroke="#0F0E12" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M15.125 5.666h-14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol></svg>

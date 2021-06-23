@@ -96,9 +96,9 @@
 
   &__button {
     margin-right: 20px;
-    padding: 11px 19px 13px;
+    padding: 11px 19px 11px;
     @include breakpoint-down($breakpoint-xxs-max) {
-      padding: 11px 12px 13px;
+      padding: 11px 12px 11px;
     }
   }
 

@@ -24,7 +24,10 @@
     @include breakpoint-down($breakpoint-md-max) {
       display: flex;
       flex-direction: column;
-      grid-gap: 40px 0;
+      grid-gap: 0;
+      .kits__grid-item {
+        margin-bottom: 40px;
+      }
     }
 
     &--scroll {
@@ -34,6 +37,10 @@
         margin: 0 -20px;
         padding-left: 20px;
         overflow: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
 
         .kits__grid-item {
           position: relative;
@@ -49,7 +56,10 @@
         }
       }
       @include breakpoint-down($breakpoint-sm-max) {
-        grid-gap: 13px;
+        grid-gap: 0;
+        .kit {
+          margin-right: 13px;
+        }
       }
 
       @include breakpoint-down($breakpoint-sm-max) {
