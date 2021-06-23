@@ -20,7 +20,7 @@
     display: flex;
     margin-top: 70px;
     @include breakpoint-down($breakpoint-md-max) {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
     @include breakpoint-down($breakpoint-sm-max) {
       margin-top: 43px;
@@ -30,6 +30,9 @@
   &__kit {
     width: 375px;
     margin-right: 80px;
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-top: 56px;
+    }
     @include breakpoint-down($breakpoint-xxs-max) {
       width: 269px;
       height: 414px;
@@ -38,9 +41,7 @@
   }
 
   &__info {
-    @include breakpoint-down($breakpoint-md-max) {
-      margin-top: 56px;
-    }
+
   }
 
   &__title {

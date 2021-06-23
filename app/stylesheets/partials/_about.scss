@@ -42,4 +42,10 @@
       display: block !important;
     }
   }
+
+  &__text-link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

@@ -5,16 +5,19 @@
   position: relative;
   width: 100%;
   font-family: $font-family-IBM;
+
   @include breakpoint-down($breakpoint-sm-max) {
     font-size: 14px;
     line-height: 18px;
   }
 
-  span {
+  span,
+  a {
     background-color: $color-background-grey;
     z-index: 1;
-    display: inline-block;
+    display: inline-flex;
     padding-right: 12px;
+    height: auto;
 
     @include breakpoint-down($breakpoint-sm-max) {
       padding-right: 22px;

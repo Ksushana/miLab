@@ -1,6 +1,6 @@
 header.header(id="top")
   .header__container.container
-    .header__logo
+    a(href="./home.html").header__logo
       include ./../../inline-svgs/logo.svg
     .header__burger
       button( type="button" )
@@ -9,22 +9,21 @@ header.header(id="top")
         button( type="button" )
           include ./../../inline-svgs/cross.svg
     .header__menu
-
       .header__links
         .header__link
-            a(href="#") Software
+            span Software
         .header__link
-            a(href="#") Kits
+            a(href="./kits.html") Kits
         .header__link
-            a(href="#") Services
+            a(href="./services.html") Services
         .header__link
-          a(href="#") Custom R&amp;D
+          a(href="./customR&D.html") Custom R&amp;D
         .header__link
-            a(href="#") About
+            a(href="./about.html") About
         .header__link
-          a(href="#") Publications
+          a(href="./publications.html") Publications
       .header__contact-link.bordered-link
-        a(href="#") Contact
+        a(href="./contact.html") Contact
       .header__mobile-bottom
         p © 2016-2020 All rights reserved
         include ./../../inline-svgs/sk.svg

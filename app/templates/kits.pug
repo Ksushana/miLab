@@ -8,8 +8,9 @@ block bodyStart
 
 block content
   .kits.container
+    .subtitle
+      a(href="./home.html") ↲ INDEX
     .kits__title.title
-      span ↲ INDEX
       .title__left
         | KITS
       .title__right
@@ -29,7 +30,7 @@ block content
             li High accuracy
           .kit__btns
             button.kit__button(type="button").bordered-link.bordered-link--black Buy, $2000
-            a.kit__button(href="").bordered-link Learn more ↳
+            a.kit__button(href="./humanTCR.html").bordered-link Learn more ↳
       .kits__grid-item
         .kit
           .kit__header.kit__header--orange
@@ -44,7 +45,7 @@ block content
             li High accuracy
           .kit__btns
             button.kit__button(type="button").bordered-link.bordered-link--black Buy, $2000
-            a.kit__button(href="").bordered-link Learn more ↳
+            a.kit__button(href="./monkeyTCR.html").bordered-link Learn more ↳
       .kits__grid-item
         .kit
           .kit__header.kit__header--blue
@@ -59,7 +60,7 @@ block content
             li High accuracy
           .kit__btns
             button.kit__button(type="button").bordered-link.bordered-link--black Buy, $2000
-            a.kit__button(href="").bordered-link Learn more ↳
+            a.kit__button(href="./human7genes.html").bordered-link Learn more ↳
       .kits__grid-item
         .kit
           .kit__header.kit__header--green
@@ -74,7 +75,7 @@ block content
             li High accuracy
           .kit__btns
             button.kit__button(type="button").bordered-link.bordered-link--black Buy, $2000
-            a.kit__button(href="").bordered-link Learn more ↳
+            a.kit__button(href="./humanTCR.html").bordered-link Learn more ↳
       .kits__grid-item
         .kit
           .kit__header.kit__header--purple
@@ -89,7 +90,7 @@ block content
             li High accuracy
           .kit__btns
             button.kit__button(type="button").bordered-link.bordered-link--black Buy, $2000
-            a.kit__button(href="").bordered-link Learn more ↳
+            a.kit__button(href="./monkeyTCR.html").bordered-link Learn more ↳
   .navigation
     .container
       .subtitle.mb-md
@@ -101,14 +102,20 @@ block content
           .navigation__list-title Software
           .navigation__list-text.text-xs Analysis of high-throughput sequencing data
           .navigation__list-number.text-xs 01
+          a.navigation__list-item-link(href="./software.html")
+            span.navigation__list-next ↳
         .navigation__list-item
           .navigation__list-title Custom R&amp;D
           .navigation__list-text.text-xs Immune repertoire pipeline for your investigation
           .navigation__list-number.text-xs 02
+          a.navigation__list-item-link(href="./customR&D.html")
+            span.navigation__list-next ↳
         .navigation__list-item
           .navigation__list-title Services
           .navigation__list-text.text-xs Order TCR and BCR profiling service
           .navigation__list-number.text-xs 03
+          a.navigation__list-item-link(href="./services.html")
+            span.navigation__list-next ↳
 
 
 block bodyEnd
