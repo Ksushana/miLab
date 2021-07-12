@@ -47,6 +47,7 @@
   &__date {
     font-family: $font-family-IBM;
     text-transform: uppercase;
+    margin-top: auto;
     @include breakpoint-down($breakpoint-md-max) {
       font-size: 12px;
       line-height: 16px;

@@ -97,37 +97,6 @@
     @include breakpoint-down($breakpoint-sm-max) {
       padding: 0;
     }
-
-    a {
-      position: relative;
-      &:after {
-        position: absolute;
-        content: "";
-        left: 0;
-        right: 0;
-        bottom: -3px;
-        height: 1px;
-        width: 100%;
-        background-color: transparent;
-        transition: background-color $transition-duration;
-      }
-    }
-
-    span {
-      position: relative;
-      &:after {
-        position: absolute;
-        content: "";
-        left: 0;
-        right: 0;
-        bottom: 8px;
-        height: 1px;
-        width: 100%;
-        background-color: #0f0e12;
-        transition: background-color $transition-duration;
-      }
-    }
-
     @include breakpoint-down($breakpoint-sm-max) {
 
       border-bottom: 1px solid rgba(#000000, 0.2);
@@ -137,14 +106,6 @@
         display: block;
         &:after {
           display: none;
-        }
-      }
-    }
-
-    &:hover {
-      a {
-        &:after {
-          background-color: #0f0e12;
         }
       }
     }
