@@ -14,6 +14,7 @@
 ========================================*/
 
 import mobileMenu from './modules/mobile-menu';
+import Animation from './modules/animation';
 
 
 

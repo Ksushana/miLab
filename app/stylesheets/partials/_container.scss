@@ -1,15 +1,36 @@
 %container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: rem($container-gap / 2);
-  padding-left: rem($container-gap / 2);
+  // padding-right: rem($container-gap / 2);
+  // padding-left: rem($container-gap / 2);
 
 
 }
 
 .container {
-  max-width: rem($container-max-width);
+  max-width: 1920px;
+  padding-left: 125px;
+  padding-right: 125px;
+
   @extend %container;
+  @include breakpoint-down($breakpoint-lg-max) {
+    max-width: 1440px;
+    padding-left: 105px;
+    padding-right: 105px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    max-width: 100%;
+    padding-left: 86px;
+    padding-right: 86px;
+  }
+  @include breakpoint-down(880px) {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include breakpoint-down($breakpoint-sm-max) {
+  }
+
 }
 
 .container-fluid {

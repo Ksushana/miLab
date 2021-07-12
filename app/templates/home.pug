@@ -8,59 +8,60 @@ block bodyStart
 
 block content
   .hero.container
-    h1.hero__title Organising adaptive immunity data
+    h1.h1.hero__title Organising<br> adaptive<br> immunity data
     .hero__animation
-      img(src="assets/anim.svg", alt="")
+      //- #myDiv
+      //- img(src="assets/anim.svg", alt="")
   .about.container
-    .subtitle.mb-md
+    .subtitle.notes
       span About
     .grid50
       .about__text.grid50__part.grid50__part-first
-        p.mb-sm.text-md We bring together the best wet lab and data analysis solutions, towards universal customizable network for the most informative immune repertoire data analysis and meaningful inerpretation.
-        p.text-sm.mb-md We develop state-of-the-art bioinformatics solutions helping scientists and clinicians to probe adaptive immunity in health and disease. Backed up by our extensive experience in the analysis of immune repertoire sequencing data, we aim at delivering reliable and efficient software tools that can be easily employed by immunologists with little or no computational background.
+        p.h3.mb-sm.mt-md We bring together the best wet lab and data analysis solutions, towards universal customizable network for the most informative immune repertoire data analysis and meaningful inerpretation.
+        p.text We develop state-of-the-art bioinformatics solutions helping scientists and clinicians to probe adaptive immunity in health and disease. Backed up by our extensive experience in the analysis of immune repertoire sequencing data, we aim at delivering reliable and efficient software tools that can be easily employed by immunologists with little or no computational background.
         a.about__link.bordered-link(href="./about.html") FinD out more ↳
   .navigation
     .container
-      .subtitle.mb-md
+      .subtitle.mb-md.notes
         span NAVIGATION
     .navigation__list
       .container
         .navigation__list-item
-          .navigation__list-title Kits
-          .navigation__list-text.text-xs Human RNA and DNA,Macaca RNA
-          .navigation__list-number.text-xs 01
+          .navigation__list-title.h1 Kits
+          .navigation__list-text.notes Human RNA and DNA,Macaca RNA
+          .navigation__list-number.text 01
           a.navigation__list-item-link(href="./kits.html")
             span.navigation__list-next ↳
         .navigation__list-item
-          .navigation__list-title Software
-          .navigation__list-text.text-xs Analysis of high-throughput sequencing data
-          .navigation__list-number.text-xs 02
+          .navigation__list-title.h1 Software
+          .navigation__list-text.notes Analysis of high-throughput sequencing data
+          .navigation__list-number.text 02
           a.navigation__list-item-link(href="./software.html")
             span.navigation__list-next ↳
         .navigation__list-item
-          .navigation__list-title Custom R&amp;D
-          .navigation__list-text.text-xs Immune repertoire pipeline for your investigation
-          .navigation__list-number.text-xs 03
+          .navigation__list-title.h1 Custom R&amp;D
+          .navigation__list-text.notes Immune repertoire pipeline for your investigation
+          .navigation__list-number.text 03
           a.navigation__list-item-link(href="./customR&D.html")
             span.navigation__list-next ↳
         .navigation__list-item
-          .navigation__list-title Services
-          .navigation__list-text.text-xs Order TCR and BCR profiling service
-          .navigation__list-number.text-xs 04
+          .navigation__list-title.h1 Services
+          .navigation__list-text.notes Order TCR and BCR profiling service
+          .navigation__list-number.text 04
           a.navigation__list-item-link(href="./services.html")
             span.navigation__list-next ↳
   .about.container
-    .subtitle.mb-md
+    .subtitle.mb-md.notes
       span What’s new
-    .grid50.mb-md.about__bordered
-      .about__text.grid50__part.grid50__part-first.grid50__part-bordered
-        p.mb-sm.title-sm ENPICOM and MiLaboratories<br> join forces
-        p.text-sm <a href="" class="about__text-link">ENPICOM B.V↗</a>, an innovative bioinformatics software engineering company, and MiLaboratories LLC, a technology leader in profiling the adaptive immune system, announced a <a href="" class="about__text-link">strategic partnership↗</a> to enable efficient MiXCR integration into ENPICOM’s cloud-based <a href="" class="about__text-link">IGX Platform↗</a>. The partnership will allow MiXCR users to leverage its intuitive user interface and unique data management capabilities to store, analyze, visualize, and interpret immune repertoire sequencing data...
-        span.about__date 15 December, 2020
-      .about__text.grid50__part.grid50__part-last
-        p.mb-sm.title-sm MiLaboratories LLC launches TCR profiling for non-human primates
-        p.text-sm Service available for rhesus macaque (Macaca mulatta) and cynomolgus (crab-eating macaque, Macaca fascicularis). Phylogenetic closeness to humans makes non-human primates a model of choice for assessing the safety and efficiency of novel monoclonal antibodies and immunotherapeutic approaches. UMI-based TCR profiling allows to track the clonotype fates and alterations in TCR repertoire with the highest precision....
-        span.about__date 7 November, 2020
+    .grid50.about__bordered.about__two-sided(style="margin-bottom:48px;")
+      .about__text.grid50__part.grid50__part-first.grid50__part-bordered.about__text--two-sided
+        p.h3.mb-sm ENPICOM and MiLaboratories<br> join forces
+        p.about__text--narrow.text.mb-smd <a href="" class="about__text-link">ENPICOM B.V↗</a>, an innovative bioinformatics software engineering company, and MiLaboratories LLC, a technology leader in profiling the adaptive immune system, announced a <a href="" class="about__text-link">strategic partnership↗</a> to enable efficient MiXCR integration into ENPICOM’s cloud-based <a href="" class="about__text-link">IGX Platform↗</a>. The partnership will allow MiXCR users to leverage its intuitive user interface and unique data management capabilities to store, analyze, visualize, and interpret immune repertoire sequencing data...
+        span.text.about__date 15 December, 2020
+      .about__text.grid50__part.grid50__part-last.about__text--two-sided
+        p.h3.mb-sm MiLaboratories LLC launches TCR profiling for non-human primates
+        p.about__text--narrow.text.mb-smd Service available for rhesus macaque (Macaca mulatta) and cynomolgus (crab-eating macaque, Macaca fascicularis). Phylogenetic closeness to humans makes non-human primates a model of choice for assessing the safety and efficiency of novel monoclonal antibodies and immunotherapeutic approaches. UMI-based TCR profiling allows to track the clonotype fates and alterations in TCR repertoire with the highest precision....
+        span.text.about__date 7 November, 2020
     a.about__link.about__link--centered.bordered-link(href="./publications.html") Show more news ↓
 
 

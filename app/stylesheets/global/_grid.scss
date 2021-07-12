@@ -1,0 +1,105 @@
+.grid50 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  @include breakpoint-down($breakpoint-md-max) {
+    &:not(.about__two-sided) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    &.about__two-sided {
+      padding-top: 20px;
+    }
+  }
+  @include breakpoint-down($breakpoint-sm-max) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__part {
+    display: flex;
+    flex-direction: column;
+    &-first {
+      padding-right: 17%;
+      @include breakpoint-down($breakpoint-lg-max) {
+        padding-right: 9%;
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        &:not(.about__text--two-sided) {
+          padding-right: 32%;
+        }
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        padding-right: 0;
+        // padding-top: 20px;
+        &:not(.about__text--two-sided) {
+          padding-right: 0;
+        }
+      }
+    }
+    &-last {
+      padding-left: 14%;
+      @include breakpoint-down($breakpoint-lg-max) {
+        padding-left: 11%;
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        padding-left: 12%;
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        padding-left: 0;
+        padding-top: 50px;
+      }
+    }
+    &-bordered {
+      border-right: 1px solid #0F0E12;
+      @include breakpoint-down($breakpoint-sm-max) {
+        border-bottom: 1px solid #0F0E12;
+        border-right: none;
+      }
+    }
+  }
+}
+
+.mb-sm {
+  margin-bottom: 20px;
+  @include breakpoint-down($breakpoint-lg-max) {
+    margin-bottom: 28px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    margin-bottom: 36px;
+  }
+  @include breakpoint-down($breakpoint-sm-max) {
+    margin-bottom: 16px;
+  }
+}
+
+.mb-smd {
+  margin-bottom: 36px;
+  @include breakpoint-down($breakpoint-md-max) {
+    margin-bottom: 25px;
+  }
+}
+
+.mb-md {
+  margin-bottom: 64px;
+  @include breakpoint-down($breakpoint-lg-max) {
+    margin-bottom: 48px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    margin-bottom: 62px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    margin-bottom: 54px;
+  }
+}
+
+.mt-md {
+  margin-top: 55px;
+  @include breakpoint-down($breakpoint-lg-max) {
+    margin-top: 0;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    margin-top: 10px;
+  }
+}

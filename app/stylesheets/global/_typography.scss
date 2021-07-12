@@ -22,116 +22,120 @@ a {
   }
 }
 
+p {
+  margin: 0;
+}
+
 a[href^="tel:"] {
   border: 0;
 }
 
-.text-xs {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 100%;
+.h1 {
+  font-weight: bold;
+  font-size: 82px;
+  line-height: 70px;
   letter-spacing: -0.01em;
-text-transform: uppercase;
+  text-transform: uppercase;
+  @include breakpoint-down($breakpoint-lg-max) {
+    font-weight: 600;
+    font-size: 74px;
+    line-height: 90px;
+    letter-spacing: unset;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    font-size: 56px;
+    line-height: 70px;
+  }
+  @include breakpoint-down($breakpoint-sm-max) {
+    font-size: 43px;
+    line-height: 46px;
+  }
+}
+.h2 {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 64px;
+  text-transform: uppercase;
+  @include breakpoint-down($breakpoint-lg-max) {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 55px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  @include breakpoint-down($breakpoint-sm-max) {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+.h3 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 46px;
+  @include breakpoint-down($breakpoint-lg-max) {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @include breakpoint-down($breakpoint-sm-max) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
-.text-sm {
-  font-size: 20px;
-  line-height: 155%;
-  color: rgba(#0F0E12, 0.9);
-  margin: 0;
+.text {
+  font-size: 24px;
+  line-height: 36px;
+  @include breakpoint-down($breakpoint-lg-max) {
+    font-size: 20px;
+    line-height: 31px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    font-size: 16px;
+    line-height: 26px;
+  }
   @include breakpoint-down($breakpoint-sm-max) {
     font-size: 15px;
+    line-height: 23px;
   }
 }
 
-.text-md {
-  font-weight: 600;
-font-size: 28px;
-line-height: 142%;
-color: rgba(#0F0E12, 0.9);
-margin: 0;
-@include breakpoint-down($breakpoint-sm-max) {
+.notes {
+  font-weight: normal;
   font-size: 20px;
-}
-}
-
-.title-md {
-  font-weight: 600;
-  font-size: 70px;
-  line-height: 80px;
+  line-height: 26px;
   text-transform: uppercase;
-}
-
-.title-sm {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 142%;
-  color: rgba(#0F0E12, 0.9);
-  margin-top: 0;
+  @include breakpoint-down($breakpoint-lg-max) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    font-size: 12px;
+    line-height: 16px;
+  }
   @include breakpoint-down($breakpoint-sm-max) {
-    font-size: 24px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
-.mb-sm {
-  margin-bottom: 28px;
-  @include breakpoint-down($breakpoint-sm-max) {
-    margin-bottom: 20px;
+.notes-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  @include breakpoint-down($breakpoint-lg-max) {
+    font-size: 16px;
+    line-height: 21px;
   }
-}
-
-.mb-md {
-  margin-bottom: 48px;
-  @include breakpoint-down($breakpoint-sm-max) {
-    margin-bottom: 36px;
-  }
-}
-
-.grid50 {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  @include breakpoint-down($breakpoint-sm-max) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__part {
-    display: flex;
-    flex-direction: column;
-    &-first {
-      padding-right: 11%;
-      @include breakpoint-down($breakpoint-sm-max) {
-        padding-right: 0;
-      }
-    }
-    &-last {
-      padding-left: 11%;
-      @include breakpoint-down($breakpoint-sm-max) {
-        padding-left: 0;
-        padding-top: 30px;
-      }
-    }
-    &-bordered {
-      border-right: 1px solid #0F0E12;
-      @include breakpoint-down($breakpoint-sm-max) {
-        border-bottom: 1px solid #0F0E12;
-        border-right: none;
-      }
-    }
-
-    .text-sm {
-      margin-bottom: 40px;
-      @include breakpoint-down($breakpoint-sm-max) {
-        margin-bottom: 25px;
-      }
-    }
-
-    span {
-      display: inline-block;
-      margin-top: auto;
-      font-weight: 300;
-      font-size: 17px;
-      line-height: 155%;
-    }
+  @include breakpoint-down($breakpoint-md-max) {
+    font-size: 14px;
+    line-height: 18px;
   }
 }

@@ -1,6 +1,9 @@
 .navigation {
   margin-bottom: 88px;
   margin-top: 30px;
+  @include breakpoint-down($breakpoint-md-max) {
+    margin-bottom: 65px;
+  }
   @include breakpoint-down($breakpoint-sm-max) {
     margin-bottom: 44px;
   }
@@ -9,22 +12,28 @@
     color: $color-white;
     padding-bottom: 115px;
     padding-top: 20px;
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-top: 0;
+      padding-bottom: 55px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
-      padding-top: 2px;
-      padding-bottom: 52px;
+      padding-top: 7px;
+      padding-bottom: 47px;
     }
   }
 
   &__list-item {
-    padding: 60px 0 70px;
+    padding: 58px 0 54px;
     border-bottom: 1px solid rgba(#FFFFFF,0.1);
     position: relative;
     min-height: 224px;
     transition: border-bottom $transition-duration;
-
+    @include breakpoint-down($breakpoint-md-max) {
+      padding: 65px 0 75px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
-      padding: 50px 0 20px;
-      min-height: 150px;
+      padding: 40px 0 33px;
+      min-height: 140px;
     }
 
     &:last-child {
@@ -48,35 +57,44 @@
   }
 
   &__list-title {
-    font-weight: bold;
-    font-size: 70px;
-    line-height: 95%;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
     margin-bottom: 12px;
-    @include breakpoint-down($breakpoint-sm-max) {
-      font-size: 34px;
-      margin-bottom: 12px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-bottom: 0;
     }
+    @include breakpoint-down($breakpoint-md-max) {
+      letter-spacing: -0.02em;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 46px;
+      letter-spacing: -0.01em;    }
   }
 
   &__list-text {
     font-family: $font-family-IBM;
     @include breakpoint-down($breakpoint-sm-max) {
-      font-size: 12px;
-      line-height: 130%;
+      font-size: 16px;
+      line-height: 21px;
+      opacity: 0.9;
     }
   }
 
   &__list-number {
     font-family: $font-family-IBM;
-    font-size: 20px;
-    position: absolute;
+      position: absolute;
     top: 60px;
-    right: 10px;
+    right: 25px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      right: 8px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      top: 67px;
+      right: 5px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
-      top: 50px;
-    right: 0;
+      top: 42px;
+      right: 7px;
     }
   }
   &__list-next {

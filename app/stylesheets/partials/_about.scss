@@ -1,5 +1,8 @@
 .about {
   margin-bottom: 100px;
+  @include breakpoint-down($breakpoint-md-max) {
+    margin-bottom: 55px;
+  }
   @include breakpoint-down($breakpoint-sm-max) {
     margin-bottom: 36px;
     display: flex;
@@ -7,16 +10,28 @@
   }
   &__link {
     width: fit-content;
-    padding: 11px 16px;
-    margin-top: 10px;
+    padding: 11px 13px;
+    margin-top: 64px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-top: 48px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-top: 57px;
+      padding: 11px 34px;
+    }
     &--centered {
       margin-top: 0;
     }
     @include breakpoint-down($breakpoint-sm-max) {
-      margin-top: 0;
+      margin-top: 29px;
+      padding: 11px 11px 14px;
+      font-size: 16px;
+      line-height: 21px;
       &--centered {
-        margin: 0px auto 0;
-        padding: 11px 11px 13px;
+        margin: 8px auto 0;
+        padding: 11px 20px 13px;
+        font-size: 14px;
+        line-height: 18px;
       }
     }
   }
@@ -29,17 +44,20 @@
     }
   }
 
-  .title-sm {
-    @include breakpoint-down($breakpoint-sm-max) {
-      margin-top: 15px;
-    }
-  }
-
   &__date {
+    font-family: $font-family-IBM;
+    text-transform: uppercase;
+    @include breakpoint-down($breakpoint-md-max) {
+      font-size: 12px;
+      line-height: 16px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
+      font-size: 14px;
+      line-height: 18px;
       margin-top: -5px !important;
-      margin-bottom: 20px;
+      margin-bottom: 33px;
       display: block !important;
+      opacity: 0.9;
     }
   }
 
@@ -48,4 +66,24 @@
       text-decoration: underline;
     }
   }
+
+  .subtitle {
+    margin-bottom: 43px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-bottom: 48px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    &--narrow {
+      padding-right: 75px;
+      @include breakpoint-down($breakpoint-lg-max) {
+        padding-right: 10px;
+      }
+    }
+  }
+
 }

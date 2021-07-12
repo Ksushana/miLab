@@ -73,13 +73,13 @@ $breakpoint-xs-min: 375px;
 $breakpoint-sm-min: 544px;
 
 // Medium screen / tablet
-$breakpoint-md-min: 768px;
+$breakpoint-md-min: 820px;
 
 // Large screen / desktop
-$breakpoint-lg-min: 992px;
+$breakpoint-lg-min: 1230px;
 
 // Extra large screen / wide desktop
-$breakpoint-xl-min: 1200px;
+$breakpoint-xl-min: 1600px;
 
 // Max
 $breakpoint-xxs-max: $breakpoint-xs-min - 1;
@@ -103,8 +103,8 @@ $breakpoint-lg-max: $breakpoint-xl-min - 1;
 $grid-columns: 12;
 $grid-gutter-width: 30px;
 
-$container-gap: 40px;
-$container-max-width: 1270px;
+// $container-gap: 40px;
+// $container-max-width: 1710px;
 
 
 /*========================================

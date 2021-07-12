@@ -6233,6 +6233,11 @@ plexer@^2.0.0:
     isstream "^0.1.2"
     readable-stream "^3.4.0"
 
+plotly.js-basic-dist@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/plotly.js-basic-dist/-/plotly.js-basic-dist-2.2.0.tgz#1a9359332d1ae499406a4e9cd904fc44f6621daf"
+  integrity sha512-XFdTiKdhJ+LvjWj80aycwfCj+4OgKd3MCRzcQwu8vbzQHWurqLlnpBGcB8yxNVaTtHN5RtW3cl/ZziqWhlTclg==
+
 plugin-error@1.0.1, plugin-error@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/plugin-error/-/plugin-error-1.0.1.tgz#77016bd8919d0ac377fdcdd0322328953ca5781c"

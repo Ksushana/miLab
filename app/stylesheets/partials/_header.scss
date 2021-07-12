@@ -1,6 +1,9 @@
 .header {
-  padding: 30px 0;
+  padding: 31px 0;
   font-family: $font-family-IBM;
+  @include breakpoint-down($breakpoint-sm-max) {
+    padding: 31px 6px;
+  }
   &__container {
     display: flex;
     align-items: center;
@@ -9,11 +12,26 @@
 
   &__logo {
     z-index: 1000;
-    width: 162px;
-    height: 38px;
+    width: 207px;
+    height: 43px;
+    flex-shrink: 0;
 
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include breakpoint-down($breakpoint-lg-max) {
+      width: 160px;
+      height: 34px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      width: 142px;
+      height: 30px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
-      margin-left: 10px;
+      width: 160px;
+      height: 34px;
     }
   }
 
@@ -22,7 +40,7 @@
     flex-grow: 1;
     background-color: $color-background-grey;
 
-    @include breakpoint-down($breakpoint-md-max) {
+    @include breakpoint-down($breakpoint-sm-max) {
       display: flex;
       flex-direction: column;
       width: 100vw;
@@ -31,40 +49,17 @@
       overflow-y: scroll;
       left: -100%;
       top: 0;
-      padding-top: 116px;
+      padding-top: 100px;
       transition: left $transition-duration;
 
-      &:after {
-        position: fixed;
-        content: '';
-        width: 100%;
-        height: 106px;
-        top: 0;
-        left: -100%;
-        right: 0;
-        background-color: $color-background-grey;
-        z-index: 100;
-        border-bottom: 1px solid $color-base;
-        transition: left $transition-duration;
-      }
+
 
       &.is-shown {
         left: 0;
         z-index: 10;
         background-color: $color-background-grey;
 
-        &:after {
-          position: fixed;
-          content: '';
-          width: 100%;
-          height: 106px;
-          top: 0;
-          left: 0;
-          right: 0;
-          background-color: $color-background-grey;
-          z-index: 100;
-          border-bottom: 1px solid $color-base;
-        }
+
       }
     }
   }
@@ -74,19 +69,35 @@
     align-items: center;
     flex-grow: 1;
     justify-content: center;
-    margin-right: 9%;
+    margin-right: 4%;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-right: 5%;
+    }
     @include breakpoint-down($breakpoint-md-max) {
+      margin-right: auto;
+      flex-grow:0;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
       display: block;
-      margin: 0 24px;
+      margin: 0 27px;
     }
   }
 
   &__link {
-    font-size: 16px;
-    line-height: 21px;
     text-align: center;
     text-transform: uppercase;
-    padding: 0 15px;
+    padding: 0 27px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding: 0 15px;
+    }
+
+    @include breakpoint-down($breakpoint-md-max) {
+      padding: 0 7px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding: 0;
+    }
+
     a {
       position: relative;
       &:after {
@@ -117,12 +128,12 @@
       }
     }
 
-    @include breakpoint-down($breakpoint-md-max) {
+    @include breakpoint-down($breakpoint-sm-max) {
 
       border-bottom: 1px solid rgba(#000000, 0.2);
       text-align: left;
       a,span {
-        padding: 30px 0;
+        padding: 24px 0 23px;
         display: block;
         &:after {
           display: none;
@@ -140,13 +151,31 @@
   }
 
   &__contact-link {
-    margin: 40px 27px 62px;
-    width: 93px;
-    height: 35px;
+    margin: 0 0 0 27px;
+    width: 145px;
+    height: 43px;
     a {
       width: 100%;
       height: 100%;
       padding: 9px 21px;
+      @include breakpoint-down($breakpoint-sm-max) {
+        padding: 12px 26px;
+      }
+    }
+
+    @include breakpoint-down($breakpoint-lg-max) {
+      width: 104px;
+      height: 35px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      width: 93px;
+      height: 35px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      width: 111px;
+      height: 42px;
+      margin-top: 85px;
+      margin-bottom: 55px;
     }
 
   }
@@ -156,7 +185,7 @@
     pointer-events: none;
     transition: opacity $transition-duration;
 
-    @include breakpoint-down($breakpoint-md-max) {
+    @include breakpoint-down($breakpoint-sm-max) {
       opacity: 1;
       pointer-events: initial;
     }
@@ -171,7 +200,7 @@
     pointer-events: none;
     transition: opacity $transition-duration;
 
-    @include breakpoint-down($breakpoint-md-max) {
+    @include breakpoint-down($breakpoint-sm-max) {
       &.is-shown {
         opacity: 1;
         pointer-events: initial;
@@ -190,7 +219,7 @@
   &__mobile-bottom {
     display: none;
 
-    @include breakpoint-down($breakpoint-md-max) {
+    @include breakpoint-down($breakpoint-sm-max) {
       display: flex;
       margin: auto 24px 21px;
       justify-content: space-between;

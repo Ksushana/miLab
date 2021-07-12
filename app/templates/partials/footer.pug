@@ -2,30 +2,32 @@ footer.footer
   .footer__container.container
     .footer__left
       .footer__logos
-        include ./../../inline-svgs/logo.svg
-        include ./../../inline-svgs/sk.svg
+        a(href="./home.html").footer__logo
+          include ./../../inline-svgs/logo.svg
+        a(href="#").footer__logo-sk
+          include ./../../inline-svgs/sk.svg
     .footer__right
       .footer__lists
         .footer__list
-          .footer__list-title Products
-          .footer__list-item
+          .footer__list-title.notes-title Products
+          .footer__list-item.notes
             a(href="#") MixCR.Pro
-          .footer__list-item
+          .footer__list-item.notes
             a(href="#") Kits
-          .footer__list-item
+          .footer__list-item.notes
             a(href="#") Service
-          .footer__list-item
+          .footer__list-item.notes
             a(href="#") Custom R&amp;D
         .footer__list
-          .footer__list-title About
-          .footer__list-item
+          .footer__list-title.notes-title About
+          .footer__list-item.notes
             a(href="#") Publications
-          .footer__list-item
+          .footer__list-item.notes
             a(href="#") Team
         .footer__list
-          .footer__list-title For clients
-          .footer__list-item
+          .footer__list-title.notes-title For clients
+          .footer__list-item.notes
             a(href="#") Contacts
     .footer__copyright
-      p © 2016-2020 All rights reserved
-      a(href="#") Privacy policy
+      p.notes © 2016-2020 All rights reserved
+      a.notes(href="#") Privacy policy

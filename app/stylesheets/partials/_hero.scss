@@ -2,40 +2,49 @@
   display: grid;
   grid-template-columns: auto 480px;
   @include breakpoint-down($breakpoint-lg-max) {
-    grid-template-columns: auto 380px;
+    grid-template-columns: 50% 50%;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    grid-template-columns: 490px auto;
   }
   @include breakpoint-down($breakpoint-sm-max) {
     display: flex;
     flex-direction: column-reverse;
   }
-  // margin-bottom: 200px;
   &__title {
+    @include breakpoint-up($breakpoint-xl-min) {
+      font-weight: 600;
+      font-size: 123px;
+      line-height: 130px;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin: 215px 0 250px;
+      padding-right: 30px;
+    }
     font-weight: 600;
-    font-size: 92px;
-    line-height: 115%;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    margin: 185px 0 0;
+    margin: 215px 0 250px;
     padding-right: 30px;
+
     @include breakpoint-down($breakpoint-lg-max) {
-      font-size: 70px;
+      margin: 215px 0 220px;
     }
     @include breakpoint-down($breakpoint-md-max) {
-      font-size: 50px;
+      margin: 90px 0 77px;
+      letter-spacing: -0.02em;
     }
     @include breakpoint-down($breakpoint-sm-max) {
-      font-size: 43px;
-      line-height: 110%;
-      margin-bottom: 43px;
-      margin-top: 0;
-      padding-right: 0;
+      margin: 90px 0 47px;
+      letter-spacing: -0.02em;
+      padding: 0;
     }
   }
   &__animation {
     height: 700px;
     display: flex;
+    @include breakpoint-down($breakpoint-md-max) {
+      height: 275px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
-      height: 395px;
       justify-content: center;
     }
     img {

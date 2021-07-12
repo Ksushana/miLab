@@ -325,6 +325,8 @@ var enableBodyScroll = function enableBodyScroll(targetElement) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mobile_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/mobile-menu */ "./scripts/modules/mobile-menu.js");
 /* harmony import */ var _modules_mobile_menu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_mobile_menu__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/animation */ "./scripts/modules/animation.js");
+/* harmony import */ var _modules_animation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_animation__WEBPACK_IMPORTED_MODULE_1__);
 
 /*========================================
 // Polyfills
@@ -337,6 +339,7 @@ __webpack_require__.r(__webpack_exports__);
 /*========================================
 // Modules
 ========================================*/
+
 
 
 /*========================================
@@ -380,6 +383,111 @@ __webpack_require__(/*! ./App.js */ "./scripts/App.js");
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! ./bundle.js */ "./scripts/bundle.js");
+
+/***/ }),
+
+/***/ "./scripts/modules/animation.js":
+/*!**************************************!*\
+  !*** ./scripts/modules/animation.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function () {
+  var ys = [-10, 1, 3, 5, 8, 8, 10, 11, 11, 11, 11, 11, 12, 13, 16, 19, 20, 30];
+  var minY = ys[0];
+  var maxY = ys[ys.length - 1];
+  var v0 = 0.1;
+  var deltaV = 0.002;
+  var particles = ys.map(function (y) {
+    return {
+      y: y,
+      v: (Math.random() - 0.5) * v0
+    };
+  });
+  var particles2 = ys.map(function (y) {
+    return {
+      y: y - 20,
+      v: (Math.random() - 0.5) * v0
+    };
+  });
+  var data = [{
+    y: particles.map(function (p) {
+      return p.y;
+    }),
+    boxpoints: "all",
+    jitter: 0.5,
+    pointpos: 0,
+    type: 'box',
+    marker: {
+      size: 53,
+      color: "#E8A4B4"
+    }
+  }];
+  var layout = {
+    xaxis: {
+      showgrid: false,
+      zeroline: false
+    },
+    yaxis: {
+      showgrid: false,
+      zeroline: false
+    },
+    font: {
+      size: 0
+    },
+    showlegend: false,
+    height: 600,
+    width: 671,
+    paper_bgcolor: "#dedede",
+    margin: 0
+  };
+
+  function randomize(p) {
+    p.v = p.v + (Math.random() - 0.5) * deltaV;
+    p.y = p.y + p.v;
+
+    if (p.y < minY) {
+      p.v = Math.abs(p.v);
+    }
+
+    if (p.y > maxY) {
+      p.v = -Math.abs(p.v);
+    }
+  }
+
+  var duration = 0;
+  Plotly.newPlot('myDiv', data, layout, {
+    displayModeBar: false
+  });
+
+  function animate() {
+    particles.forEach(randomize);
+    Plotly.animate('myDiv', {
+      data: [{
+        y: particles.map(function (p) {
+          return p.y;
+        })
+      }, {
+        y: particles2.map(function (p) {
+          return p.y + 20;
+        })
+      }],
+      // traces: [0],
+      layout: {}
+    }, {
+      transition: {
+        duration: duration
+      },
+      frame: {
+        duration: duration
+      }
+    });
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+})();
 
 /***/ }),
 
