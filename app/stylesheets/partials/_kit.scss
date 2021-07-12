@@ -3,15 +3,28 @@
   background-blend-mode: soft-light, normal;
   background-repeat: no-repeat;
   border-radius: $border-radius;
-  width: 375px;
-  height: 542px;
+  width: 462px;
+  height: 671px;
   background-size: cover;
-  padding: 52px 0 38px;
   display: flex;
   flex-direction: column;
+  padding: 62px 0 52px;
+
+  @include breakpoint-down($breakpoint-lg-max) {
+    width: 375px;
+    height: 542px;
+    padding: 52px 0 38px;
+    background-size: cover;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    width: 247px;
+    height: 348px;
+    padding: 25px 0;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-tablet.png);
+  }
   @include breakpoint-down($breakpoint-sm-max) {
     width: 335px;
-    height: 462px;
+    height: 460px;
     padding: 33px 0 36px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob.png);
   }
@@ -23,13 +36,24 @@
   }
 
   &__header {
-    padding: 20px 40px;
-    height: 180px;
+    padding: 25px 50px;
+    height: 222px;
     border-radius: 0px 20px 20px 0px;
-    margin-right: 94px;
+    margin-right: 115px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding: 20px 40px;
+      height: 180px;
+      margin-right: 94px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-right: 30px;
+      padding: 9px 20px 5px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
       padding-left: 36px;
       height: 160px;
+      padding: 20px 40px;
+      margin-right: 55px;
     }
     @include breakpoint-down($breakpoint-xxs-max) {
       margin-right: 50px;
@@ -54,49 +78,112 @@
   }
 
   &__subtitle {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    margin-bottom: 13px;
     font-family: $font-family-IBM;
+    margin-bottom: 16px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-bottom: 13px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-bottom: 4px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
-    font-weight: bold;
-    font-size: 42px;
-    line-height: 40px;
-    text-transform: uppercase;
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-right: 5px;
+    }
   }
 
   &__list {
     @include list-style-none;
-    padding: 33px 0 26px 45px;
+    padding: 33px 0 26px 52px;
     font-family: $font-family-IBM;
     margin-right: 94px;
-    font-size: 14px;
-    line-height: 180%;
-    letter-spacing: -0.01em;
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding: 20px 0 23px 41px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding: 9px 0 15px 20px;
+      margin-right: 0;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
       font-size: 12px;
       line-height: 180%;
-      padding: 18px 0 18px 40px;
+      padding: 12px 0 24px 37px;
     }
     @include breakpoint-down($breakpoint-xxs-max) {
       padding: 14px 0 16px 15px;
+
+    }
+
+    li {
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include breakpoint-down($breakpoint-lg-max) {
+        margin-bottom: 11px;
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 5px;
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        margin-bottom: 9px;
+      }
     }
   }
 
   &__btns {
     margin-top: auto;
-    padding-left: 41px;
+    padding-left: 52px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding-left: 40px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-left: 20px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-left: 37px;
+    }
     @include breakpoint-down($breakpoint-xxs-max) {
       padding-left: 15px;
     }
   }
 
   &__button {
-    margin-right: 20px;
-    padding: 11px 19px 11px;
+
+    padding: 11px 15px 11px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding: 11px 11px 13px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding: 8px 8px 10px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding: 11px 17px 13px;
+    }
+    &.bordered-link--black {
+      padding: 11px 17px 11px;
+      margin-right: 10px;
+      @include breakpoint-down($breakpoint-lg-max) {
+        padding: 11px 12px 13px;
+        margin-right: 18px;
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        padding: 8px 12px 10px;
+        margin-right: 7px;
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        padding: 11px 20px 13px;
+      }
+    }
     @include breakpoint-down($breakpoint-xxs-max) {
       padding: 11px 12px 11px;
     }

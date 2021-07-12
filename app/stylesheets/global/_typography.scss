@@ -62,11 +62,11 @@ a[href^="tel:"] {
     line-height: 55px;
   }
   @include breakpoint-down($breakpoint-md-max) {
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 30px;
+    line-height: 35px;
   }
   @include breakpoint-down($breakpoint-sm-max) {
-    font-size: 36px;
+    font-size: 43px;
     line-height: 46px;
   }
 }

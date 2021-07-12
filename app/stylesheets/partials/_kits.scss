@@ -1,11 +1,13 @@
 .kits {
   margin-top: 40px;
-  margin-bottom: 130px;
+  margin-bottom: 95px;
   display: flex;
   flex-direction: column;
-
+  @include breakpoint-down($breakpoint-lg-max) {
+    margin-bottom: 130px;
+  }
   &__title {
-    margin-bottom: 105px;
+    margin-bottom: 65px;
     @include breakpoint-down($breakpoint-sm-max) {
       margin-bottom: 41px;
     }
@@ -14,12 +16,11 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 375px);
-    grid-gap: 58px 54px;
-
-    @media (max-width: 1400px) {
-      grid-template-columns: repeat(2, 375px);
-      margin: 0 auto;
+    grid-template-columns: repeat(3, 462px);
+    grid-gap: 60px 95px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      grid-template-columns: repeat(3, 375px);
+      grid-gap: 58px 54px;
     }
     @include breakpoint-down($breakpoint-md-max) {
       display: flex;
