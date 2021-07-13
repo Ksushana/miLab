@@ -1,9 +1,9 @@
 .title {
   position: relative;
   display: flex;
-  margin-top: -18px;
+  margin-top: -13px;
   @include breakpoint-down($breakpoint-lg-max) {
-    margin-top: -12px;
+    margin-top: -10px;
   }
   @include breakpoint-down($breakpoint-md-max) {
     margin-top: -7px;

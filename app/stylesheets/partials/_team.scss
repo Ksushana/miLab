@@ -1,0 +1,85 @@
+.team {
+  margin-bottom: 228px;
+  @include breakpoint-down($breakpoint-lg-max) {
+    margin-bottom: 160px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    margin-bottom: 100px;
+  }
+  .title__right {
+    padding-top:23px;
+    padding-bottom: 23px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding-top:46px;
+      padding-bottom: 46px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-top:40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-top: 96px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-top: 58px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list-item {
+    width: 27%;
+    @include breakpoint-down($breakpoint-lg-max) {
+      width: 30%;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      width: 50%;
+      margin-bottom: 50px;
+    }
+    @include breakpoint-down(620px) {
+      width: 100%;
+      margin-bottom: 80px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 60px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      width: 228px;
+      height: 210px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-bottom: 46px;
+    }
+    @include breakpoint-down(620px) {
+      width: 335px;
+      height: 296px;
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    display: block;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-bottom: 3px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-bottom: 10px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-bottom: 4px;
+    }
+  }
+}

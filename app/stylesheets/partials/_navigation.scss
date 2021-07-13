@@ -99,13 +99,19 @@
   }
   &__list-next {
     position: absolute;
-    right: 10px;
+    right: 30px;
     bottom: 60px;
     font-size: 30px;
     line-height: 95%;
     font-family: $font-family-IBM;
     opacity: 0;
     transition: opacity $transition-duration;
+    @include breakpoint-down($breakpoint-lg-max) {
+      right: 10px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      right: 4px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
       display: none;
     }

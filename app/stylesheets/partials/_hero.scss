@@ -18,22 +18,22 @@
       line-height: 130px;
       letter-spacing: -0.02em;
       text-transform: uppercase;
-      margin: 215px 0 250px;
+      margin: 175px 0 250px;
       padding-right: 30px;
     }
     font-weight: 600;
-    margin: 215px 0 250px;
+    margin: 175px 0 250px;
     padding-right: 30px;
 
     @include breakpoint-down($breakpoint-lg-max) {
-      margin: 215px 0 220px;
+      margin: 175px 0 220px;
     }
     @include breakpoint-down($breakpoint-md-max) {
-      margin: 90px 0 77px;
+      margin: 50px 0 77px;
       letter-spacing: -0.02em;
     }
     @include breakpoint-down($breakpoint-sm-max) {
-      margin: 90px 0 47px;
+      margin: 50px 0 47px;
       letter-spacing: -0.02em;
       padding: 0;
     }

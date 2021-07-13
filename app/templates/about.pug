@@ -9,8 +9,27 @@ block bodyStart
 
 
 block content
-  .container
-    | Тут будет страница
+  .team.container
+    .subtitle.notes
+      a(href="./home.html") ↲ INDEX
+    .title
+      .title__left.h1
+        | ABOUT
+      .title__right.text
+        | We develop state-of-the-art bioinformatics solutions helping scientists and clinicians to probe adaptive immunity in health and disease. Backed up by our extensive experience in the analysis of immune repertoire sequencing data, we aim at delivering reliable and efficient software tools that can be easily employed by immunologists with little or no computational background.
+    .team__list
+      .team__list-item
+        img.team__img(src="assets/poslavsky.png", alt="")
+        span.h3.team__name Stanislav Poslavsky, PhD
+        span.text CEO, co-founder
+      .team__list-item
+        img.team__img(src="assets/bolotin.png", alt="")
+        span.h3.team__name Dmitriy Bolotin
+        span.text CTO, co-founder
+      .team__list-item
+        img.team__img(src="assets/chudakov.png", alt="")
+        span.h3.team__name Dmitriy Chudakov, PhD
+        span.text CSO, co-founder
 
 block bodyEnd
 

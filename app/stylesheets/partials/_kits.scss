@@ -1,17 +1,41 @@
 .kits {
-  margin-top: 40px;
   margin-bottom: 95px;
   display: flex;
   flex-direction: column;
+  position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      border-bottom: 1px solid #0F0E12;
+      width: calc(100% - 250px);
+      height: 1px;
+      left: 125px;
+      bottom: 0;
+    }
   @include breakpoint-down($breakpoint-lg-max) {
     margin-bottom: 160px;
+    &::after {
+      width: calc(100% - 210px);
+      left: 105px;
+    }
   }
-  @include breakpoint-down($breakpoint-lg-max) {
+  @include breakpoint-down($breakpoint-md-max) {
     margin-bottom: 77px;
+    &::after {
+      width: calc(100% - 172px);
+      left: 86px;
+    }
+  }
+  @include breakpoint-down(880px) {
+    &::after {
+      width: calc(100% - 40px);
+      left: 20px;
+    }
   }
   @include breakpoint-down($breakpoint-sm-max) {
     margin-top: 23px;
     margin-bottom: 63px;
+
   }
 
   &__title {
@@ -31,9 +55,11 @@
     display: grid;
     grid-template-columns: repeat(3, 462px);
     grid-gap: 60px 95px;
+
     @include breakpoint-down(1820px) {
       grid-template-columns: repeat(3, 31%);
       grid-gap: 58px 54px;
+
     }
     @include breakpoint-down(1439px) {
       grid-template-columns: repeat(3, 31.5%);
@@ -42,6 +68,9 @@
     @include breakpoint-down(1300px) {
       grid-template-columns: repeat(3,32%);
       grid-gap: 41px 22px;
+      &::after {
+        bottom: -55px;
+      }
     }
     @include breakpoint-down(979px) {
       display: flex;
@@ -50,15 +79,36 @@
     }
     @include breakpoint-down(750px) {
       flex-direction: column;
+      &::after {
+        bottom: -37px;
+        width: calc(100%-40px);
+        left: 20px;
+      }
     }
 
     &--scroll {
-      @include breakpoint-down($breakpoint-md-max) {
+      margin-top: 100px;
+      @include breakpoint-down($breakpoint-lg-max) {
+        margin-top: 70px;
+      }
+      @include breakpoint-down(1439px) {
+        margin-top: 60px;
+        grid-template-columns: repeat(2,337px);
+        grid-gap: 100px 133px;
+        .kits__grid-item {
+          margin-right: 0;
+        }
+      }
+      @include breakpoint-between(767px, 979px) {
+        grid-gap: 40px 40px;
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
         flex-direction: row;
-        grid-gap: 30px;
-        margin: 0 -20px;
+        grid-gap: 0;
+        margin: 50px -20px 0;
         padding-left: 20px;
         overflow: scroll;
+        flex-wrap: nowrap;
 
         &::-webkit-scrollbar {
           display: none;
@@ -66,6 +116,7 @@
 
         .kits__grid-item {
           position: relative;
+          margin-right: 30px;
 
           &::after {
             position: absolute;
@@ -77,12 +128,7 @@
           }
         }
       }
-      @include breakpoint-down($breakpoint-sm-max) {
-        grid-gap: 0;
-        .kit {
-          margin-right: 13px;
-        }
-      }
+
 
       @include breakpoint-down($breakpoint-sm-max) {
         .kit {
@@ -99,8 +145,11 @@
         .kit__btns {
           padding-left: 15px;
         }
+        .kit__list {
+          padding-bottom: 0;
+        }
         .kit__button {
-          margin-right: 16px;
+          margin-right: 6px;
           padding: 11px;
         }
       }

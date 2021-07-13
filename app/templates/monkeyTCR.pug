@@ -8,14 +8,14 @@ block bodyStart
 
 block content
   .full-info.container
-    .subtitle
+    .subtitle.notes
       a(href="./kits.html") ↲ Kits
     .full-info__grid
       .full-info__kit
         .kit.kit--no-btns
           .kit__header.kit__header--orange
             .kit__subtitle 24 Reactions
-            .kit__title Monkey TCR
+            .kit__title.h2 Monkey TCR Kit
           ul.kit__list
             li UMI 5’Race
             li IG heavy &amp; light
@@ -25,43 +25,44 @@ block content
             li High accuracy
 
       .full-info__info
-        h1.full-info__title.title-md  Monkey TCR Kit
-        p.full-info__text
+        h1.full-info__title.title-md.h1  Monkey TCR Kit
+        p.full-info__text.text
           | The Monkey TCR Kit is designed for unbiased amplification of TCR alpha and beta cDNA libraries using 5’RACE with unique molecular identifiers (UMI) incorporated within template switch oligo.
         .full-info__links
           button(type="button").bordered-link.bordered-link--black Buy, $2000
-          a(href="").bordered-link
-            +svgicon('sidebar')
-            span MixCR.Pro
-          a(href="").bordered-link
-            +svgicon('file-btn')
-            span Kit manual
+          div
+            a(href="").bordered-link
+              +svgicon('sidebar')
+              span MixCR.Pro
+            a(href="").bordered-link
+              +svgicon('file-btn')
+              span Kit manual
         .full-info__table
           .full-info__table-item
-            .full-info__table-title Species
-            .full-info__table-data
+            .full-info__table-title.notes-title Species
+            .full-info__table-data.notes
               span Monkey
           .full-info__table-item
-            .full-info__table-title Chains
-            .full-info__table-data
+            .full-info__table-title.notes-title Chains
+            .full-info__table-data.notes
               span Both TCR Alpha and Beta chains
           .full-info__table-item
-            .full-info__table-title Title
-            .full-info__table-data
+            .full-info__table-title.notes-title Title
+            .full-info__table-data.notes
               span RNA
           .full-info__table-item
-            .full-info__table-title Software
-            .full-info__table-data
+            .full-info__table-title.notes-title Software
+            .full-info__table-data.notes
               span Included
   .kits.container
-    .kits__title.title
+    .subtitle.notes
       span CHECK ALSO
     .kits__grid.kits__grid--scroll
       .kits__grid-item
-        .kit
+        .kit.kit--scroll
           .kit__header.kit__header--pink
             .kit__subtitle 24 Reactions
-            .kit__title Human TCR
+            .kit__title.h2 Human TCR Kit
           ul.kit__list
             li UMI 5’Race
             li IG heavy &amp; light
@@ -70,12 +71,13 @@ block content
             li Full length + isotypes
             li High accuracy
           .kit__btns
-            a.kit__button(href="./humanTCR.html").bordered-link Learn more ↳
+            button.kit__button(type="button").bordered-link.bordered-link--black Buy, $2000
+            a.kit__button.notes.bordered-link(href="") Learn more ↳
       .kits__grid-item
-        .kit
+        .kit.kit--scroll
           .kit__header.kit__header--blue
             .kit__subtitle 24 Reactions
-            .kit__title Human 7 genes
+            .kit__title.h2 Human 7 genes
           ul.kit__list
             li UMI 5’Race
             li IG heavy &amp; light
@@ -84,6 +86,7 @@ block content
             li Full length + isotypes
             li High accuracy
           .kit__btns
+            button.kit__button(type="button").bordered-link.bordered-link--black Buy, $2000
             a.kit__button(href="./human7genes.html").bordered-link Learn more ↳
 
 
