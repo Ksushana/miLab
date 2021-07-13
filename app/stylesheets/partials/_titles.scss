@@ -2,6 +2,12 @@
   position: relative;
   display: flex;
   margin-top: -18px;
+  @include breakpoint-down($breakpoint-lg-max) {
+    margin-top: -12px;
+  }
+  @include breakpoint-down($breakpoint-md-max) {
+    margin-top: -7px;
+  }
 
   @include breakpoint-down($breakpoint-sm-max) {
     flex-wrap: wrap;
@@ -28,19 +34,16 @@
     @include breakpoint-down($breakpoint-lg-max) {
       width: 400px;
       padding: 48px 60px 48px 0;
-      width: 521px;
+      width: 511px;
     }
     @include breakpoint-down($breakpoint-md-max) {
-      width: 320px;
+      width: 355px;
 
     }
     @include breakpoint-down($breakpoint-sm-max) {
       width: 100%;
       border-right: none;
-      border-bottom: 1px solid $color-base;
-      padding: 35px 0 42px 0;
-      font-size: 48px;
-      line-height: 95%;
+      padding: 45px 0 0 0;
     }
   }
 
@@ -59,11 +62,12 @@
     @include breakpoint-down($breakpoint-lg-max) {
       padding: 48px 0 48px 60px;
     }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding: 60px 0 25px 37px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
       width: 100%;
-      padding: 28px 0 28px;
-      font-size: 18px;
-      line-height: 150%;
+      padding: 13px 0 16px;
     }
   }
 

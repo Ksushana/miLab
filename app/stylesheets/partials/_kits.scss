@@ -4,31 +4,52 @@
   display: flex;
   flex-direction: column;
   @include breakpoint-down($breakpoint-lg-max) {
-    margin-bottom: 130px;
+    margin-bottom: 160px;
   }
+  @include breakpoint-down($breakpoint-lg-max) {
+    margin-bottom: 77px;
+  }
+  @include breakpoint-down($breakpoint-sm-max) {
+    margin-top: 23px;
+    margin-bottom: 63px;
+  }
+
   &__title {
     margin-bottom: 65px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-bottom: 108px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-bottom: 85px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
       margin-bottom: 41px;
     }
-
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 462px);
     grid-gap: 60px 95px;
-    @include breakpoint-down($breakpoint-lg-max) {
-      grid-template-columns: repeat(3, 375px);
+    @include breakpoint-down(1820px) {
+      grid-template-columns: repeat(3, 31%);
       grid-gap: 58px 54px;
     }
-    @include breakpoint-down($breakpoint-md-max) {
+    @include breakpoint-down(1439px) {
+      grid-template-columns: repeat(3, 31.5%);
+      grid-gap: 41px 33px;
+    }
+    @include breakpoint-down(1300px) {
+      grid-template-columns: repeat(3,32%);
+      grid-gap: 41px 22px;
+    }
+    @include breakpoint-down(979px) {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       grid-gap: 0;
-      .kits__grid-item {
-        margin-bottom: 40px;
-      }
+    }
+    @include breakpoint-down(750px) {
+      flex-direction: column;
     }
 
     &--scroll {
@@ -84,5 +105,18 @@
         }
       }
     }
+  }
+  &__grid-item {
+    @include breakpoint-down(979px) {
+      margin-right: 20px;
+      margin-bottom: 30px;
+    }
+    @include breakpoint-down(750px) {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      margin-right: 0;
+    }
+
   }
 }

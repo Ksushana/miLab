@@ -56,12 +56,16 @@ a[href^="tel:"] {
   font-size: 56px;
   line-height: 64px;
   text-transform: uppercase;
-  @include breakpoint-down($breakpoint-lg-max) {
+  @include breakpoint-down(1820px) {
     font-weight: 600;
     font-size: 50px;
     line-height: 55px;
   }
-  @include breakpoint-down($breakpoint-md-max) {
+  @include breakpoint-down(1439px) {
+    font-size: 43px;
+    line-height: 46px;
+  }
+  @include breakpoint-down(1279px) {
     font-size: 30px;
     line-height: 35px;
   }
