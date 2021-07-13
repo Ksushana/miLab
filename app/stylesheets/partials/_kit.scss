@@ -223,6 +223,10 @@
       font-size: 14px;
       line-height: 18px;
     }
+    @include breakpoint-down($breakpoint-xxs-max) {
+      font-size: 12px;
+      line-height: 16px;
+    }
     &.bordered-link--black {
       padding: 11px 17px 11px;
       margin-right: 10px;
