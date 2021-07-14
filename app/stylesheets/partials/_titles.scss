@@ -83,5 +83,24 @@
     text-transform: uppercase;
     padding: 0 60px 44px 0;
   }
+
+  &--bordered {
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-bottom: 36px;
+      border-bottom: 1px solid $color-base;
+    }
+  }
+
+  &--no-text {
+    .title__left {
+      border-right: none;
+      width: 100%;
+      padding: 58px 0;
+      border-bottom: 1px solid $color-base;
+      @include breakpoint-down($breakpoint-lg-max) {
+        padding: 48px 0 32px;
+      }
+    }
+  }
 }
 

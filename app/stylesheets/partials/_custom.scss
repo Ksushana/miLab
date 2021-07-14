@@ -1,0 +1,81 @@
+.custom {
+  margin-bottom: 100px;
+  @include breakpoint-down($breakpoint-md-max) {
+    margin-bottom: 70px;
+  }
+  @include breakpoint-down($breakpoint-sm-max) {
+    margin-bottom: 10px;
+  }
+  &__list {
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-top: 23px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-top: 0;
+    }
+  }
+  &__list-block {
+    display: flex;
+    padding-bottom: 49px;
+    padding-top: 68px;
+    border-bottom: 1px solid rgba(#000000, 0.2) ;
+    .h3 {
+      margin-bottom: 20px;
+    }
+    .custom__list-item:first-child {
+      margin-right: 10%;
+    }
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding-bottom: 46px;
+      padding-top: 93px;
+
+      .h3 {
+        margin-bottom: 16px;
+      }
+      .custom__list-item:first-child {
+        margin-right: 7.5%;
+      }
+      .text {
+        padding-right: 20%;
+      }
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-bottom: 42px;
+      padding-top: 42px;
+      .h3 {
+        margin-bottom: 20px;
+      }
+      .custom__list-item:first-child {
+        margin-right: 5%;
+      }
+      .text {
+        padding-right: 10%;
+      }
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      flex-direction: column;
+      padding-bottom: 0;
+      padding-top: 0;
+      border-bottom: 0;
+
+      .text {
+        padding-right: 0;
+      }
+      .h3 {
+        margin-bottom: 16px;
+      }
+      .custom__list-item:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__list-item {
+    @include breakpoint-down($breakpoint-sm-max) {
+      border-bottom: 1px solid $color-base;
+      padding-bottom: 27px;
+      padding-top: 36px;
+      margin-bottom: 20px;
+    }
+  }
+}

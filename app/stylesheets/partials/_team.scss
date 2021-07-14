@@ -6,6 +6,9 @@
   @include breakpoint-down($breakpoint-md-max) {
     margin-bottom: 100px;
   }
+  @include breakpoint-down($breakpoint-sm-max) {
+    margin-bottom: 45px;
+  }
   .title__right {
     padding-top:23px;
     padding-bottom: 23px;
@@ -31,6 +34,8 @@
     }
     @include breakpoint-down($breakpoint-sm-max) {
       flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
     }
   }
 
@@ -42,12 +47,17 @@
     @include breakpoint-down($breakpoint-sm-max) {
       width: 50%;
       margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     @include breakpoint-down(620px) {
       width: 100%;
       margin-bottom: 80px;
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 
@@ -57,15 +67,18 @@
     margin-bottom: 60px;
     @include breakpoint-down($breakpoint-lg-max) {
       width: 228px;
-      height: 210px;
+      height: auto;
     }
     @include breakpoint-down($breakpoint-md-max) {
       margin-bottom: 46px;
     }
     @include breakpoint-down(620px) {
       width: 335px;
-      height: 296px;
+      height: auto  ;
       margin: 0 auto 30px;
+    }
+    @include breakpoint-down($breakpoint-xxs-max) {
+      width: 100%;
     }
   }
 
