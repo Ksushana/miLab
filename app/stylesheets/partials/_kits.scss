@@ -2,7 +2,8 @@
   margin-bottom: 95px;
   display: flex;
   flex-direction: column;
-  position: relative;
+  &--also {
+    position: relative;
     &::after {
       position: absolute;
       content: "";
@@ -12,6 +13,7 @@
       left: 125px;
       bottom: 0;
     }
+  }
   @include breakpoint-down($breakpoint-lg-max) {
     margin-bottom: 160px;
     &::after {

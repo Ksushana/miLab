@@ -74,6 +74,32 @@ a[href^="tel:"] {
     line-height: 46px;
   }
 }
+.h2-kit {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 60px;
+  text-transform: uppercase;
+  @include breakpoint-down(1820px) {
+    font-size: 33px;
+    line-height: 42px;
+  }
+  @include breakpoint-down(1439px) {
+    font-size: 28px;
+    line-height: 46px;
+  }
+  @include breakpoint-down(1279px) {
+    font-size: 23px;
+    line-height: 35px;
+  }
+  @include breakpoint-down($breakpoint-sm-max) {
+    font-size: 29px;
+    line-height: 46px;
+  }
+  @include breakpoint-down($breakpoint-xxs-max) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
 .h3 {
   font-weight: 600;
   font-size: 36px;

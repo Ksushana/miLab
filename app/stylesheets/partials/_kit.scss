@@ -25,7 +25,7 @@
   @include breakpoint-down(1279px) {
     width: 247px;
     height: 348px;
-    padding: 25px 0;
+    padding: 25px 0 15px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-tablet.png);
   }
   @include breakpoint-down($breakpoint-sm-max) {
@@ -42,34 +42,39 @@
   }
 
   &__header {
-    padding: 25px 50px;
+    padding: 25px 30px 25px 40px;
     height: 222px;
     border-radius: 0px 20px 20px 0px;
-    margin-right: 115px;
+    margin-right: 64px;
     @include breakpoint-down(1820px) {
-      padding: 20px 40px;
+      padding: 20px 30px 20px 40px;
+      min-height: 180px;
       height: 180px;
-      margin-right: 94px;
-    }
-    @include breakpoint-down(1439px) {
-      padding-left: 36px;
-      height: 160px;
-      padding: 20px 40px;
       margin-right: 55px;
     }
+    @include breakpoint-down(1439px) {
+      height: 160px;
+      min-height: 160px;
+      margin-right: 55px;
+      padding-left: 30px;
+    }
     @include breakpoint-down(1279px) {
+      height: 110px;
+      min-height: 110px;
       margin-right: 30px;
       padding: 9px 20px 5px;
     }
     @include breakpoint-down($breakpoint-sm-max) {
       padding-left: 36px;
       height: 160px;
-      padding: 20px 40px;
+      padding: 20px 30px;
       margin-right: 55px;
     }
     @include breakpoint-down($breakpoint-xxs-max) {
       margin-right: 50px;
       padding-left: 15px;
+      min-height: 140px;
+      height: 140px;
     }
 
     &--pink {
@@ -114,15 +119,10 @@
     }
   }
 
-  &__title {
-    @include breakpoint-down(1279px) {
-      padding-right: 5px;
-    }
-  }
 
   &__list {
     @include list-style-none;
-    padding: 33px 0 26px 52px;
+    padding: 33px 0 26px 42px;
     font-family: $font-family-IBM;
     margin-right: 94px;
     @include breakpoint-down(1820px) {
@@ -131,16 +131,16 @@
     @include breakpoint-down(1439px) {
       font-size: 12px;
       line-height: 180%;
-      padding: 12px 0 24px 37px;
+      padding: 12px 0 24px 32px;
     }
     @include breakpoint-down(1279px) {
-      padding: 9px 0 15px 20px;
+      padding: 9px 10px 15px 20px;
       margin-right: 0;
     }
     @include breakpoint-down($breakpoint-sm-max) {
       font-size: 12px;
       line-height: 180%;
-      padding: 12px 0 24px 37px;
+      padding: 12px 0 24px 30px;
     }
     @include breakpoint-down($breakpoint-xxs-max) {
       padding: 14px 0 16px 15px;
@@ -150,7 +150,7 @@
     li {
       margin-bottom: 12px;
       font-size: 20px;
-      line-height: 26px;
+      line-height: 24px;
       text-transform: uppercase;
       &:last-child {
         margin-bottom: 0;
@@ -158,15 +158,16 @@
       @include breakpoint-down(1820px) {
         margin-bottom: 11px;
         font-size: 16px;
-        line-height: 21px;
-      }
-      @include breakpoint-down(1439px) {
-        margin-bottom: 9px;
-        font-size: 14px;
         line-height: 18px;
       }
+      @include breakpoint-down(1439px) {
+        margin-bottom: 6px;
+        font-size: 14px;
+        line-height: 17px;
+      }
       @include breakpoint-down(1279px) {
-
+        font-size: 12px;
+        line-height: 14px;
         margin-bottom: 5px;
       }
       @include breakpoint-down($breakpoint-sm-max) {
@@ -181,18 +182,18 @@
 
   &__btns {
     margin-top: auto;
-    padding-left: 52px;
+    padding-left: 42px;
     @include breakpoint-down(1820px) {
       padding-left: 40px;
     }
     @include breakpoint-down(1439px) {
-      padding-left: 37px;
+      padding-left: 32px;
     }
     @include breakpoint-down(1279px) {
-      padding-left: 20px;
+      padding-left: 17px;
     }
     @include breakpoint-down($breakpoint-sm-max) {
-      padding-left: 37px;
+      padding-left: 30px;
     }
     @include breakpoint-down($breakpoint-xxs-max) {
       padding-left: 15px;
