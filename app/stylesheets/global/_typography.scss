@@ -153,6 +153,10 @@ a[href^="tel:"] {
     font-size: 14px;
     line-height: 18px;
   }
+
+  &--link {
+    text-decoration-line: underline;
+  }
 }
 
 .notes-title {
