@@ -1,0 +1,104 @@
+extends ./layout/layout.pug
+
+block globalVars
+
+block headEnd
+
+block bodyStart
+
+block content
+  .full-info.container
+    .subtitle.notes
+      a(href="./kits.html") ↲ Kits
+    .full-info__grid
+      .full-info__kit
+        .kit.kit--no-btns
+          .kit__header.kit__header--green.kit__header--no-btns
+            .kit__subtitle 24 reactions
+            .kit__title.h2-kit Monkey 5’RACE TCR
+          ul.kit__list
+            li UMI 5’RACE
+            li TCR alpha &amp; beta
+            li Blood / Cells / Tissue / FF
+            li 150 + 150 nt Sequencing
+            li MiSeq/NextSeq/HiSeq/NovaSeq
+            li High accuracy
+
+      .full-info__info
+        h1.full-info__title.title-md.h1  Monkey 5’RACE TCR Kit
+        p.full-info__text.text
+          | MiLaboratories  Monkey 5’RACE TCR Kit is designed for unbiased amplification of TCR alpha and beta cDNA libraries using unique molecular identifiers (UMI) incorporated within template switch oligo.
+
+        .full-info__links
+          button(type="button").bordered-link.bordered-link--black Buy, $2000
+          div
+            a(href="").bordered-link
+              +svgicon('sidebar')
+              span MixCR.Pro
+            a(href="").bordered-link
+              +svgicon('file-btn')
+              span Kit manual
+        .full-info__table
+          .full-info__table-item
+            .full-info__table-title.notes-title Species
+            .full-info__table-data.notes
+              span Macaca Mulatta &amp; Macaca Fascicularis
+          .full-info__table-item
+            .full-info__table-title.notes-title Chains
+            .full-info__table-data.notes
+              span TCR alpha and beta
+          .full-info__table-item
+            .full-info__table-title.notes-title Material
+            .full-info__table-data.notes
+              span RNA
+          .full-info__table-item
+            .full-info__table-title.notes-title Sequencing
+            .full-info__table-data.notes
+              span 150 + 150  (full length)
+          .full-info__table-item
+            .full-info__table-title.notes-title Software
+            .full-info__table-data.notes
+              span MiXCR Pro (included)
+  .kits.kits--also.container
+    .subtitle.notes
+      span CHECK ALSO
+    .kits__grid.kits__grid--scroll
+      .kits__grid-item
+        .kit.kit--scroll
+          .kit__header.kit__header--orange
+            .kit__subtitle 24 reactions
+            .kit__title.h2-kit Human multiplex TCR
+          ul.kit__list
+            li Multiplex PCR
+            li TCR alpha &amp; beta
+            li Blood / Cells / Tissue / FF / FFPE
+            li 150 + 150 Sequencing
+            li MiSeq / NextSeq / HiSeq / NovaSeq
+            li High accuracy
+          .kit__btns
+            button.kit__button.notes.bordered-link.bordered-link--black.inactive(type="button") coming soon
+            a.kit__button.notes.bordered-link(href="/humanmultitcrkit.html") Learn more ↳
+      .kits__grid-item
+        .kit.kit--scroll
+          .kit__header.kit__header--purple
+            .kit__subtitle 24 reactions
+            .kit__title.h2-kit Human DNA TCR
+          ul.kit__list
+            li DNA multiplex
+            li TCR alpha &amp; beta
+            li Blood / Cells / Tissue / FF / FFPE
+            li 150 + 150 nt Sequencing
+            li High accuracy
+            li MiSeq/NextSeq/HiSeq/NovaSeq
+          .kit__btns
+            button.kit__button.notes.bordered-link.bordered-link--black.inactive(type="button") coming soon
+            a.kit__button.notes.bordered-link(href="/humandnakit.html") Learn more ↳
+
+
+
+
+block bodyEnd
+
+block bodyVendorScripts
+
+block bodyCustomScripts

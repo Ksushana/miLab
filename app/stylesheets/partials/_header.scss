@@ -75,6 +75,7 @@
     }
     @include breakpoint-down($breakpoint-md-max) {
       margin-right: auto;
+      margin-left: auto;
       flex-grow:0;
     }
     @include breakpoint-down($breakpoint-sm-max) {

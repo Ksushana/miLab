@@ -54,14 +54,19 @@
     flex-shrink: 0;
     @include breakpoint-down($breakpoint-lg-max) {
       width: 375px;
-      margin-right: 80px;
+      margin-right: 140px;
+    }
+    @include breakpoint-down(1439px) {
+      width: 375px;
+      margin-right: 100px;
+    }
+    @include breakpoint-down(1280px) {
+      margin-right: 35px;
     }
     @include breakpoint-down($breakpoint-md-max) {
       width: 305px;
-      margin-right: 35px;
     }
     @include breakpoint-down($breakpoint-sm-max) {
-      width: 335px;
       margin-right: 0;
       margin-bottom: 50px;
     }

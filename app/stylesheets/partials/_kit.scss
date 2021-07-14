@@ -43,13 +43,14 @@
 
   &__header {
     padding: 25px 30px 25px 40px;
-    height: 222px;
+    height: 196px;
+    min-height: 196px;
     border-radius: 0px 20px 20px 0px;
     margin-right: 64px;
     @include breakpoint-down(1820px) {
       padding: 20px 30px 20px 40px;
-      min-height: 180px;
-      height: 180px;
+      min-height: 160px;
+      height: 160px;
       margin-right: 55px;
     }
     @include breakpoint-down(1439px) {
@@ -67,6 +68,7 @@
     @include breakpoint-down($breakpoint-sm-max) {
       padding-left: 36px;
       height: 160px;
+      min-height: 160px;
       padding: 20px 30px;
       margin-right: 55px;
     }
@@ -75,6 +77,29 @@
       padding-left: 15px;
       min-height: 140px;
       height: 140px;
+    }
+
+    &--no-btns {
+      min-height: 222px;
+      height: 222px;
+      @include breakpoint-between(900px, 1820px) {
+        padding: 25px 30px 25px 40px;
+        border-radius: 0px 20px 20px 0px;
+        margin-right: 64px;
+      }
+      @include breakpoint-between(767px, 900px) {
+        height: 140px !important;
+        min-height: 140px !important;
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        height: 200px;
+        min-height: 200px;
+        padding: 9px 20px 5px;
+      }
+      @include breakpoint-down($breakpoint-xxs-max) {
+        min-height: 140px;
+        height: 140px;
+      }
     }
 
     &--pink {
@@ -96,29 +121,27 @@
 
   &__subtitle {
     font-family: $font-family-IBM;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     font-size: 20px;
     line-height: 26px;
     text-transform: uppercase;
     @include breakpoint-down(1820px) {
-      margin-bottom: 13px;
+      margin-bottom: 10px;
       font-size: 16px;
       line-height: 21px;
     }
     @include breakpoint-down(1439px) {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       font-size: 14px;
       line-height: 18px;
     }
     @include breakpoint-down(1279px) {
       margin-bottom: 4px;
-
     }
     @include breakpoint-down($breakpoint-sm-max) {
       margin-bottom: 10px;
     }
   }
-
 
   &__list {
     @include list-style-none;
@@ -201,7 +224,6 @@
   }
 
   &__button {
-
     padding: 11px 15px 11px;
     @include breakpoint-down(1820px) {
       padding: 11px 11px 13px;
@@ -253,7 +275,88 @@
   }
 
   &--no-btns {
-    @include breakpoint-between(900px, 1300px) {
+    @include breakpoint-down(1820px) {
+      width: 462px;
+      height: 671px;
+      background-size: cover;
+      padding: 62px 0 52px;
+      .kit__title {
+        font-size: 44px;
+        line-height: 60px;
+      }
+      .kit__list li {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    @include breakpoint-between(900px, 1439px) {
+      width: 375px;
+      height: 542px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
+      background-size: contain;
+      .kit__title {
+        font-size: 34px;
+        line-height: 49px;
+      }
+      .kit__list {
+        font-size: 20px;
+        line-height: 30px;
+        padding-top:30px;
+        padding-left: 40px;
+
+        li {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    @include breakpoint-down(1300px) {
+      width: 375px;
+      height: 542px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
+      background-size: contain;
+      .kit__title {
+        font-size: 34px;
+        line-height: 49px;
+      }
+      .kit__list {
+        font-size: 20px;
+        line-height: 30px;
+        padding-top:30px;
+        padding-left: 40px;
+
+        li {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    @include breakpoint-down(1280px) {
+      width: 375px;
+      height: 542px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
+      background-size: contain;
+      .kit__title {
+        font-size: 34px;
+        line-height: 49px;
+      }
+      .kit__list {
+        font-size: 20px;
+        line-height: 30px;
+        padding-top:30px;
+        padding-left: 40px;
+        padding-right: 20px;
+
+        li {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+    @include breakpoint-between(900px, 1280px) {
       width: 305px;
       height: 454px;
       background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-narrow.png);
@@ -295,11 +398,78 @@
       }
       .kit__list {
         padding-bottom: 0;
+        padding-top: 20px;
+        li {
+          font-size: 12px;
+           line-height: 16px;
+        }
       }
       .kit__button {
         margin-right: 6px;
         padding: 11px;
       }
+      .kit__title {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+    @include breakpoint-down(767px) {
+      width: 305px;
+      height: 454px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-narrow.png);
+      padding: 33px 0;
+      .kit__header {
+        margin-right: 25px;
+        padding: 20px 40px;
+      }
+      .kit__subtitle {
+        margin-bottom: 12px;
+      }
+      .kit__title {
+        font-size: 32px;
+        line-height: 48px;
+        padding-right: 0;
+      }
+      .kit__list {
+        padding: 14px 0 15px 38px;
+        margin-right: 0;
+        li {
+          font-size: 12px;
+          line-height: 16px;
+          margin-bottom: 10px;
+        }
+      }
+
+    }
+    @include breakpoint-down(374px) {
+      width: 269px;
+      height: 414px;
+      padding: 28px 0 32px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob-scroll.png);
+    .kit__header {
+      margin-right: 50px;
+      padding-left: 15px;
+    }
+    .kit__list,
+    .kit__btns {
+      padding-left: 15px;
+    }
+    .kit__list {
+      padding-bottom: 0;
+      padding-top: 20px;
+      li {
+        font-size: 12px;
+         line-height: 16px;
+      }
+    }
+    .kit__button {
+      margin-right: 6px;
+      padding: 11px;
+    }
+    .kit__title {
+      font-size: 22px;
+      line-height: 26px;
+    }
     }
   }
   &--scroll {
@@ -343,6 +513,18 @@
         }
       }
 
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      .kit__title {
+        font-size: 25px;
+        line-height: 35px;
+
+      }
+      .kit__list li {
+        font-size: 12px;
+        line-height: 13px;
+        margin-bottom: 9px;
+      }
     }
   }
 }

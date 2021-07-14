@@ -102,7 +102,10 @@
         }
       }
       @include breakpoint-between(767px, 979px) {
-        grid-gap: 40px 40px;
+        grid-gap: 0;
+        .kits__grid-item {
+          margin-right: 20px;
+        }
       }
       @include breakpoint-down($breakpoint-sm-max) {
         flex-direction: row;
@@ -152,7 +155,7 @@
         }
         .kit__button {
           margin-right: 6px;
-          padding: 11px;
+          padding: 10px;
         }
       }
     }
