@@ -9,8 +9,37 @@ block bodyStart
 
 
 block content
-  .container
-    | Тут будет страница
+  .contacts.container
+    .subtitle.notes
+      a(href="./home.html") ↲ INDEX
+    .title.title--no-text
+      .title__left.h1
+        | contacts
+    .contacts__list
+      .contacts__list-item
+        .contacts__img
+          +svgicon('usa')
+        .h3 USA
+        .text 534 S.Andres Dr.<br>
+          | Solana Beach, CA 92075<br>
+          | + 1 858 8296239<br>
+          | ynikolsky@milaboratory.com
+      .contacts__list-item
+        .contacts__img
+          +svgicon('russia')
+        .h3 Russia
+        .text 42 Bolshoy boulevard, bld. 1, office 102<br>
+          | Skolkovo Innovation center<br>
+          | Moscow<br>
+          | 143026
+      .contacts__list-item
+        .contacts__img
+          +svgicon('japan')
+        .h3 Distributor in Japan
+        .text INFOCOM CORPORATION<br>
+          | 2-34-17 Jingumae, Shibuya-ku, Tokyo 150-0001<br>
+          | +81-3-6866-3860<br>
+          | info-science@infocom.co.jp
 
 block bodyEnd
 
