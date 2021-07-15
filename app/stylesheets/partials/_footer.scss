@@ -188,6 +188,7 @@
       font-size: 10px;
       line-height: 13px;
       padding-right: 10px;
+      align-items: flex-start;
     }
     @include breakpoint-down($breakpoint-xxs-max) {
       flex-direction: column;

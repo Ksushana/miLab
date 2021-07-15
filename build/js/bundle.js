@@ -327,6 +327,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mobile_menu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_mobile_menu__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/animation */ "./scripts/modules/animation.js");
 /* harmony import */ var _modules_animation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_animation__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_show_article__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/show-article */ "./scripts/modules/show-article.js");
+/* harmony import */ var _modules_show_article__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_show_article__WEBPACK_IMPORTED_MODULE_2__);
 
 /*========================================
 // Polyfills
@@ -339,6 +341,7 @@ __webpack_require__.r(__webpack_exports__);
 /*========================================
 // Modules
 ========================================*/
+
 
 
 
@@ -516,6 +519,32 @@ __webpack_require__(/*! ./bundle.js */ "./scripts/bundle.js");
 
   openBtn.addEventListener("click", openCatalogMenu);
   closeBtn.addEventListener("click", closeCatalogMenu);
+})();
+
+/***/ }),
+
+/***/ "./scripts/modules/show-article.js":
+/*!*****************************************!*\
+  !*** ./scripts/modules/show-article.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function () {
+  var accordionButtons = document.getElementsByClassName('publications__more');
+
+  for (var i = 0; i < accordionButtons.length; i++) {
+    accordionButtons[i].addEventListener('click', function () {
+      this.classList.toggle('rotate');
+      var accordionContent = this.nextElementSibling;
+
+      if (accordionContent.style.maxHeight) {
+        accordionContent.style.maxHeight = null;
+      } else {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      }
+    });
+  }
 })();
 
 /***/ }),

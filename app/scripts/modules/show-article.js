@@ -1,12 +1,17 @@
 (function() {
-  var openBtns = document.querySelectorAll("..publications__more");
-  var article = document.querySelectorAll(".publications__article");
+  let accordionButtons = document.getElementsByClassName('publications__more');
+  for (let i = 0; i < accordionButtons.length; i++) {
+    accordionButtons[i].addEventListener('click', function() {
+        this.classList.toggle('rotate');
+        let accordionContent = this.nextElementSibling;
 
-  var toggleArticle = function() {
-    for (var i = 0; i < openBtns.length; i++) {
-      openBtns[i].classList.toggle('rotate');
-    }
+        if (accordionContent.style.maxHeight) {
+            accordionContent.style.maxHeight = null;
+        }
+          else {
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+        }
+    });
   }
-
-  openBtn.addEventListener("click", toggleArticle)
 })();
+
