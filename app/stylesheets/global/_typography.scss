@@ -70,7 +70,7 @@ a[href^="tel:"] {
     line-height: 35px;
   }
   @include breakpoint-down($breakpoint-sm-max) {
-    font-size: 43px;
+    font-size: 36px;
     line-height: 46px;
   }
 }
