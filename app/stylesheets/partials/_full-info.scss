@@ -217,6 +217,9 @@
         font-weight: 500;
         font-size: 12px;
         line-height: 16px;
+        &:last-child {
+          margin-bottom: 9px;
+        }
       }
 
       &.color-tag-IGH {
