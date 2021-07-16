@@ -17,29 +17,52 @@ block content
         | contacts
     .contacts__list
       .contacts__list-item
-        .contacts__img
+        .contacts__img.contacts__img--usa
           +svgicon('usa')
-        .h3 USA
-        .text 534 S.Andres Dr.<br>
-          | Solana Beach, CA 92075<br>
-          | + 1 858 8296239<br>
-          | ynikolsky@milaboratory.com
+        .contacts__list-text
+          .h3.contacts__title USA
+          .text 534 S.Andres Dr.<br>
+            | Solana Beach, CA 92075<br>
+            | + 1 858 8296239<br>
+            | ynikolsky@milaboratory.com
       .contacts__list-item
-        .contacts__img
+        .contacts__img.contacts__img--russia
           +svgicon('russia')
-        .h3 Russia
-        .text 42 Bolshoy boulevard, bld. 1, office 102<br>
-          | Skolkovo Innovation center<br>
-          | Moscow<br>
-          | 143026
+        .contacts__list-text
+          .h3.contacts__title Russia
+          .text 42 Bolshoy boulevard, bld. 1,<br> office 102<br>
+            | Skolkovo Innovation center<br>
+            | Moscow<br>
+            | 143026
       .contacts__list-item
-        .contacts__img
+        .contacts__img.contacts__img--japan
           +svgicon('japan')
-        .h3 Distributor in Japan
-        .text INFOCOM CORPORATION<br>
-          | 2-34-17 Jingumae, Shibuya-ku, Tokyo 150-0001<br>
-          | +81-3-6866-3860<br>
-          | info-science@infocom.co.jp
+        .contacts__list-text
+          .h3.contacts__title Distributor in Japan
+          .text INFOCOM CORPORATION<br>
+            | 2-34-17 Jingumae, Shibuya-ku, Tokyo 150-0001<br>
+            | +81-3-6866-3860<br>
+            | info-science@infocom.co.jp
+  .contacts__form-cover
+    .container
+      .contacts__emails
+        .contacts__emails-item
+          .notes-title Technical questions on software
+          a.notes-link(href="mailto") support@milaboratory.com
+        .contacts__emails-item
+          .notes-title Licensing And collaboration
+          a.notes-link(href="mailto") licensing@milaboratory.com
+        .contacts__emails-item
+          .notes-title Service
+          a.notes-link(href="mailto") service@milaboratory.com
+      .contacts__form
+        .h2 contact us
+        form(action="post")
+          p
+            input(type="email", name="", placeholder="Your e-mail")
+          p
+            textarea(name="", cols="30", rows="10",placeholder="Message")
+          button.contacts__form-btn.bordered-link(type="submit") send
 
 block bodyEnd
 
