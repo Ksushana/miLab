@@ -19,7 +19,8 @@ block content
       .contacts__list
         .contacts__list-item
           .contacts__img.contacts__img--usa
-            +svgicon('usa')
+            .contacts__img-cover
+              img(src="assets/usa.png", alt="")
           .contacts__list-text
             .h3.contacts__title USA
             .text 534 S.Andres Dr.<br>
@@ -28,7 +29,8 @@ block content
               a(href="mailto:ynikolsky@milaboratory.com") ynikolsky@milaboratory.com
         .contacts__list-item
           .contacts__img.contacts__img--russia
-            +svgicon('russia')
+            .contacts__img-cover
+              img(src="assets/rus.png", alt="")
           .contacts__list-text
             .h3.contacts__title Russia
             .text 42 Bolshoy boulevard, bld. 1,<br> office 102<br>
@@ -37,7 +39,8 @@ block content
               | 143026
         .contacts__list-item
           .contacts__img.contacts__img--japan
-            +svgicon('japan')
+            .contacts__img-cover
+              img(src="assets/japan.png", alt="")
           .contacts__list-text
             .h3.contacts__title Distributor in Japan
             .text INFOCOM CORPORATION<br>
