@@ -10,17 +10,17 @@ header.header(id="top")
           include ./../../inline-svgs/cross.svg
     .header__menu
       .header__links
-        .header__link.notes.link
-            a.inactive(href="./software.html") Software
-        .header__link.notes.link
+        .header__link.notes.link( class=(isSoftware ? "inactive" : null) )
+            a(href="./software.html") Software
+        .header__link.notes.link( class=(isKits ? "inactive" : null) )
             a(href="./kits.html") Kits
-        .header__link.notes.link
+        .header__link.notes.link( class=(isServices ? "inactive" : null) )
             a(href="./services.html") Services
-        .header__link.notes.link
+        .header__link.notes.link( class=(isCustom ? "inactive" : null) )
           a(href="./customR&D.html") Custom R&amp;D
-        .header__link.notes.link
+        .header__link.notes.link( class=(isAbout ? "inactive" : null) )
             a(href="./about.html") About
-        .header__link.notes.link
+        .header__link.notes.link( class=(isPublications ? "inactive" : null) )
           a(href="./publications.html") Publications
       .header__contact-link.bordered-link
         a(href="./contact.html") Contact
