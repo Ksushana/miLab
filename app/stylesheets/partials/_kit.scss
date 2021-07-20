@@ -224,6 +224,7 @@
   }
 
   &__button {
+    cursor: pointer;
     padding: 11px 15px 11px;
     @include breakpoint-down(1820px) {
       padding: 11px 11px 13px;

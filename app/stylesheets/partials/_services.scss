@@ -360,6 +360,7 @@
     width: 100%;
     padding: 30px;
     margin-bottom: 68px;
+    cursor: pointer;
     @include breakpoint-down($breakpoint-lg-max) {
       margin-bottom: 80px;
     }
