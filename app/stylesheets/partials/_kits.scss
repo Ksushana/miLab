@@ -114,6 +114,7 @@
         padding-left: 20px;
         overflow: scroll;
         flex-wrap: nowrap;
+        scrollbar-width: none;
 
         &::-webkit-scrollbar {
           display: none;

@@ -213,6 +213,7 @@
   &__form-chains {
     width: 24%;
     min-width: 24%;
+    flex-direction: column;
   }
   &__form-species {
     width: 20.6%;
@@ -380,9 +381,7 @@
       left: 0;
       right: 0;
       z-index: 10000;
-      background-color: #dedede;
       padding: 20px 0 0;
-      border: none;
       order: 1;
     }
   }
