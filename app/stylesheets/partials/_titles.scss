@@ -70,6 +70,31 @@
       width: 100%;
       padding: 35px 0 16px;
     }
+
+    &--btn {
+      display: flex;
+      .bordered-link {
+        flex-shrink: 0;
+        padding: 14px 17px 13px;
+        margin-left: 68px;
+        height: fit-content;
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        flex-direction: column;
+        .bordered-link {
+          width: fit-content;
+          margin-left: 0;
+          margin-top: 28px;
+          padding: 11px 32px 13px;
+        }
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        .bordered-link {
+          margin: 36px auto 0;
+          padding: 11px 23px 13px;
+        }
+      }
+    }
   }
 
   &--small {
