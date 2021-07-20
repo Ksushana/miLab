@@ -7,16 +7,78 @@
     align-items: center;
     border-right: 1px solid $color-base;
     border-left: 1px solid $color-base;
+    margin-top: -20px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-top: -52px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-top: -15px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-top: -25px;
+    }
   }
   &__form-header {
     display: flex;
     font-family: $font-family-IBM;
     padding-bottom: 23px;
+    padding-top: 35px;
     border-bottom: 1px solid rgba(#000000, 0.2);
+    border-top: 1px solid rgba(#000000, 0.2);
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 20px;
+      border-left: 1px solid rgba(#0F0E12, 0.3);
+      top: 0;
+      right: 0;
+      @include breakpoint-down($breakpoint-md-max) {
+        display: none;
+      }
+    }
+    .notes {
+      position: relative;
+      &:before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 20px;
+        border-left: 1px solid rgba(#0F0E12, 0.3);
+        top: -39px;
+        @include breakpoint-down($breakpoint-md-max) {
+          display: none;
+        }
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        padding-left: 5px;
+        &.services__form-chains {
+          padding-right: 90px;
+        }
+        &.services__form-material {
+          padding-right: 140px;
+        }
+        &.services__form-method {
+          padding-left: 0;
+        }
+      }
+    }
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding-bottom: 28px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-bottom: 10px;
+      padding-top: 8px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      display: none;
+    }
   }
 
   &__form-item {
-    padding-right: 85px;
+    padding-right: 4%;
+    padding-top: 9px;
     font-family: $font-family-IBM;
     display: flex;
     flex-wrap: wrap;
@@ -25,8 +87,12 @@
       padding-left: 43px;
       position: relative;
       display: block;
-      margin-bottom: 23px;
+      margin-bottom: 18px;
       padding-right: 41px;
+      &:last-of-type{
+        margin-bottom: 10px;
+      }
+
       &:before {
         position: absolute;
         content: "";
@@ -35,37 +101,92 @@
         background-color: $color-dark-grey;
         border-radius: 50%;
         left: 4px;
-        top: 2px;
-        transition: all $transition-duration;
+        top: -2px;
+        will-change: background-position;
+        transition: background-color $transition-duration, width $transition-duration, height $transition-duration, left $transition-duration, top $transition-duration;
         background-position: center;
         background-repeat: no-repeat;
         background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggb3BhY2l0eT0iMC4yIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNzMyMDEgNi42ODlMOC43MzE1NCAwLjQ1MzEyNUwxMCAyLjAzNTI2TDMuNzMyMDEgOS44NTE2OEwwIDUuMTk4MzdMMS4yNjg0NiAzLjYxNjIzTDMuNzMyMDEgNi42ODlaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K");
+        @include breakpoint-down($breakpoint-md-max) {
+          top: -6px;
+        }
+      }
+      @include breakpoint-down($breakpoint-lg-max) {
+        margin-bottom: 23px;
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        margin-bottom: 28px;
+        padding-right: 0;
+        &:before {
+          top: -2px;
+        }
       }
     }
     input:checked + label {
       font-weight: 500;
       &:before {
-        position: absolute;
-        content: "";
         width: 32px;
         height: 32px;
         background-color: $color-background-green;
-        border-radius: 50%;
         left: 0;
-        top: -2px;
+        top: -6px;
         background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxMCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggb3BhY2l0eT0iMC42IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNzMyMDEgNi45OTY3OEw4LjczMTU0IDAuNzYwNzQyTDEwIDIuMzQyOTJMMy43MzIwMSAxMC4xNTk1TDAgNS41MDYxMUwxLjI2ODQ2IDMuOTIzOTNMMy43MzIwMSA2Ljk5Njc4WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==");
-
+      }
+    }
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding-top: 0;
+      padding-right: 0;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      &:before {
+        top: -6px;
+      }
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      width: 100% !important;
+      margin-top: 16px;
+      padding-right: 0;
+      flex-direction: column;
+      label {
+        margin-bottom: 22px;
+        &:last-of-type{
+          margin-bottom: 24px;
+        }
       }
     }
   }
 
   &__form-method {
     flex-grow: 1;
-    padding-right: 40px;
+    padding-right: 20px;
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-right: 0;
+      width: 100%;
+    }
   }
   &__form-material {
-    width: 387px;
-    min-width: 387px;
+    width: 22.4%;
+    min-width: 22.4%;
+    label {
+      padding-right: 0;
+    }
+    @include breakpoint-down($breakpoint-lg-max) {
+      width: 23%;
+      min-width: 23%;
+      label {
+        padding-right: 20px;
+      }
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      width: 32%;
+      min-width: 32%;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-top: 35px;
+      label {
+        padding-right: 85px;
+      }
+    }
   }
   &__form-item-note {
     display: block;
@@ -73,54 +194,160 @@
     color: rgba(27, 27, 27, 0.8);
     font-weight: normal !important;
     &:first-child {
-      margin-top: 23px;
+      margin-top: 18px;
+    }
+    @include breakpoint-down($breakpoint-lg-max) {
+      &:first-child {
+        margin-top: 23px;
+
+      }
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-bottom: 10px;
+      &:first-child {
+        margin-top: 20px;
+
+      }
     }
   }
   &__form-chains {
-    width: 400px;
-    min-width: 400px;
+    width: 24%;
+    min-width: 24%;
   }
   &__form-species {
-    width: 340px;
-    min-width: 340px;
+    width: 20.6%;
+    min-width: 20.6%;
     label {
       padding-right: 10px;
       width: 50%;
     }
-
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding-right: 0;
+      width: 21%;
+      min-width: 21%;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      width: 13.5%;
+      min-width: 13.5%;
+      label {
+        padding-right: 10px;
+        width: 100%;
+      }
+    }
   }
   &__form-block {
+    position: relative;
     margin-top: 106px;
     margin-bottom: 80px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-top: 128px;
+      margin-bottom: 120px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-top: 66px;
+      margin-bottom: 82px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-top: 92px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 60px;
+    }
 
     .h1 {
-      margin-bottom: 86px;
+      margin-bottom: 50px;
+      margin-top: 0;
+      @include breakpoint-down($breakpoint-lg-max) {
+        margin-bottom: 30px;
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        letter-spacing: -0.02em;
+        margin-bottom: 35px;
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        font-size: 36px;
+        line-height: 46px;
+        letter-spacing: -0.01em;
+        margin-bottom: 35px;
+      }
     }
   }
 
   &__form-fieldset {
     display: flex;
     border:0 none;
-    padding: 45px 0 35px;
+    padding: 50px 0 11px;
     min-height: 285px;
     margin: 0;
+    order: 2;
     align-items: flex-start;
     border-bottom: 1px solid $color-black;
     &:last-of-type {
       border-bottom: 1px solid rgba(#000000, 0.2);
       margin-bottom: 60px;
     }
+    .subtitle {
+      display: none;
+    }
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding: 70px 0 0;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding: 40px 0 35px;
+      min-height: unset;
+      &:last-of-type {
+        margin-bottom: 45px;
+      }
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      flex-direction: column;
+      padding: 14px 0 35px;
+      border-bottom: none;
+      .subtitle {
+        display: block;
+        margin-bottom: 40px;
+      }
+      &:first-of-type {
+        margin-top: -100px;
+
+      }
+      &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 100px;
+      }
+    }
   }
 
   &__form-legend {
     .h2 {
-      margin-bottom: 17px;
+      margin-bottom: 18px;
+      @include breakpoint-down($breakpoint-md-max) {
+        font-size: 32px;
+        line-height: 48px;
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        font-size: 36px;
+        line-height: 46px;
+        letter-spacing: -0.01em;
+        margin-top: 28px;
+      }
     }
-    .notes {
+    .notes.services__form-list {
       font-family: $font-family-IBM;
+
       span {
         display: inline-block;
         margin-bottom: 10px;
+      }
+      @include breakpoint-down($breakpoint-md-max) {
+        span {
+          margin-bottom: 13px;
+        }
+      }
+      @include breakpoint-down($breakpoint-sm-max) {
+        span {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -133,6 +360,30 @@
     width: 100%;
     padding: 30px;
     margin-bottom: 68px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      margin-bottom: 80px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding: 32px 30px 36px;
+      margin-bottom: 30px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding: 26px 30px 22px;
+      margin-bottom: 21px;
+    }
+  }
+  &__btn-sticky {
+    @include breakpoint-down($breakpoint-sm-max) {
+      position: sticky;
+      top: calc(100vh - 106px);
+      left: 0;
+      right: 0;
+      z-index: 10000;
+      background-color: #dedede;
+      padding: 20px 0 0;
+      border: none;
+      order: 1;
+    }
   }
   &__writeus {
     font-family: $font-family-IBM;
@@ -141,6 +392,45 @@
     width: 100%;
     a {
       text-decoration: underline;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      order: 3;
+    }
+  }
+
+  &__form {
+    @include breakpoint-down($breakpoint-sm-max) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__clear {
+    position: absolute;
+    top: 21px;
+    right: 0;
+    a{
+      padding: 11px 23px 13px;
+    }
+    @include breakpoint-down($breakpoint-lg-max) {
+      top: 26px;
+      a{
+        padding: 11px 17px 13px;
+      }
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      top: 12px;
+      a{
+        padding: 11px 38px 13px;
+      }
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      position: static;
+      margin: 8px auto 26px;
+      a{
+        padding: 10px 20px 12px;
+      }
     }
   }
 }

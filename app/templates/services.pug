@@ -2,6 +2,9 @@ extends ./layout/layout.pug
 
 block globalVars
 
+block variables
+  - let isService = true;
+
 block headEnd
 
 block bodyStart
@@ -32,14 +35,18 @@ block content
       form.services__form( action="#" method="post" )
         fieldset.services__form-fieldset
           .services__form-legend.services__form-method
+            .subtitle.notes
+              span Method used
             .h2 5’RACE<br> with UMI
-            .notes
-              span ⁕ Quantitative
-              span ⁕ Error-free
-              span ⁕ Full-lenght
-              span ⁕ Hypermutations
-              span ⁕ All isotypes
+            .notes.services__form-list
+              span &ensp;⁕ Quantitative
+              span &ensp;⁕ Error-free
+              span &ensp;⁕ Full-lenght
+              span &ensp;⁕ Hypermutations
+              span &ensp;⁕ All isotypes
           .services__form-item.services__form-material
+            .subtitle.notes.services__form-list
+              span Starting material
             input(type="checkbox" id="High_quality_RNA-1" name="Starting_material-1" value="High quality RNA")
             label.notes( for="High_quality_RNA-1") High quality RNA
               span.services__form-item-note ⁕ Extracted from pbmc
@@ -48,6 +55,8 @@ block content
               span.services__form-item-note ⁕ FF tissue
 
           .services__form-item.services__form-chains
+            .subtitle.notes
+              span Chains available
             input(type="checkbox" id="TCR_alpha/beta-1" name="Chains_available-1" value="TCR alpha/beta")
             label.notes( for="TCR_alpha/beta-1") TCR alpha/beta
             input(type="checkbox" id="TCR_gamma/delta-1" name="Chains_available-1" value="TCR gamma/delta")
@@ -57,6 +66,8 @@ block content
             input(type="checkbox" id="IG_Light-1" name="Chains_available-1" value="IG Light")
             label.notes( for="IG_Light-1") IG Light
           .services__form-item.services__form-species
+            .subtitle.notes.services__form-list
+              span Species available
             input(type="checkbox" id="Human-1" name="Species_available-1" value="Human")
             label.notes( for="Human-1") Human
             input(type="checkbox" id="Monkey-1" name="Species_available-1" value="Monkey")
@@ -64,49 +75,69 @@ block content
             input(type="checkbox" id="Mouse-1" name="Species_available-1" value="Mouse")
             label.notes( for="Mouse-1") Mouse
             input(type="checkbox" id="Other-1" name="Species_available-1" value="Other")
-            label.notes( for="Other-1") Other
+            label.notes( for="Other-1") Rat
             input(type="checkbox" id="Rat-1" name="Species_available-1" value="Rat")
-            label.notes( for="Rat-1") Rat
+            label.notes( for="Rat-1") Other
         fieldset.services__form-fieldset
           .services__form-legend.services__form-method
+            .subtitle.notes.services__form-list
+              span Method used
             .h2 RNA<br> Multiplex
-            .notes
+            .notes.services__form-list
               span ⁕ Sensitivity
               span ⁕ CDR3 only
               span ⁕ Low quality RNA works
           .services__form-item.services__form-material
+            .subtitle.notes.services__form-list
+              span Starting material
             input(type="checkbox" id="Low_quality_RNA-2" name="Starting_material-2" value="Low quality RNA")
             label.notes( for="Low_quality_RNA-2") Low quality RNA
               span.services__form-item-note ⁕ or high quality RNA from low cell numbers
 
           .services__form-item.services__form-chains
+            .subtitle.notes.services__form-list
+              span Chains available
             input(type="checkbox" id="TCR_alpha/beta-2" name="Chains_available-2" value="TCR alpha/beta")
             label.notes( for="TCR_alpha/beta-2") TCR alpha/beta
 
           .services__form-item.services__form-species
+            .subtitle.notes.services__form-list
+              span Species available
             input(type="checkbox" id="Human-2" name="Species_available-2" value="Human")
             label.notes( for="Human-2") Human
         fieldset.services__form-fieldset
           .services__form-legend.services__form-method
+            .subtitle.notes
+              span Method used
             .h2 DNA<br> Multiplex
-            .notes
+            .notes.services__form-list
               span ⁕ Quantitative
               span ⁕ CDR3 only
               span ⁕ All-in-on
           .services__form-item.services__form-material
+            .subtitle.notes.services__form-list
+              span Starting material
             input(type="checkbox" id="Low_quality_RNA-3" name="Starting_material-3" value="Low quality RNA")
-            label.notes( for="Low_quality_RNA-3") Low quality RNA
+            label.notes( for="Low_quality_RNA-3") DNA
               span.services__form-item-note ⁕ or high quality RNA from low cell numbers
 
           .services__form-item.services__form-chains
+            .subtitle.notes.services__form-list
+              span Chains available
             input(type="checkbox" id="TCR_alpha/beta-3" name="Chains_available-3" value="7 genes in one")
             label.notes( for="TCR_alpha/beta-3") 7 genes in one
 
           .services__form-item.services__form-species
+            .subtitle.notes.services__form-list
+              span Species available
             input(type="checkbox" id="Human-3" name="Species_available-3" value="Human")
             label.notes( for="Human-3") Human
-        button.services__form-btn.bordered-link.bordered-link--black(type="submit") Inquire
-        span.services__writeus.notes OR <A href="">Write us</a> If you need something special
+        .services__btn-sticky
+          button.services__form-btn.bordered-link.bordered-link--black(type="submit") Inquire
+      .services__clear.bordered-link
+        a(href="#") Clean all
+      span.services__writeus.notes OR <A href="">Write us</a> If you need something special
+
   .terms
     .container
       h2.h2 Order Terms

@@ -1,24 +1,109 @@
 .terms {
   background-color: $color-background-green;
+  padding-bottom: 135px;
+  margin-bottom: -120px;
+  overflow: hidden;
+  @include breakpoint-down($breakpoint-md-max) {
+    padding-bottom: 105px;
+    margin-bottom: -111px;
+  }
+  &+.navigation .subtitle span {
+    background-color: $color-background-green;
+  }
   .h2 {
     padding-top: 48px;
     padding-bottom: 20px;
     width: 100%;
     border-bottom: 1px solid $color-base;
     margin: 0 0 44px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding-top: 55px;
+      padding-bottom: 25px;
+      margin-bottom: 40px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      font-size: 32px;
+      line-height: 48px;
+      padding-top: 64px;
+      padding-bottom: 32px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      font-size: 35px;
+      line-height: 48px;
+      padding-top: 35px;
+      padding-bottom: 22px;
+      margin-bottom: 10px;
+    }
   }
 
   &__list {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     font-family: $font-family-IBM;
-    grid-template-columns: repeat(3, 590px);
     padding-top: 40px;
+    margin-bottom: 20px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-top: 26px;
+      margin-bottom: 0;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      flex-direction: column;
+      &:not(:last-of-type) {
+        margin-bottom: 64px;
+      }
+    }
   }
   &__list-item {
-    padding-right: 200px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
+    width: 35.3%;
+    padding-right: 10%;
     .notes-title {
       margin-bottom: 16px;
+      padding-right: 85px;
+    }
+    &:nth-child(3n) {
+      width: 29%;
+      padding-right: 5%;
+    }
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding-right: 75px;
+      margin-bottom: 80px;
+      width: 32.5%;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-right: 35px;
+      margin-bottom: 0;
+      width: 34.5%;
+      padding-right: 30px;
+      &:first-of-type {
+        margin-bottom: 125px;
+      }
+
+      .notes-title {
+        font-size: 16px;
+        padding-right: 0;
+        margin-bottom: 21px;
+      }
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-right: 0;
+      margin-bottom: 36px;
+      width: 100%;
+      &:first-of-type {
+        margin-bottom: 36px;
+      }
+      .notes-title {
+        font-size: 14px;
+        margin-bottom: 19px;
+      }
+      &:nth-child(3n) {
+        width: 100%;
+        padding-right: 0;
+      }
     }
   }
 
@@ -33,10 +118,24 @@
       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyNyAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI2LjAwMDEgMTEuNDc4OEwyMC4wMDAxIDEuNDc4ODVDMTkuOTA0NSAxLjMyMDc1IDE5Ljc2NzEgMS4xOTIyIDE5LjYwMjkgMS4xMDc0N0MxOS40Mzg3IDEuMDIyNzUgMTkuMjU0MyAwLjk4NTE0NyAxOS4wNzAxIDAuOTk4ODQ4SDcuMDAwMDlDNi44MjkyIDAuOTk5NTYxIDYuNjYxMzQgMS4wNDQwNiA2LjUxMjU0IDEuMTI4MDlDNi4zNjM3NCAxLjIxMjEyIDYuMjM4OTUgMS4zMzI4OCA2LjE1MDA5IDEuNDc4ODVMMC4xNTAwODggMTEuNDc4OEMwLjA2MjMxOTcgMTEuNjMwOSAwLjAxNjExMzMgMTEuODAzMyAwLjAxNjExMzMgMTEuOTc4OEMwLjAxNjExMzMgMTIuMTU0NCAwLjA2MjMxOTcgMTIuMzI2OCAwLjE1MDA4OCAxMi40Nzg4TDYuMTUwMDkgMjIuNDc4OEM2LjIzMzk0IDIyLjYzMjMgNi4zNTY1NiAyMi43NjEgNi41MDU3MSAyMi44NTIzQzYuNjU0ODUgMjIuOTQzNSA2LjgyNTMxIDIyLjk5NCA3LjAwMDA5IDIyLjk5ODhIMTkuMDcwMUMxOS4yNDI3IDIyLjk5OTkgMTkuNDEyNiAyMi45NTYyIDE5LjU2MzMgMjIuODcyMUMxOS43MTQgMjIuNzg4IDE5Ljg0MDMgMjIuNjY2MyAxOS45MzAxIDIyLjUxODhMMjUuOTMwMSAxMi41MTg4QzI2LjAzNjMgMTIuMzY4NyAyNi4wOTkgMTIuMTkyMiAyNi4xMTEzIDEyLjAwODdDMjYuMTIzNyAxMS44MjUyIDI2LjA4NTIgMTEuNjQxOSAyNi4wMDAxIDExLjQ3ODhaTTE4LjUxMDEgMjAuOTk4OEg3LjU5MDA5TDIuMTcwMDkgMTEuOTk4OEw3LjU5MDA5IDIuOTk4ODVIMTguNTEwMUwyMy45MzAxIDExLjk5ODhMMTguNTEwMSAyMC45OTg4WiIgZmlsbD0iYmxhY2siLz4KPHBhdGggZD0iTTEzIDVDMTIuNzM0OCA1IDEyLjQ4MDQgNS4xMDUzNiAxMi4yOTI5IDUuMjkyODlDMTIuMTA1NCA1LjQ4MDQzIDEyIDUuNzM0NzggMTIgNlYxNEMxMiAxNC4yNjUyIDEyLjEwNTQgMTQuNTE5NiAxMi4yOTI5IDE0LjcwNzFDMTIuNDgwNCAxNC44OTQ2IDEyLjczNDggMTUgMTMgMTVDMTMuMjY1MiAxNSAxMy41MTk2IDE0Ljg5NDYgMTMuNzA3MSAxNC43MDcxQzEzLjg5NDYgMTQuNTE5NiAxNCAxNC4yNjUyIDE0IDE0VjZDMTQgNS43MzQ3OCAxMy44OTQ2IDUuNDgwNDMgMTMuNzA3MSA1LjI5Mjg5QzEzLjUxOTYgNS4xMDUzNiAxMy4yNjUyIDUgMTMgNVoiIGZpbGw9ImJsYWNrIi8+CjxwYXRoIGQ9Ik0xMyAxNkMxMi43MzQ4IDE2IDEyLjQ4MDQgMTYuMTA1NCAxMi4yOTI5IDE2LjI5MjlDMTIuMTA1NCAxNi40ODA0IDEyIDE2LjczNDggMTIgMTdWMThDMTIgMTguMjY1MiAxMi4xMDU0IDE4LjUxOTYgMTIuMjkyOSAxOC43MDcxQzEyLjQ4MDQgMTguODk0NiAxMi43MzQ4IDE5IDEzIDE5QzEzLjI2NTIgMTkgMTMuNTE5NiAxOC44OTQ2IDEzLjcwNzEgMTguNzA3MUMxMy44OTQ2IDE4LjUxOTYgMTQgMTguMjY1MiAxNCAxOFYxN0MxNCAxNi43MzQ4IDEzLjg5NDYgMTYuNDgwNCAxMy43MDcxIDE2LjI5MjlDMTMuNTE5NiAxNi4xMDU0IDEzLjI2NTIgMTYgMTMgMTZaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K");
       width: 32px;
       height: 32px;
-      top: 10px;
+      top: 0px;
       left: 0;
       background-repeat: no-repeat;
       background-position: center;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-bottom: 65px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-bottom: 20px;
+      padding-left: 56px;
+      margin-top: 36px;
+      &::before {
+        top: 4px;
+      }
+      br {
+        display: none;
+      }
     }
   }
 }
