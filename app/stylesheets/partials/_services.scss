@@ -1,5 +1,5 @@
 .services {
-  marquee {
+  .marquee {
     font-family: $font-family-IBM;
     font-weight: 500;
     height: 75px;
@@ -8,6 +8,15 @@
     border-right: 1px solid $color-base;
     border-left: 1px solid $color-base;
     margin-top: -20px;
+    overflow: hidden;
+    .notes {
+
+      white-space: nowrap;
+      &.marquee1 {
+        animation: marquee2 10s linear infinite;
+      }
+    }
+
     @include breakpoint-down($breakpoint-lg-max) {
       margin-top: -52px;
     }
@@ -46,7 +55,7 @@
         width: 1px;
         height: 20px;
         border-left: 1px solid rgba(#0F0E12, 0.3);
-        top: -39px;
+        top: -35px;
         @include breakpoint-down($breakpoint-md-max) {
           display: none;
         }
@@ -410,27 +419,47 @@
     position: absolute;
     top: 21px;
     right: 0;
-    a{
+    button{
+      @include button-reset-style;
       padding: 11px 23px 13px;
     }
     @include breakpoint-down($breakpoint-lg-max) {
       top: 26px;
-      a{
+      button{
         padding: 11px 17px 13px;
       }
     }
     @include breakpoint-down($breakpoint-md-max) {
       top: 12px;
-      a{
+      button{
         padding: 11px 38px 13px;
       }
     }
     @include breakpoint-down($breakpoint-sm-max) {
       position: static;
       margin: 8px auto 26px;
-      a{
+      button{
         padding: 10px 20px 12px;
       }
+    }
+  }
+
+  @keyframes marquee1 {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
     }
   }
 }

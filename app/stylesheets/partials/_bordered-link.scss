@@ -27,13 +27,19 @@
     background-color: $color-base;
     color: $color-white;
   }
+  &:active {
+    background-color:transparent;
+    color: $color-base;
+  }
 
-  a {
+  a,
+  button {
     width: 100%;
     height: 100%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    color: inherit;
   }
 
   &--black {

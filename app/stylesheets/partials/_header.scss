@@ -88,9 +88,16 @@
     text-align: center;
     text-transform: uppercase;
     padding: 0 27px;
-    &.inactive {
-      a {
-        text-decoration: line-through;
+    &.inactive a {
+      &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        height: 1px;
+        width: 100%;
+        background-color: $color-base;
       }
     }
     @include breakpoint-down($breakpoint-lg-max) {

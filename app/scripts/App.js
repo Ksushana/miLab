@@ -16,6 +16,7 @@
 import mobileMenu from './modules/mobile-menu';
 import Animation from './modules/animation';
 import Article from './modules/show-article';
+import Clear from './modules/clear-filter';
 
 
 

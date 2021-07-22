@@ -329,6 +329,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_animation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_animation__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_show_article__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/show-article */ "./scripts/modules/show-article.js");
 /* harmony import */ var _modules_show_article__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_show_article__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_clear_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/clear-filter */ "./scripts/modules/clear-filter.js");
+/* harmony import */ var _modules_clear_filter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_clear_filter__WEBPACK_IMPORTED_MODULE_3__);
 
 /*========================================
 // Polyfills
@@ -341,6 +343,7 @@ __webpack_require__.r(__webpack_exports__);
 /*========================================
 // Modules
 ========================================*/
+
 
 
 
@@ -477,6 +480,30 @@ __webpack_require__(/*! ./bundle.js */ "./scripts/bundle.js");
 // }
 // animate();
 // })();
+
+/***/ }),
+
+/***/ "./scripts/modules/clear-filter.js":
+/*!*****************************************!*\
+  !*** ./scripts/modules/clear-filter.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function () {
+  var clearBtn = document.querySelector(".services__clear button");
+  var form = document.querySelector(".services__form");
+
+  if (!clearBtn) {
+    return;
+  }
+
+  var clearFilter = function clearFilter() {
+    form.reset();
+  };
+
+  clearBtn.addEventListener("click", clearFilter);
+})();
 
 /***/ }),
 
