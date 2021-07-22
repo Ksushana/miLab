@@ -13,7 +13,7 @@
 
       white-space: nowrap;
       &.marquee1 {
-        animation: marquee2 10s linear infinite;
+        animation: marquee1 10s linear infinite;
       }
     }
 
@@ -447,10 +447,27 @@
   @keyframes marquee1 {
     0% {
       transform: translateX(0);
+      opacity: 1;
+    }
+
+    48% {
+      transform: translateX(100%);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    51% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    52% {
+      opacity: 1;
     }
 
     100% {
-      transform: translateX(100%);
+      transform: translateX(0);
     }
   }
   @keyframes marquee2 {
