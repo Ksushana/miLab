@@ -557,11 +557,26 @@ __webpack_require__(/*! ./bundle.js */ "./scripts/bundle.js");
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+// (function() {
+//   let accordionButtons = document.getElementsByClassName('.publications__more--mob');
+//   for (let i = 0; i < accordionButtons.length; i++) {
+//     accordionButtons[i].addEventListener('click', function() {
+//         this.classList.toggle('rotate');
+//         let accordionContent = this.nextElementSibling;
+//         if (accordionContent.style.maxHeight) {
+//             accordionContent.style.maxHeight = null;
+//         }
+//           else {
+//             accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+//         }
+//     });
+//   }
+// })();
 (function () {
-  var accordionButtons = document.getElementsByClassName('publications__more');
+  var accordionBlocks = document.querySelectorAll('.publications__list-item-inner');
 
-  for (var i = 0; i < accordionButtons.length; i++) {
-    accordionButtons[i].addEventListener('click', function () {
+  for (var i = 0; i < accordionBlocks.length; i++) {
+    accordionBlocks[i].addEventListener('click', function () {
       this.classList.toggle('rotate');
       var accordionContent = this.nextElementSibling;
 

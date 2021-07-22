@@ -11,6 +11,13 @@
       margin-top: 12px;
       margin-bottom: 58px;
     }
+    .h3 {
+      position: relative;
+      cursor: pointer;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color $transition-duration;
+    }
     .text {
       margin-bottom: 30px;
 
@@ -45,6 +52,9 @@
       padding-bottom: 58px;
       display: flex;
       flex-direction: column;
+      .h3 {
+        position: static;
+      }
     }
   }
   &__link {
@@ -53,24 +63,48 @@
       margin-bottom: 7px;
     }
   }
+  &__list-item-inner {
+    &:hover {
+      .h3 {
+        text-decoration-color: $color-base;
+        @include breakpoint-down($breakpoint-sm-max) {
+          text-decoration-color:transparent;
+        }
+      }
+    }
+    &.rotate {
+      .publications__more {
+        transform: rotate(0);
+        top: 10px;
+        @include breakpoint-down($breakpoint-sm-max) {
+          top: unset;
+        }
+      }
+    }
+  }
   &__more {
-    @include button-reset-style;
-    position: absolute;
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxNyAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuMDggMC4wMjk5OTkyTDAuMTEwMDAxIDZMMS4xNiA3LjA1TDQuMDQgNC4yTDUuMzkgMi42NEw1LjQ1IDIuNjdMNS4zMyA1LjdMNS4zMyAxNC42N0wxNi4yMiAxNC42N0wxNi4yMiAxMy4xN0w2LjgzIDEzLjE3TDYuODMgNS43TDYuNzEgMi42N0w2Ljc3IDIuNjRMOC4xMiA0LjJMMTEgNy4wNUwxMi4wNSA2TDYuMDggMC4wMjk5OTkyWiIgZmlsbD0iIzBGMEUxMiIvPgo8L3N2Zz4K");
     background-size: contain;
     background-repeat: no-repeat;
     width: 18px;
     height: 28px;
-    right: 30%;
-    bottom: 16px;
     transform: rotate(180deg);
     transition: transform $transition-duration;
+    position: absolute;
+    top: 0;
+    right: -35px;
+    &--mob {
+      display: none;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
-      right: 16px;
+      top: unset;
+      bottom: 17px;
+      right: 17px;
+      &.rotate {
+        transform: rotate(0);
+      }
     }
-    &.rotate {
-      transform: rotate(0);
-    }
+
   }
   &__article {
     padding-top: 36px;
