@@ -20,7 +20,6 @@
       margin-bottom: 75px;
     }
     @include breakpoint-down($breakpoint-sm-max) {
-      // flex-direction: column;
       margin-top: 35px;
       margin-bottom: 0;
       flex-direction: row;

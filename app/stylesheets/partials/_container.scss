@@ -1,10 +1,6 @@
 %container {
   margin-right: auto;
   margin-left: auto;
-  // padding-right: rem($container-gap / 2);
-  // padding-left: rem($container-gap / 2);
-
-
 }
 
 .container {
@@ -30,7 +26,6 @@
   }
   @include breakpoint-down($breakpoint-sm-max) {
   }
-
 }
 
 .container-fluid {

@@ -52,14 +52,10 @@
       padding-top: 100px;
       transition: left $transition-duration;
 
-
-
       &.is-shown {
         left: 0;
         z-index: 10;
         background-color: $color-background-grey;
-
-
       }
     }
   }
@@ -151,7 +147,6 @@
       margin-top: 85px;
       margin-bottom: 55px;
     }
-
   }
 
   &__burger {

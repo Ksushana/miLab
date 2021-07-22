@@ -17,7 +17,6 @@
     }
     .notes {
       font-family: $font-family-IBM;
-
     }
     @include breakpoint-down($breakpoint-lg-max) {
       padding-top: 40px;
@@ -28,7 +27,6 @@
       }
       .text {
         margin-bottom: 16px;
-
       }
     }
     @include breakpoint-down($breakpoint-md-max) {
@@ -39,7 +37,6 @@
       }
       .text {
         margin-bottom: 15px;
-
       }
     }
     @include breakpoint-down($breakpoint-sm-max) {
@@ -82,5 +79,4 @@
     overflow: hidden;
     transition: max-height $transition-duration;
   }
-
 }

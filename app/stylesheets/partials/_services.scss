@@ -10,7 +10,6 @@
     margin-top: -20px;
     overflow: hidden;
     .notes {
-
       white-space: nowrap;
       &.marquee1 {
         animation: marquee1 10s linear infinite;
@@ -208,14 +207,12 @@
     @include breakpoint-down($breakpoint-lg-max) {
       &:first-child {
         margin-top: 23px;
-
       }
     }
     @include breakpoint-down($breakpoint-sm-max) {
       margin-bottom: 10px;
       &:first-child {
         margin-top: 20px;
-
       }
     }
   }
@@ -319,7 +316,6 @@
       }
       &:first-of-type {
         margin-top: -100px;
-
       }
       &:last-of-type {
         border-bottom: none;
@@ -344,7 +340,6 @@
     }
     .notes.services__form-list {
       font-family: $font-family-IBM;
-
       span {
         display: inline-block;
         margin-bottom: 10px;
@@ -449,7 +444,6 @@
       transform: translateX(0);
       opacity: 1;
     }
-
     48% {
       transform: translateX(100%);
       opacity: 1;
@@ -465,18 +459,8 @@
     52% {
       opacity: 1;
     }
-
     100% {
       transform: translateX(0);
-    }
-  }
-  @keyframes marquee2 {
-    0% {
-      transform: translateX(-100%);
-    }
-
-    100% {
-      transform: translateX(100%);
     }
   }
 }

@@ -31,7 +31,6 @@
     .kits__title {
       margin-bottom: 80px;
     }
-
   }
 
   &__grid {
@@ -207,10 +206,6 @@
       border-radius: 10px;
       margin-bottom: 0;
       margin-top: 9px;
-      @include breakpoint-down($breakpoint-sm-max) {
-
-      }
-
 
       &.colored {
         padding-left: 15px;
