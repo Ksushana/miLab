@@ -1,11 +1,10 @@
 .hero {
   display: grid;
-  grid-template-columns: auto 480px;
+  grid-template-columns: auto 40%;
   @include breakpoint-down($breakpoint-lg-max) {
-    grid-template-columns: 50% 50%;
   }
   @include breakpoint-down($breakpoint-md-max) {
-    grid-template-columns: 490px auto;
+    grid-template-columns: 470px auto;
   }
   @include breakpoint-down($breakpoint-sm-max) {
     display: flex;
@@ -39,19 +38,26 @@
     }
   }
   &__animation {
-    height: 700px;
+    height: 660px;
     display: flex;
+    @include breakpoint-down($breakpoint-lg-max) {
+      height: 540px;
+    }
     @include breakpoint-down($breakpoint-md-max) {
       height: 275px;
     }
     @include breakpoint-down($breakpoint-sm-max) {
       justify-content: center;
     }
-    img {
-      width: 100%;
-      @include breakpoint-down($breakpoint-sm-max) {
-        max-width: 400px;
-      }
-    }
+    // img {
+    //   width: 100%;
+    //   @include breakpoint-down($breakpoint-sm-max) {
+    //     max-width: 400px;
+    //   }
+    // }
+  }
+
+  &__img {
+    width: 100%;
   }
 }
