@@ -86,4 +86,24 @@
       }
     }
   }
+
+  &__hidden {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+  &__show-news {
+    .less {
+      display: none;
+    }
+    &.show {
+      .less {
+        display: block;
+      }
+      .more {
+        display: none;
+      }
+    }
+  }
 }
