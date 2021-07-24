@@ -35,7 +35,7 @@
     @include breakpoint-down($breakpoint-md-max) {
       width: 245px;
     }
-    @include breakpoint-down($breakpoint-md-max) {
+    @include breakpoint-down($breakpoint-sm-max) {
       width: 50%;
     }
     @include breakpoint-down($breakpoint-xs-max) {
@@ -53,9 +53,6 @@
       width: 100%;
       height: 100%;
       display: inline-flex;
-      img {
-        width: 100%;
-      }
     }
     &--usa {
       width: 307px;
@@ -63,9 +60,9 @@
       img {
         height: 186px;
         margin-top: auto;
-        @include breakpoint-down($breakpoint-lg-max) {
-          height: 141px;
-        }
+        // @include breakpoint-down($breakpoint-lg-max) {
+        //   height: 141px;
+        // }
       }
     }
     &--russia {
@@ -75,45 +72,48 @@
       img {
         height: 186px;
         margin-top: auto;
-        @include breakpoint-down($breakpoint-lg-max) {
-          height: 141px;
-        }
       }
     }
     &--japan {
       width: 260px;
       height: 292px;
-      @include breakpoint-down($breakpoint-lg-max) {
-        margin-left: 20px;
-      }
     }
 
     @include breakpoint-down($breakpoint-lg-max) {
       &--usa {
         width: 234px;
         height: 218px;
+        img {
+            height: 141px;
+        }
       }
       &--russia {
         width: 258px;
         height: 218px;
+        img {
+          height: 141px;
+      }
       }
       &--japan {
         width: 195.5px;
         height: 218px;
+        img {
+          margin-left: 20px;
+      }
       }
     }
     @include breakpoint-down($breakpoint-md-max) {
       margin-bottom: 50px;
       &--usa {
-        width: 207px;
+        width: auto;
         height: 174px;
       }
       &--russia {
-        width: 227px;
+        width: auto;
         height: 174px;
       }
       &--japan {
-        width: 152px;
+        width: auto;
         height: 174px;
       }
     }
