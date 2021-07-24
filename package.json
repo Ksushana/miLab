@@ -1,10 +1,10 @@
 {
-  "name": "NAME",
+  "name": "MiLaboratories",
   "version": "0.1.0",
   "description": "frontend",
   "keywords": [
     "project",
-    "NAME",
+    "MiLaboratories",
     "static"
   ],
   "scripts": {
