@@ -159,6 +159,10 @@ a[href^="tel:"] {
   }
 }
 
+.notes-link-any-case {
+  text-transform: none;
+}
+
 .notes-title {
   font-weight: 500;
   font-size: 20px;
