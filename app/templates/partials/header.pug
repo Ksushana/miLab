@@ -1,6 +1,7 @@
 header.header(id="top")
   .header__container.container
     a(href="./home.html").header__logo
+      span( class=(isPink ? "pink" : isBlue2 ? "blue2" : isBlue4 ? "blue4" : isOrange ? "orange" : isGreen2 ? "green2" : "green"))
       include ./../../inline-svgs/logo.svg
     .header__burger
       button( type="button" )
