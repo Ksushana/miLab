@@ -173,3 +173,7 @@ a[href^="tel:"] {
     line-height: 18px;
   }
 }
+
+.no-uppercase {
+  text-transform: none;
+}

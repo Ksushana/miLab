@@ -80,7 +80,7 @@
   &__logo-sk {
     margin-right: 166px;
     @include breakpoint-down($breakpoint-lg-max) {
-      margin-right: 193px;
+      margin-right: 138px;
     }
     @include breakpoint-down($breakpoint-md-max) {
       margin-right: 100px;
@@ -209,6 +209,7 @@
 
     a {
       text-decoration: underline;
+      text-align: right;
       @include breakpoint-down($breakpoint-md-max) {
         font-size: 14px;
         line-height: 18px;
