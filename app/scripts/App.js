@@ -19,7 +19,7 @@ import Article from './modules/show-article';
 import Clear from './modules/clear-filter';
 import News from './modules/show-news';
 import Marquee from './modules/marquee';
-
+import './modules/software';
 
 
 /*========================================
