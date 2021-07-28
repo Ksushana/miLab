@@ -24,7 +24,7 @@ Best,`
     })
   }
 
-  function processLicenseTypeForm(form) {
+  function processForm(form) {
     updateLinks();
 
     form.addEventListener('click', (e) => {
@@ -39,7 +39,7 @@ Best,`
   document.addEventListener('DOMContentLoaded', function (event) {
     const form = document.getElementById('license-type-switch-form');
     if (form) {
-      processLicenseTypeForm(form);
+      processForm(form);
     }
   });
 })();

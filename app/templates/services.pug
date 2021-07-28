@@ -31,7 +31,7 @@ block content
         .services__form-material.notes Starting material
         .services__form-chains.notes Chains available
         .services__form-species.notes Species available
-      form.services__form( action="#" method="post" )
+      form.services__form( action="#" method="post" id="services-form" )
         fieldset.services__form-fieldset
           .services__form-legend.services__form-method
             .subtitle.notes
@@ -116,7 +116,7 @@ block content
           .services__form-item.services__form-material
             .subtitle.notes.services__form-list
               span Starting material
-            input(type="checkbox" id="Low_quality_RNA-3" name="Starting_material-3" value="Low quality RNA")
+            input(type="checkbox" id="Low_quality_RNA-3" name="Starting_material-3" value="DNA")
             label.notes( for="Low_quality_RNA-3") DNA
               span.services__form-item-note ⁕ or high quality RNA from low cell numbers
 
