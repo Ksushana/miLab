@@ -8,7 +8,6 @@
         const selected = {};
 
         for (const [name, value] of data.entries()) {
-          console.log(name + ', ' + value);
           const pref = name.split("#")[0] || '_';
           selected[pref] = (selected[pref] || []).concat(value);
         }
