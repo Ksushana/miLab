@@ -10,6 +10,7 @@ function pugToHtml(){
   let pugOptions = {};
   let pugData = {
     config: {
+      location: process.env.LOCATION_ENV || 'ru',
       isDev: isDev,
       CSS_BUNDLE: config.data.css,
       JS_BUNDLE: config.data.js

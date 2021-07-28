@@ -4,8 +4,9 @@ footer.footer( class=(isService ? "sticky" : null) )
       .footer__logos
         a(href="./home.html").footer__logo
           include ./../../inline-svgs/logo.svg
-        a(href="#").footer__logo-sk
-          include ./../../inline-svgs/sk.svg
+        if (config.location === 'ru')
+          a(href="#").footer__logo-sk
+            include ./../../inline-svgs/sk.svg
     .footer__right
       .footer__lists
         .footer__list

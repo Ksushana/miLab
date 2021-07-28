@@ -9,8 +9,10 @@
   ],
   "scripts": {
     "start": "gulp --debug --sourcemap=true",
+    "start_en": "LOCATION_ENV=en gulp --debug --sourcemap=true",
     "build": "gulp build",
     "dist": "NODE_ENV=production npm run build",
+    "dist_en": "LOCATION_ENV=en NODE_ENV=production npm run build",
     "deploy": "gulp deploy",
     "deploy:dist": "NODE_ENV=production npm run deploy"
   },

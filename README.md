@@ -20,6 +20,12 @@ yarn
 npm run start
 ```
 
+Международная версия
+
+```bash
+npm run start_en
+```
+
 или
 
 ```bash
@@ -42,6 +48,12 @@ yarn build
 
 ```bash
 npm run dist
+```
+
+Международная версия
+
+```bash
+npm run dist_en
 ```
 
 или
