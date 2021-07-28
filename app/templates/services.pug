@@ -46,7 +46,7 @@ block content
           .services__form-item.services__form-material
             .subtitle.notes.services__form-list
               span Starting material
-            input(type="checkbox" id="High_quality_RNA-1" name="Starting_material-1" value="High quality RNA")
+            input(type="checkbox" id="High_quality_RNA-1" name="race#Starting_material-1" value="High quality RNA")
             label.notes( for="High_quality_RNA-1") High quality RNA
               span.services__form-item-note ⁕ Extracted from pbmc
               span.services__form-item-note ⁕ Sorted cells
@@ -56,27 +56,27 @@ block content
           .services__form-item.services__form-chains
             .subtitle.notes
               span Chains available
-            input(type="checkbox" id="TCR_alpha/beta-1" name="Chains_available-1" value="TCR alpha/beta")
+            input(type="checkbox" id="TCR_alpha/beta-1" name="race#Chains_available-1" value="TCR alpha/beta")
             label.notes( for="TCR_alpha/beta-1") TCR alpha/beta
-            input(type="checkbox" id="TCR_gamma/delta-1" name="Chains_available-1" value="TCR gamma/delta")
+            input(type="checkbox" id="TCR_gamma/delta-1" name="race#Chains_available-1" value="TCR gamma/delta")
             label.notes( for="TCR_gamma/delta-1") TCR gamma/delta
-            input(type="checkbox" id="IG_heavy-1" name="Chains_available-1" value="IG heavy")
+            input(type="checkbox" id="IG_heavy-1" name="race#Chains_available-1" value="IG heavy")
             label.notes( for="IG_heavy-1") IG heavy
-            input(type="checkbox" id="IG_Light-1" name="Chains_available-1" value="IG Light")
+            input(type="checkbox" id="IG_Light-1" name="race#Chains_available-1" value="IG Light")
             label.notes( for="IG_Light-1") IG Light
           .services__form-item.services__form-species
             .subtitle.notes.services__form-list
               span Species available
-            input(type="checkbox" id="Human-1" name="Species_available-1" value="Human")
+            input(type="checkbox" id="Human-1" name="race#Species_available-1" value="Human")
             label.notes( for="Human-1") Human
-            input(type="checkbox" id="Monkey-1" name="Species_available-1" value="Monkey")
+            input(type="checkbox" id="Monkey-1" name="race#Species_available-1" value="Monkey")
             label.notes( for="Monkey-1") Monkey
-            input(type="checkbox" id="Mouse-1" name="Species_available-1" value="Mouse")
+            input(type="checkbox" id="Mouse-1" name="race#Species_available-1" value="Mouse")
             label.notes( for="Mouse-1") Mouse
-            input(type="checkbox" id="Other-1" name="Species_available-1" value="Other")
-            label.notes( for="Other-1") Rat
-            input(type="checkbox" id="Rat-1" name="Species_available-1" value="Rat")
-            label.notes( for="Rat-1") Other
+            input(type="checkbox" id="Rat-1" name="race#Species_available-1" value="Rat")
+            label.notes( for="Rat-1") Rat
+            input(type="checkbox" id="Others-1" name="race#Species_available-1" value="Others")
+            label.notes( for="Others-1") Others
         fieldset.services__form-fieldset
           .services__form-legend.services__form-method
             .subtitle.notes.services__form-list
@@ -89,20 +89,20 @@ block content
           .services__form-item.services__form-material
             .subtitle.notes.services__form-list
               span Starting material
-            input(type="checkbox" id="Low_quality_RNA-2" name="Starting_material-2" value="Low quality RNA")
+            input(type="checkbox" id="Low_quality_RNA-2" name="rna#Starting_material-2" value="Low quality RNA")
             label.notes( for="Low_quality_RNA-2") Low quality RNA
               span.services__form-item-note ⁕ or high quality RNA from low cell numbers
 
           .services__form-item.services__form-chains
             .subtitle.notes.services__form-list
               span Chains available
-            input(type="checkbox" id="TCR_alpha/beta-2" name="Chains_available-2" value="TCR alpha/beta")
+            input(type="checkbox" id="TCR_alpha/beta-2" name="rna#Chains_available-2" value="TCR alpha/beta")
             label.notes( for="TCR_alpha/beta-2") TCR alpha/beta
 
           .services__form-item.services__form-species
             .subtitle.notes.services__form-list
               span Species available
-            input(type="checkbox" id="Human-2" name="Species_available-2" value="Human")
+            input(type="checkbox" id="Human-2" name="rna#Species_available-2" value="Human")
             label.notes( for="Human-2") Human
         fieldset.services__form-fieldset
           .services__form-legend.services__form-method
@@ -116,20 +116,20 @@ block content
           .services__form-item.services__form-material
             .subtitle.notes.services__form-list
               span Starting material
-            input(type="checkbox" id="Low_quality_RNA-3" name="Starting_material-3" value="DNA")
+            input(type="checkbox" id="Low_quality_RNA-3" name="dna#Starting_material-3" value="DNA")
             label.notes( for="Low_quality_RNA-3") DNA
               span.services__form-item-note ⁕ or high quality RNA from low cell numbers
 
           .services__form-item.services__form-chains
             .subtitle.notes.services__form-list
               span Chains available
-            input(type="checkbox" id="TCR_alpha/beta-3" name="Chains_available-3" value="7 genes in one")
+            input(type="checkbox" id="TCR_alpha/beta-3" name="dna#Chains_available-3" value="7 genes in one")
             label.notes( for="TCR_alpha/beta-3") 7 genes in one
 
           .services__form-item.services__form-species
             .subtitle.notes.services__form-list
               span Species available
-            input(type="checkbox" id="Human-3" name="Species_available-3" value="Human")
+            input(type="checkbox" id="Human-3" name="dna#Species_available-3" value="Human")
             label.notes( for="Human-3") Human
         .services__btn-sticky
           button.services__form-btn.bordered-link.bordered-link--black(type="submit") Inquire

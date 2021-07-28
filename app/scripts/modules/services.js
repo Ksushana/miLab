@@ -1,11 +1,19 @@
 (function () {
-  function buildLinkQuery(selected) {
+  function buildLinkQuery(data) {
     const parts = {
       subject() {
         return 'MiXCR Pro Trial Request';
       },
       body() {
-        if (!selected.length) {
+        const selected = {};
+
+        for (const [name, value] of data.entries()) {
+          console.log(name + ', ' + value);
+          const pref = name.split("#")[0] || '_';
+          selected[pref] = (selected[pref] || []).concat(value);
+        }
+
+        if (!Object.keys(selected).length) {
           return `Hi MiLaboratories,
 
 I’m interested in your services.
@@ -17,7 +25,7 @@ Best,`
 
 I’m interested in your services and the following features:
 
-${selected.map(p => `* ${p}`).join('\n')}
+${Object.values(selected).map(p => `* ${p.join(', ')}`).join('\n')}
 
 Best,`
       }
@@ -29,8 +37,7 @@ Best,`
   function processForm(form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const data = new FormData(e.target);
-      location.href = 'mailto:licensing@milaboratory.com?' + buildLinkQuery([...data.values()]);
+      location.href = 'mailto:licensing@milaboratory.com?' + buildLinkQuery(new FormData(e.target));
     })
   }
 
