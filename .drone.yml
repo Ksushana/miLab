@@ -61,7 +61,7 @@ steps:
   - name: upload_ru
     image: amazon/aws-cli
     commands:
-      - aws s3 sync dist s3://$${DEPLOY_S3_CDN_BUCKET}/milaboratories.com/ru/ --delete
+      - aws s3 sync dist s3://$${DEPLOY_S3_CDN_BUCKET}/milaboratories.com/ru/ --delete --acl public-read
     environment:
       <<: *aws_credentials
       DEPLOY_S3_CDN_BUCKET:
@@ -76,7 +76,7 @@ steps:
   - name: upload_en
     image: amazon/aws-cli
     commands:
-      - aws s3 sync dist s3://$${DEPLOY_S3_CDN_BUCKET}/milaboratories.com/en/ --delete
+      - aws s3 sync dist s3://$${DEPLOY_S3_CDN_BUCKET}/milaboratories.com/en/ --delete --acl public-read
     environment:
       <<: *aws_credentials
       DEPLOY_S3_CDN_BUCKET:
