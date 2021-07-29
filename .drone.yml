@@ -77,6 +77,7 @@ steps:
     image: amazon/aws-cli
     commands:
       - aws s3 sync dist s3://$${DEPLOY_S3_CDN_BUCKET}/milaboratories.com/en/ --delete --acl public-read
+      - aws cloudfront create-invalidation --distribution-id ECWELJ2YGDR3O --paths "/*"
     environment:
       <<: *aws_credentials
       DEPLOY_S3_CDN_BUCKET:
