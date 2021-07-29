@@ -13,14 +13,15 @@
 // Modules
 ========================================*/
 
-import mobileMenu from './modules/mobile-menu';
-import Animation from './modules/animation';
-import Article from './modules/show-article';
-import Clear from './modules/clear-filter';
-import News from './modules/show-news';
-import Marquee from './modules/marquee';
+import './modules/mobile-menu';
+import './modules/animation';
+import './modules/show-article';
+import './modules/clear-filter';
+import './modules/show-news';
+import './modules/marquee';
 import './modules/software';
 import './modules/services';
+import './modules/inquire-buttons';
 
 
 /*========================================

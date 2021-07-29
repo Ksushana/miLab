@@ -1,3 +1,5 @@
+import {LICENSING_EMAIL} from '../constants';
+
 (function () {
   function buildLinkQuery(data) {
     const parts = {
@@ -36,7 +38,7 @@ Best,`
   function processForm(form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      location.href = 'mailto:licensing@milaboratory.com?' + buildLinkQuery(new FormData(e.target));
+      location.href = 'mailto:' + LICENSING_EMAIL + '?' + buildLinkQuery(new FormData(e.target));
     })
   }
 

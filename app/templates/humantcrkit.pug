@@ -33,7 +33,7 @@ block content
         p.full-info__text.text
           | Allows synthesis of UMI-labeled 5’RACE human TCR cDNA libraries suitable for sequencing on Illumina®
         .full-info__links
-          button.bordered-link.bordered-link--black(type="button") Buy, $2000
+          button.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Human TCR Kit") Inquire
           div
             a(href="").bordered-link
               +svgicon('sidebar')
@@ -95,7 +95,7 @@ block content
             li MiSeq/NextSeq/HiSeq/NovaSeq
             li High accuracy
           .kit__btns
-            button.kit__button.notes.bordered-link.bordered-link--black(type="button") Buy, $2000
+            button.kit__button.notes.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Monkey 5’RACE TCR Kit") Inquire
             a.kit__button.notes.bordered-link(href="./monkeyTCRkit") Learn more ↳
       .kits__grid-item
         .kit.kit--scroll
@@ -126,7 +126,7 @@ block content
             li HIGH ACCURACY
             li MISEQ/NEXTSEQ/HISEQ/NOVASEQ
           .kit__btns
-            button.kit__button.notes.bordered-link.bordered-link--black(type="button") Buy, $2000
+            button.kit__button.notes.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Human DNA TCR Kit") Inquire
             a.kit__button.notes.bordered-link(href="./humanDNAkit") Learn more ↳
 
 block bodyEnd

@@ -1,3 +1,5 @@
+import {LICENSING_EMAIL} from '../constants';
+
 (function () {
   let licenseType = 'academic';
 
@@ -8,7 +10,7 @@
     body() {
       return `Hi MiLaboratories,
 
-I would like to enquire ${licenseType} license.
+I would like to inquire ${licenseType} license.
 
 Best,`
     }
@@ -20,7 +22,7 @@ Best,`
 
   function updateLinks() {
     document.querySelectorAll('.pricing-block__btn').forEach((el) => {
-      el.setAttribute('href', 'mailto:licensing@milaboratory.com?' + buildLinkQuery());
+      el.setAttribute('href', 'mailto:' + LICENSING_EMAIL + '?' + buildLinkQuery());
     })
   }
 
