@@ -60,9 +60,6 @@
       img {
         height: 186px;
         margin-top: auto;
-        // @include breakpoint-down($breakpoint-lg-max) {
-        //   height: 141px;
-        // }
       }
     }
     &--russia {
@@ -77,6 +74,10 @@
     &--japan {
       width: 260px;
       height: 292px;
+      img {
+        height: 218px;
+        margin-top: auto;
+      }
     }
 
     @include breakpoint-down($breakpoint-lg-max) {
@@ -99,6 +100,7 @@
         height: 218px;
         img {
           margin-left: 20px;
+          height: 174px
       }
       }
     }
