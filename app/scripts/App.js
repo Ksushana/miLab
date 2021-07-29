@@ -22,6 +22,7 @@ import './modules/marquee';
 import './modules/software';
 import './modules/services';
 import './modules/inquire-buttons';
+import './modules/modal';
 
 
 /*========================================

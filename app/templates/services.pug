@@ -133,7 +133,7 @@ block content
             input(type="checkbox" id="Human-3" name="dna#Species_available-3" value="Human")
             label.notes( for="Human-3") Human
         .services__btn-sticky
-          button.services__form-btn.bordered-link.bordered-link--black(type="submit") Inquire
+          button.services__form-btn.bordered-link.bordered-link--black(type="button") Inquire
       .services__clear.bordered-link
         button(type="button") Clean all
       span.services__writeus.notes OR <A href="">Write us</a> If you need something special
@@ -159,16 +159,6 @@ block content
           .notes We are not permitted to accept any starting material which is infectious for humans, animals or plants.
       h2.h2 Shipment
       .terms__note.notes-title Contact us to discuss sample preparation protocol and to arrange a shipment
-      //.terms__list
-      //  .terms__list-item
-      //    .notes-title RNA stable tubes
-      //    .notes We accept RNA isolated by any standard method in GenTegra/RNAstable tubes or cellular lysate in RLT® buffer (QIAGEN) in 1.5 ml screw-cap conical microcentrifuge tubes sealed with parafilm.
-      //  .terms__list-item
-      //    .notes-title Requirements
-      //    .notes Description of samples in the shipping documents may vary depending on country requirements. It is essential to mention "scientific research samples"and "have no  commercial value". Please do  not mention "medical", "diagnostic", "biological" or "ethanol" anywhere in the  shipping documents.  Please  contact us before sending samples.
-      //  .terms__list-item
-      //    .notes-title Delivery
-      //    .notes Please DO NOT send the materials via FedEx due to limitations on delivery of any chemical substances via this carrier to Russian Federation.<br><br>Please DO NOT send samples on dry ice or blue ice as such packages require special customs handling and otherwise will not be delivered.
 
   .navigation
     .container
@@ -194,6 +184,8 @@ block content
           .navigation__list-number.text 02
           a.navigation__list-item-link(href="./services")
             span.navigation__list-next ↳
+
+  include ./partials/modal.pug
 
 block bodyEnd
 
