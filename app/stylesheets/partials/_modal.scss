@@ -1,0 +1,120 @@
+.darken {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1111;
+  pointer-events: none;
+  background: rgba(0,0,0,0);
+  transition: background-color $transition-duration;
+  top: 0;
+  left: 0;
+}
+
+.darken-show {
+  pointer-events: all;
+  background: rgba(0,0,0,0.4);
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -163px;
+  margin-left: -207px;
+  width: 415px;
+  height: 326px;
+  background: #DEDEDE;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 24px;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: all $transition-duration;
+  @include breakpoint-down($breakpoint-sm-max) {
+    bottom: 0;
+    width: 100%;
+    height: 382px;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    margin-left: 0;
+    top: unset;
+    transform: scale(1) translateY(100%);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    border: 1px solid #0F0E12;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 16px 20px;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: $font-family-IBM;
+    text-transform: uppercase;
+    outline: none;
+    margin-bottom: 14px;
+    resize: none;
+
+    &--email {
+      height: 48px;
+      @include breakpoint-down($breakpoint-sm-max) {
+        height: 56px;
+      }
+    }
+    &--comment {
+      height: 142px;
+      @include breakpoint-down($breakpoint-sm-max) {
+        height: 168px;
+      }
+    }
+  }
+
+  &__submit {
+    background:#242424;
+    border-radius: 10px;
+    padding: 16px;
+    color: #ffffff;
+    margin-top: 12px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color $transition-duration;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: $font-family-IBM;
+    text-transform: uppercase;
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding: 26px;
+    }
+    &:hover {
+      background: #0F0E12;
+    }
+  }
+}
+
+.modal-show {
+  z-index: 7777;
+  pointer-events: all;
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1);
+}
+.services__form-btn {
+  @include breakpoint-down($breakpoint-sm-max) {
+    transition: transform $transition-duration, opacity $transition-duration,;
+    opacity: 1;
+
+    &.btn-hide {
+      transform: translateY(200px);
+      opacity: 0;
+    }
+  }
+}
