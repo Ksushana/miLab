@@ -63,9 +63,7 @@ block content
             input(type="checkbox" id="TCR_gamma/delta-1" name="race#Chains_available-1" value="TCR gamma/delta")
             label.notes( for="TCR_gamma/delta-1") TCR gamma/delta
             input(type="checkbox" id="IG_heavy-1" name="race#Chains_available-1" value="IG heavy")
-            label.notes( for="IG_heavy-1") IG heavy
-            input(type="checkbox" id="IG_Light-1" name="race#Chains_available-1" value="IG Light")
-            label.notes( for="IG_Light-1") IG Light
+            label.notes( for="IG_heavy-1") IG heavy/light
           .services__form-item.services__form-species
             .subtitle.notes.services__form-list
               span Species available
@@ -117,21 +115,17 @@ block content
             .notes.services__form-list
               span &ensp;⁕ Sensitivity
               span &ensp;⁕ CDR3 only
-          .services__form-item.services__form-material.half-width
+          .services__form-item.services__form-material
             .subtitle.notes.services__form-list
               span Starting material
             input(type="checkbox" id="dna-multiplex-dna" name="dna#Starting_material-3" value="DNA")
             label.notes( for="dna-multiplex-dna") DNA
-            input(type="checkbox" id="dna-multiplex-blood" name="dna#Starting_material-3" value="BLOOD")
-            label.notes( for="dna-multiplex-blood") BLOOD
-            input(type="checkbox" id="dna-multiplex-cells" name="dna#Starting_material-3" value="CELLS")
-            label.notes( for="dna-multiplex-cells") CELLS
-            input(type="checkbox" id="dna-multiplex-tissue" name="dna#Starting_material-3" value="TISSUE")
-            label.notes( for="dna-multiplex-tissue") TISSUE
-            input(type="checkbox" id="dna-multiplex-ff" name="dna#Starting_material-3" value="FF")
-            label.notes( for="dna-multiplex-ff") FF
-            input(type="checkbox" id="dna-multiplex-ffpe" name="dna#Starting_material-3" value="FFPE")
-            label.notes( for="dna-multiplex-ffpe") FFPE
+              span.services__form-item-note Extracted from:
+                span.services__form-item-note ⁕ BLOOD
+                span.services__form-item-note ⁕ CELLS
+                span.services__form-item-note ⁕ TISSUE
+                span.services__form-item-note ⁕ FF
+                span.services__form-item-note ⁕ FFPE
 
           .services__form-item.services__form-chains
             .subtitle.notes.services__form-list
