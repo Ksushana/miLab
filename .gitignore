@@ -3,7 +3,6 @@
 .publish
 bower_components
 node_modules
-dist
 dist_en
 build
 build_en

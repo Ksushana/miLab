@@ -1,0 +1,185 @@
+extends ./layout/layout.pug
+
+block globalVars
+  - PAGE_TITLE = 'MiLaboratories — Software'
+
+block variables
+  - let isSoftware = true;
+  - let isGreen2 = true;
+
+block headEnd
+
+
+
+block bodyStart
+
+
+
+block content
+  .software.container
+    .subtitle.notes.subtitle--no-text
+      a(href="./") ↲ INDEX
+    .title
+      .title__left.h1.title--bordered.no-uppercase
+        | MiXCR PRO
+      .title__right.title__right--btn.text
+        | MiXCR PRO is a universal software for fast and rigorous interactive analysis of T-cell  and B-cell receptor repertoire high-throughput sequencing data.
+        .bordered-link.bordered-link--black
+          a(href="mailto:licensing@milaboratory.com?subject=MiXCR%20Pro%20Trial%20Request&body=Hi%20MiLaboratories,%0A%0APlease%20send%20me%20a%20link%20to%20MiXCR%20Pro%20trial%20version%0A%0ABest,%0A") Try for free
+    .software__top-list
+      .software__top-list-item
+        .h3 Universal
+        .text Extracts repertoire information from the data obtained with any kind of library preparation protocol (RepSeq, RNA-Seq, Single Cell; with or without UMI), starting material and species.
+
+      .software__top-list-item
+        .h3 Reliable
+        .text Efficiently corrects PCR and sequencing errors, identifies germline hypermutations, and assembles contig sequencing with the highest possible sensitivity and zero false-positive rate.
+
+      .software__top-list-item
+        .h3 Fast
+        .text Allows to efficiently process any amount of NGS data and scale as much as computing resources allow.
+
+      .software__top-list-item
+        .h3 Interactive
+        .text Provides a wide range of interactive post-analysis algorithms for extraction of clinically relevant features, comparing and grouping datasets, with the ability to export publication-quality figures and data tables.
+
+    .software__list
+      .software__list-item
+        .software__list-item-text
+          .h2 Repertoire profiling from raw sequencing data
+          .text MiXCR PRO allows extraction of repertoire data directly from sequencer output. Intuitive user interface for analysis parameter selections helps to easily find optimal settings for your dataset. Many optimal presets for popular data types, generated with industry standard protocols and commercially available reagent kits.
+        .software__list-item-img
+          img(src="assets/software/software1@1x.png",srcset="assets/software/software1@1x.png 2x" alt="")
+      .software__list-item.software__list-item--reverse
+        .software__list-item-img
+          img(src="assets/software/software2@1x.png",srcset="assets/software/software2@2x.png 2x" alt="")
+        .software__list-item-text.software__list-item-text--reverse
+          .h2 Interactive exploring and comparison of datasets
+          .text MiXCR PRO provides comprehensive instruments to intersect T- and B-cell repertoires from different samples. Powerful interactive overlap browser and visualization tools help quickly identify similarities between samples and individual clones responsible for it.
+      .software__list-item
+        .software__list-item-text
+          .h2 Comprehensive interactive statistical analysis of TCR and BCR repertoires
+          .text MiXCR PRO provides tools to calculate many scalar characteristics of repertoires, like diversity estimates, averaged characteristics of clonotype sequences etc., and quickly compare them between samples with correctly applied statistical tests.
+        .software__list-item-img
+          img(src="assets/software/software3@1x.png",srcset="assets/software/software3@1x.png 2x" alt="")
+    .software__pricing.pricing
+      .h2 Pricing
+      .pricing__btns
+        .pricing__link.notes 30 days unlimited access. Payment will never be charged. <a href="#">Try&nbsp;for&nbsp;free</a>
+        .pricing__switches(id="license-type-switch-form")
+          input(type="radio" id="academic" name="type" checked)
+          label.notes( for="academic") Academic
+          input(type="radio" id="commercial" name="type")
+          label.notes( for="commercial") Commercial
+        .pricing__switches
+          input(type="radio" id="yearly" name="period" checked)
+          label.notes( for="yearly") Yearly
+          input(type="radio" id="monthly" name="period")
+          label.notes( for="monthly") Monthly
+      .pricing__list
+        .pricing__list-item.pricing-block
+          .pricing-block__header.pricing-block__header--grey
+            .h3 Single user
+            .notes.pricing-block__price $8.000 / year
+          .pricing-block__inner
+            .pricing-block__list
+              .pricing-block__list-item.notes Up to 32 computational kernels
+              .pricing-block__list-item.notes One MiSeq per week
+              .pricing-block__list-item.notes Install on 1 PC with 1 user
+            a.pricing-block__btn.bordered-link.bordered-link--black(href="#") Start now
+        .pricing__list-item.pricing-block
+          .pricing-block__header.pricing-block__header--orange
+            .h3 Small lab
+            .notes.pricing-block__price $16.000 / year
+          .pricing-block__inner
+            .pricing-block__list
+              .pricing-block__list-item.notes Up to 96 computational kernels
+              .pricing-block__list-item.notes Multiple MiSeqs per week
+              .pricing-block__list-item.notes Unlimited number of PCs with maximum 3 parallel users
+              .pricing-block__list-item.notes Execution in Docker containers
+            a.pricing-block__btn.bordered-link.bordered-link--black(href="#") Start now
+        .pricing__list-item.pricing-block
+          .pricing-block__header.pricing-block__header--green
+            .h3 Enterprise
+            .notes
+          .pricing-block__inner
+            .pricing-block__list
+              .pricing-block__list-item.notes Unlimited
+            a.pricing-block__btn.bordered-link.bordered-link--black(href="#") Start now
+    .software__table-block
+      .software__form-header
+        .software__form-parameter.notes Parameter
+        .software__form-user.notes Single user
+        .software__form-lab.notes Small lab
+        .software__form-enterprize.notes Enterprise
+      .software__table-item
+        .software__form-parameter.text Average data amount processed per week
+        .software__form-user.notes 12 GB
+        .software__form-lab.notes 64 GB
+        .software__form-enterprize.notes Unlimited
+      .software__table-item
+        .software__form-parameter.text T- and B-cell repertoire profiling
+        .software__form-user.tick
+        .software__form-lab.tick
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Repertoire extraction from RNA-Seq data
+        .software__form-user.tick
+        .software__form-lab.tick
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Repertoire profiling from Single Cell data
+        .software__form-user.tick
+        .software__form-lab.tick
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Graphical User Interface
+        .software__form-user.tick
+        .software__form-lab.tick
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Advanced post analysis of repertoire data with graphical and tabular visualization
+        .software__form-user.tick
+        .software__form-lab.tick
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Interactive statistical analysis of post analysis results
+        .software__form-user.tick
+        .software__form-lab.tick
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Command Line Interface
+        .software__form-user.tick
+        .software__form-lab.tick
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Custom analysis pipelines
+        .software__form-user
+        .software__form-lab
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Offloading of computationally-intensive tasks to backend servers
+        .software__form-user
+        .software__form-lab.tick
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Access to high quality pre-built Docker containers for manual batch analysis
+        .software__form-user
+        .software__form-lab.tick
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Email Support
+        .software__form-user
+        .software__form-lab.notes limited
+        .software__form-enterprize.tick
+      .software__table-item
+        .software__form-parameter.text Online Support
+        .software__form-user
+        .software__form-lab.notes limited
+        .software__form-enterprize.tick
+
+block bodyEnd
+
+block bodyVendorScripts
+
+block bodyCustomScripts
