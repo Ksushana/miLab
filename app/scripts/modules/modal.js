@@ -1,5 +1,5 @@
 (function() {
-  const btn = document.querySelector('.services__form-btn')
+  const btn = document.querySelector('.modal-btn')
   if (btn) {
     var ESC = 27;
     const modal = document.querySelector('.modal')
