@@ -290,4 +290,26 @@
       }
     }
   }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 175px;
+    @include breakpoint-down($breakpoint-lg-max) {
+      padding-bottom: 200px;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-bottom: 125px;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-bottom: 84px;
+    }
+    button {
+      padding: 15px 40px;
+      @include breakpoint-down($breakpoint-sm-max) {
+        width: 100%;
+      }
+    }
+  }
 }
