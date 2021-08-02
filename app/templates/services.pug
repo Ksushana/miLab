@@ -41,7 +41,7 @@ block content
             .notes.services__form-list
               span &ensp;⁕ Quantitative
               span &ensp;⁕ Error-free
-              span &ensp;⁕ Full-lenght
+              span &ensp;⁕ Full-length
               span &ensp;⁕ Hypermutations
               span &ensp;⁕ All isotypes
           .services__form-item.services__form-material
@@ -49,9 +49,10 @@ block content
               span Starting material
             input(type="checkbox" id="High_quality_RNA-1" name="race#Starting_material-1" value="High quality RNA")
             label.notes( for="High_quality_RNA-1") High quality RNA
-              span.services__form-item-note ⁕ Extracted from pbmc
-              span.services__form-item-note ⁕ Sorted cells
-              span.services__form-item-note ⁕ Whole blood paxgene (r) tubes
+              span.services__form-item-note Extracted from:
+              span.services__form-item-note ⁕ PBMC
+              span.services__form-item-note ⁕ CELLS
+              span.services__form-item-note ⁕ WHOLE BLOOD PAXGENE (R) TUBES
               span.services__form-item-note ⁕ FF tissue
 
           .services__form-item.services__form-chains
@@ -84,15 +85,18 @@ block content
               span Method used
             .h2 RNA<br> Multiplex
             .notes.services__form-list
-              span ⁕ Sensitivity
-              span ⁕ CDR3 only
-              span ⁕ Low quality RNA works
+              span &ensp;⁕ Sensitivity
+              span &ensp;⁕ CDR3 only
           .services__form-item.services__form-material
             .subtitle.notes.services__form-list
               span Starting material
             input(type="checkbox" id="Low_quality_RNA-2" name="rna#Starting_material-2" value="Low quality RNA")
             label.notes( for="Low_quality_RNA-2") Low quality RNA
-              span.services__form-item-note ⁕ or high quality RNA from low cell numbers
+              span.services__form-item-note Extracted from:
+              span.services__form-item-note ⁕ FF TISSUE
+              span.services__form-item-note ⁕ FFPE
+            input(type="checkbox" id="rna-multiplex-small-rna-amount" name="rna#Starting_material-2" value="SMALL RNA AMOUNT")
+            label.notes( for="rna-multiplex-small-rna-amount") SMALL RNA AMOUNT
 
           .services__form-item.services__form-chains
             .subtitle.notes.services__form-list
@@ -111,21 +115,29 @@ block content
               span Method used
             .h2 DNA<br> Multiplex
             .notes.services__form-list
-              span ⁕ Quantitative
-              span ⁕ CDR3 only
-              span ⁕ All-in-on
-          .services__form-item.services__form-material
+              span &ensp;⁕ Sensitivity
+              span &ensp;⁕ CDR3 only
+          .services__form-item.services__form-material.half-width
             .subtitle.notes.services__form-list
               span Starting material
-            input(type="checkbox" id="Low_quality_RNA-3" name="dna#Starting_material-3" value="DNA")
-            label.notes( for="Low_quality_RNA-3") DNA
-              span.services__form-item-note ⁕ or high quality RNA from low cell numbers
+            input(type="checkbox" id="dna-multiplex-dna" name="dna#Starting_material-3" value="DNA")
+            label.notes( for="dna-multiplex-dna") DNA
+            input(type="checkbox" id="dna-multiplex-blood" name="dna#Starting_material-3" value="BLOOD")
+            label.notes( for="dna-multiplex-blood") BLOOD
+            input(type="checkbox" id="dna-multiplex-cells" name="dna#Starting_material-3" value="CELLS")
+            label.notes( for="dna-multiplex-cells") CELLS
+            input(type="checkbox" id="dna-multiplex-tissue" name="dna#Starting_material-3" value="TISSUE")
+            label.notes( for="dna-multiplex-tissue") TISSUE
+            input(type="checkbox" id="dna-multiplex-ff" name="dna#Starting_material-3" value="FF")
+            label.notes( for="dna-multiplex-ff") FF
+            input(type="checkbox" id="dna-multiplex-ffpe" name="dna#Starting_material-3" value="FFPE")
+            label.notes( for="dna-multiplex-ffpe") FFPE
 
           .services__form-item.services__form-chains
             .subtitle.notes.services__form-list
               span Chains available
-            input(type="checkbox" id="TCR_alpha/beta-3" name="dna#Chains_available-3" value="7 genes in one")
-            label.notes( for="TCR_alpha/beta-3") 7 genes in one
+            input(type="checkbox" id="TCR_alpha/beta-3" name="dna#Chains_available-3" value="TCR ALPHA/BETA")
+            label.notes( for="TCR_alpha/beta-3") TCR ALPHA/BETA
 
           .services__form-item.services__form-species
             .subtitle.notes.services__form-list
