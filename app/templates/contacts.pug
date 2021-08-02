@@ -61,13 +61,13 @@ block content
             .notes-title Service
             a.notes(href="mailto:service@milaboratory.com") service@milaboratory.com
           a(id="mail")
-        .contacts__form
+        .contacts__form(id="contacts-form")
           .h2 contact us
           form(action="post")
             p
               input(type="email", name="", placeholder="Your e-mail")
             p
-              textarea(name="", cols="30", rows="5",placeholder="Message")
+              textarea(name="message", cols="30", rows="5", placeholder="Message")
             button.contacts__form-btn.bordered-link(type="submit") send
 
 block bodyEnd

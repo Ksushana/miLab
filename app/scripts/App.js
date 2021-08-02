@@ -21,6 +21,7 @@ import './modules/show-news';
 import './modules/marquee';
 import './modules/software';
 import './modules/services';
+import './modules/contacts';
 import './modules/inquire-buttons';
 import './modules/modal';
 
