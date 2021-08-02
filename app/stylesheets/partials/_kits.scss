@@ -82,7 +82,7 @@
       flex-direction: column;
       &::after {
         bottom: -37px;
-        width: calc(100%-40px);
+        width: calc(100% - 40px);
         left: 20px;
       }
     }
