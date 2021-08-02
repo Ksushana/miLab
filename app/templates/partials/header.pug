@@ -1,6 +1,6 @@
 header.header(id="top")
   .header__container.container
-    a(href="./home.html").header__logo
+    a(href="./").header__logo
       span( class=(isPink ? "pink" : isBlue2 ? "blue2" : isBlue4 ? "blue4" : isOrange ? "orange" : isGreen2 ? "green2" : "green"))
       include ./../../inline-svgs/logo.svg
     .header__burger
@@ -12,19 +12,19 @@ header.header(id="top")
     .header__menu
       .header__links
         .header__link.notes.link( class=(isSoftware ? "inactive" : null) )
-            a(href="./software-temp.html") Software
+            a(href="./software") Software
         .header__link.notes.link( class=(isKits ? "inactive" : null) )
-            a(href="./kits.html") Kits
+            a(href="./kits") Kits
         .header__link.notes.link( class=(isServices ? "inactive" : null) )
-            a(href="./services.html") Services
-        .header__link.notes.link( class=(isCustom ? "inactive" : null) )
-          a(href="./customR&D.html") Custom R&amp;D
+            a(href="./services") Services
+        //.header__link.notes.link( class=(isCustom ? "inactive" : null) )
+          a(href="./customR&D") Custom R&amp;D
         .header__link.notes.link( class=(isAbout ? "inactive" : null) )
-            a(href="./about.html") About
+            a(href="./about") About
         .header__link.notes.link( class=(isPublications ? "inactive" : null) )
-          a(href="./publications.html") Publications
+          a(href="./publications") Publications
       .header__contact-link.bordered-link
-        a(href="./contact.html") Contact
+        a(href="./contacts") Contact
       .header__mobile-bottom
         p © 2016-2021 All rights reserved
         include ./../../inline-svgs/sk.svg

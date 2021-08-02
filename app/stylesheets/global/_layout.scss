@@ -30,6 +30,10 @@ body {
   display: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .content {
   padding-top: 40px;
 }

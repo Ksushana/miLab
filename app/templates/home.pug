@@ -1,6 +1,7 @@
 extends ./layout/layout.pug
 
 block globalVars
+  - PAGE_TITLE = 'MiLaboratories — Home'
 
 block headEnd
 
@@ -19,7 +20,7 @@ block content
       .about__text.grid50__part.grid50__part-first
         p.h3.mb-sm.mt-md We develop top-notch solutions for immune repertoire analysis starting from the sample preparation and ending with the leading software for extracting clinically relevant features from the data.
         p.text At MiLaboratories we focus on delivering the best solutions to investigators and clinicians to probe adaptive immunity in health and disease. Our MiXCR software is used in vaccine, cancer, antibodies and autoimmune diseases drug development pipelines. Backed up by our extensive experience in the field, we offer a full range of services  starting from experiment planning, preparation of samples, sequencing to data processing and extracting clinically relevant features and diagnostic patterns.
-        a.about__link.bordered-link(href="./about.html") FinD out more ↳
+        a.about__link.bordered-link(href="./about") FinD out more ↳
   .navigation
     .container
       .subtitle.mb-md.notes
@@ -30,25 +31,25 @@ block content
           .navigation__list-title.h1 Kits
           .navigation__list-text.notes Human RNA and DNA,Macaca RNA
           .navigation__list-number.text 01
-          a.navigation__list-item-link(href="./kits.html")
+          a.navigation__list-item-link(href="./kits")
             span.navigation__list-next ↳
         .navigation__list-item
           .navigation__list-title.h1 Software
           .navigation__list-text.notes Analysis of high-throughput sequencing data
           .navigation__list-number.text 02
-          a.navigation__list-item-link(href="./software-temp.html")
+          a.navigation__list-item-link(href="./software")
             span.navigation__list-next ↳
-        .navigation__list-item
+        //.navigation__list-item
           .navigation__list-title.h1 Custom R&amp;D
           .navigation__list-text.notes Immune repertoire pipeline for your investigation
           .navigation__list-number.text 03
-          a.navigation__list-item-link(href="./customR&D.html")
+          a.navigation__list-item-link(href="./customR&D")
             span.navigation__list-next ↳
         .navigation__list-item
           .navigation__list-title.h1 Services
           .navigation__list-text.notes Order TCR and BCR profiling service
-          .navigation__list-number.text 04
-          a.navigation__list-item-link(href="./services.html")
+          .navigation__list-number.text 03
+          a.navigation__list-item-link(href="./services")
             span.navigation__list-next ↳
   .about.news.container
     .subtitle.mb-md.notes

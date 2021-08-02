@@ -15,7 +15,11 @@ module.exports = {
     port: 9000,
     open: false,
     server: {
-      baseDir: [BUILD, SRC]
+      baseDir: [BUILD, SRC],
+      index: 'home.html',
+      serveStaticOptions: {
+        extensions: ["html"]
+      }
     },
     files: [BUILD + '/**']
   },

@@ -1,6 +1,7 @@
 extends ./layout/layout.pug
 
 block globalVars
+  - PAGE_TITLE = 'MiLaboratories — Monkey 5’RACE TCR Kit'
 
 block variables
   - let isGreen = true;
@@ -12,7 +13,7 @@ block bodyStart
 block content
   .full-info.container
     .subtitle.notes
-      a(href="./kits.html") ↲ Kits
+      a(href="./kits") ↲ Kits
     .full-info__grid
       .full-info__kit
         .kit.kit--no-btns
@@ -33,12 +34,12 @@ block content
           | MiLaboratories  Monkey 5’RACE TCR Kit is designed for unbiased amplification of TCR alpha and beta cDNA libraries using unique molecular identifiers (UMI) incorporated within template switch oligo.
 
         .full-info__links
-          button(type="button").bordered-link.bordered-link--black Buy, $2000
+          button.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Monkey 5’RACE TCR Kit") Inquire
           div
-            a(href="").bordered-link
+            a(href="/software").bordered-link
               +svgicon('sidebar')
               span.no-uppercase MiXCR PRO
-            a(href="").bordered-link
+            a(href="https://link.milaboratory.com/docs/pdfs/manual_monkey_tcr_kit_tm_001.pdf").bordered-link
               +svgicon('file-btn')
               span Kit manual
         .full-info__table
@@ -80,7 +81,7 @@ block content
             li High accuracy
           .kit__btns
             button.kit__button.notes.bordered-link.bordered-link--black.inactive(type="button") coming soon
-            a.kit__button.notes.bordered-link(href="./humanmultiTCRkit.html") Learn more ↳
+            a.kit__button.notes.bordered-link(href="./humanmultiTCRkit") Learn more ↳
 
       .kits__grid-item
         .kit.kit--scroll
@@ -96,7 +97,7 @@ block content
             li High accuracy
           .kit__btns
             button.kit__button.notes.bordered-link.bordered-link--black.inactive(type="button") coming soon
-            a.kit__button.notes.bordered-link(href="./humanmultiBCRkit.html") Learn more ↳
+            a.kit__button.notes.bordered-link(href="./humanmultiBCRkit") Learn more ↳
       .kits__grid-item
         .kit.kit--scroll
           .kit__header.kit__header--pink
@@ -110,8 +111,8 @@ block content
             li MISEQ / NEXTSEQ
             li High accuracy
           .kit__btns
-            button.kit__button.notes.bordered-link.bordered-link--black(type="button") Buy, $2000
-            a.kit__button.notes.bordered-link(href="./humantcrkit.html") Learn more ↳
+            button.kit__button.notes.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Human TCR Kit") Inquire
+            a.kit__button.notes.bordered-link(href="./humantcrkit") Learn more ↳
       .kits__grid-item
         .kit.kit--scroll
           .kit__header.kit__header--purple
@@ -125,8 +126,8 @@ block content
             li HIGH ACCURACY
             li MISEQ/NEXTSEQ/HISEQ/NOVASEQ
           .kit__btns
-            button.kit__button.notes.bordered-link.bordered-link--black(type="button") Buy, $2000
-            a.kit__button.notes.bordered-link(href="./humanDNAkit.html") Learn more ↳
+            button.kit__button.notes.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Human DNA TCR Kit") Inquire
+            a.kit__button.notes.bordered-link(href="./humanDNAkit") Learn more ↳
 
 block bodyEnd
 

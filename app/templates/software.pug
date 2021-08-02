@@ -1,6 +1,7 @@
 extends ./layout/layout.pug
 
 block globalVars
+  - PAGE_TITLE = 'MiLaboratories — Software'
 
 block variables
   - let isSoftware = true;
@@ -17,14 +18,14 @@ block bodyStart
 block content
   .software.container
     .subtitle.notes.subtitle--no-text
-      a(href="./home.html") ↲ INDEX
+      a(href="./") ↲ INDEX
     .title
       .title__left.h1.title--bordered.no-uppercase
         | MiXCR PRO
       .title__right.title__right--btn.text
         | MiXCR PRO is a universal software for fast and rigorous interactive analysis of T-cell  and B-cell receptor repertoire high-throughput sequencing data.
         .bordered-link.bordered-link--black
-          a(href="") Try for free
+          a(href="mailto:licensing@milaboratory.com?subject=MiXCR%20Pro%20Trial%20Request&body=Hi%20MiLaboratories,%0A%0APlease%20send%20me%20a%20link%20to%20MiXCR%20Pro%20trial%20version%0A%0ABest,%0A") Try for free
     .software__top-list
       .software__top-list-item
         .h3 Universal
@@ -46,7 +47,7 @@ block content
       .software__list-item
         .software__list-item-text
           .h2 Repertoire profiling from raw sequencing data
-          .text MiXCR PRO allows extraction of repertoire data directly from sequencer output. Intuitive user interface for analysis parameter selections helps to easily find optimal settings for your dataset. Many optimal presets for popular data types, generated with industry standard protocols and commercially available reagent kits.
+          .text MiXCR Pro allows extraction of repertoire data directly from sequencer output. Intuitive user interface for analysis parameter selections helps to easily find optimal settings for your dataset. Many optimal presets for popular data types, generated with industry standard protocols and commercially available reagent kits.
         .software__list-item-img
           img(src="assets/software/software1@1x.jpg",srcset="assets/software/software1@2x.jpg 2x" alt="")
       .software__list-item.software__list-item--reverse
@@ -65,7 +66,7 @@ block content
       .h2 Pricing
       .pricing__btns
         .pricing__link.notes 30 days unlimited access. Payment will never be charged. <a href="#">Try&nbsp;for&nbsp;free</a>
-        .pricing__switches
+        .pricing__switches(id="license-type-switch-form")
           input(type="radio" id="academic" name="type" checked)
           label.notes( for="academic") Academic
           input(type="radio" id="commercial" name="type")
@@ -99,7 +100,7 @@ block content
             a.pricing-block__btn.bordered-link.bordered-link--black(href="#") Start now
         .pricing__list-item.pricing-block
           .pricing-block__header.pricing-block__header--green
-            .h3 Enterprize
+            .h3 Enterprise
             .notes
           .pricing-block__inner
             .pricing-block__list
@@ -110,7 +111,7 @@ block content
         .software__form-parameter.notes Parameter
         .software__form-user.notes Single user
         .software__form-lab.notes Small lab
-        .software__form-enterprize.notes Enterprize
+        .software__form-enterprize.notes Enterprise
       .software__table-item
         .software__form-parameter.text Average data amount processed per week
         .software__form-user.notes 12 GB

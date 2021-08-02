@@ -1,6 +1,7 @@
 extends ./layout/layout.pug
 
 block globalVars
+  - PAGE_TITLE = 'MiLaboratories — Human DNA TCR Kit'
 
 block variables
   - let isPink = true;
@@ -12,7 +13,7 @@ block bodyStart
 block content
   .full-info.container
     .subtitle.notes
-      a(href="./kits.html") ↲ Kits
+      a(href="./kits") ↲ Kits
     .full-info__grid
       .full-info__kit
         .kit.kit--no-btns
@@ -34,10 +35,10 @@ block content
         .full-info__links
           button.bordered-link.bordered-link--black.inactive(type="button") coming soon
           div
-            a(href="").bordered-link
+            a(href="/software").bordered-link
               +svgicon('sidebar')
               span.no-uppercase MiXCR PRO
-            a(href="").bordered-link
+            a(href="").bordered-link.hidden
               +svgicon('file-btn')
               span Kit manual
         .full-info__table
@@ -80,7 +81,7 @@ block content
             li High accuracy
           .kit__btns
             button.kit__button.notes.bordered-link.bordered-link--black.inactive(type="button") coming soon
-            a.kit__button.notes.bordered-link(href="./humanmultiTCRkit.html") Learn more ↳
+            a.kit__button.notes.bordered-link(href="./humanmultiTCRkit") Learn more ↳
       .kits__grid-item
         .kit.kit--scroll
           .kit__header.kit__header--green
@@ -94,8 +95,8 @@ block content
             li MiSeq/NextSeq/HiSeq/NovaSeq
             li High accuracy
           .kit__btns
-            button.kit__button.notes.bordered-link.bordered-link--black(type="button") Buy, $2000
-            a.kit__button.notes.bordered-link(href="./monkeyTCRkit.html") Learn more ↳
+            button.kit__button.notes.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Monkey 5’RACE TCR Kit") Inquire
+            a.kit__button.notes.bordered-link(href="./monkeyTCRkit") Learn more ↳
       .kits__grid-item
         .kit.kit--scroll
           .kit__header.kit__header--blue
@@ -110,7 +111,7 @@ block content
             li High accuracy
           .kit__btns
             button.kit__button.notes.bordered-link.bordered-link--black.inactive(type="button") coming soon
-            a.kit__button.notes.bordered-link(href="./humanmultiBCRkit.html") Learn more ↳
+            a.kit__button.notes.bordered-link(href="./humanmultiBCRkit") Learn more ↳
       .kits__grid-item
         .kit.kit--scroll
           .kit__header.kit__header--pink
@@ -124,8 +125,8 @@ block content
             li MISEQ / NEXTSEQ
             li High accuracy
           .kit__btns
-            button.kit__button.notes.bordered-link.bordered-link--black(type="button") Buy, $2000
-            a.kit__button.notes.bordered-link(href="./humantcrkit.html") Learn more ↳
+            button.kit__button.notes.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Human TCR Kit") Inquire
+            a.kit__button.notes.bordered-link(href="./humantcrkit") Learn more ↳
 
 
 

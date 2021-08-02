@@ -1,6 +1,7 @@
 extends ./layout/layout.pug
 
 block globalVars
+  - PAGE_TITLE = 'MiLaboratories — Contacts'
 
 block variables
   - let isBlue4 = true;
@@ -13,7 +14,7 @@ block content
   .contacts
     .container
       .subtitle.notes
-        a(href="./home.html") ↲ INDEX
+        a(href="./") ↲ INDEX
       .title.title--no-text
         .title__left.h1
           | contacts
@@ -59,13 +60,14 @@ block content
           .contacts__list-item
             .notes-title Service
             a.notes(href="mailto:service@milaboratory.com") service@milaboratory.com
-        .contacts__form
+          a(id="mail")
+        .contacts__form(id="contacts-form")
           .h2 contact us
           form(action="post")
             p
               input(type="email", name="", placeholder="Your e-mail")
             p
-              textarea(name="", cols="30", rows="5",placeholder="Message")
+              textarea(name="message", cols="30", rows="5", placeholder="Message")
             button.contacts__form-btn.bordered-link(type="submit") send
 
 block bodyEnd

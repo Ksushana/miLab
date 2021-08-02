@@ -5,7 +5,7 @@ block body
   .layout
     include ./../partials/header.pug
 
-    main.content
+    main.content(class={'content-not-found': NOT_FOUND})
       block content
 
     include ./../partials/footer.pug

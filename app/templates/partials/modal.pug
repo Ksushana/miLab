@@ -1,6 +1,6 @@
 .darken
 .modal
-  form(action="post")
-    input.modal__input.modal__input--email(type="email" placeholder="Your e-mail*" required)
-    textarea.modal__input.modal__input--comment( placeholder="additional comments")
+  form(action="post" id="inquire-form")
+    input.modal__input.modal__input--email(type="email" name="email" placeholder="Your e-mail*" required)
+    textarea.modal__input.modal__input--comment(name="comment" placeholder="additional comments")
     input.modal__submit(type="submit" value="Inquire")

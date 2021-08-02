@@ -2,32 +2,33 @@ footer.footer( class=(isService ? "sticky" : null) )
   .footer__container.container
     .footer__left
       .footer__logos
-        a(href="./home.html").footer__logo
+        a(href="./").footer__logo
           include ./../../inline-svgs/logo.svg
-        a(href="#").footer__logo-sk
-          include ./../../inline-svgs/sk.svg
+        if (config.location === 'ru')
+          a(href="#").footer__logo-sk
+            include ./../../inline-svgs/sk.svg
     .footer__right
       .footer__lists
         .footer__list
           .footer__list-title.notes-title Products
           .footer__list-item.notes.link
-            a.no-uppercase(href="./software-temp.html") MiXCR PRO
+            a.no-uppercase(href="./software") MiXCR PRO
           .footer__list-item.notes.link
-            a(href="./kits.html") Kits
+            a(href="./kits") Kits
           .footer__list-item.notes.link
-            a(href="./services.html") Service
-          .footer__list-item.notes.link
-            a(href="./customR&D.html") Custom R&amp;D
+            a(href="./services") Service
+          //.footer__list-item.notes.link
+            a(href="./customR&D") Custom R&amp;D
         .footer__list
           .footer__list-title.notes-title About
           .footer__list-item.notes.link
-            a(href="./publications.html") Publications
+            a(href="./publications") Publications
           .footer__list-item.notes.link
-            a(href="./about.html") Team
+            a(href="./about") Team
         .footer__list
           .footer__list-title.notes-title For clients
           .footer__list-item.notes.link
-            a(href="./contact.html") Contacts
+            a(href="./contacts") Contacts
     .footer__copyright
       p.notes © 2016-2021 All rights reserved
       a.notes(href="#") Privacy policy

@@ -1,0 +1,20 @@
+.content-not-found {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+}
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  padding-bottom: 40px;
+  flex: 1;
+  line-height: normal;
+  > div:first-child {
+    padding-bottom: 10px;
+    font-size: 112px;
+  }
+}

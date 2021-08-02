@@ -1,0 +1,117 @@
+extends ./layout/layout.pug
+
+block globalVars
+
+block variables
+  - let isOrange = true;
+
+block headEnd
+
+block bodyStart
+
+block content
+  .full-info.container
+    .subtitle
+      a(href="./kits") ↲ Kits
+    .full-info__grid
+      .full-info__kit
+        .kit.kit--no-btns
+          .kit__header.kit__header--orange.kit__header--no-btns
+            .kit__subtitle 24 Reactions
+            .kit__title.h2 Monkey TCR Kit
+          ul.kit__list
+            li UMI 5’Race
+            li IG heavy &amp; light
+            li Blood/cells/tissue/FF
+            li 250+250 sequencing
+            li Full length + isotypes
+            li High accuracy
+
+      .full-info__info
+        h1.full-info__title.title-md.h1  Monkey TCR Kit
+        p.full-info__text.text
+          | The Monkey TCR Kit is designed for unbiased amplification of TCR alpha and beta cDNA libraries using 5’RACE with unique molecular identifiers (UMI) incorporated within template switch oligo.
+        .full-info__links
+          button.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Monkey TCR Kit") Inquire
+          div
+            a(href="").bordered-link
+              +svgicon('sidebar')
+              span.mixcr-pro-label MiXCR PRO
+            a(href="").bordered-link
+              +svgicon('file-btn')
+              span Kit manual
+        .full-info__table
+          .full-info__table-item
+            .full-info__table-title.notes-title Title
+            .full-info__table-data.notes
+              span Human
+          .full-info__table-item
+            .full-info__table-title.notes-title Antibodies
+            .full-info__table-data
+              span.colored.color-tag-IGH IGH
+              span.colored.color-tag-IGK IGK
+              span.colored.color-tag-IGL IGL
+          .full-info__table-item
+            .full-info__table-title.notes-title Isotypes
+            .full-info__table-data
+              span.colored.color-tag-IgM IgM
+              span.colored.color-tag-IgD IgD
+              span.colored.color-tag-IgG1 IgG1
+              span.colored.color-tag-IG2 IG2
+              span.colored.color-tag-IgG3 IgG3
+              span.colored.color-tag-IgG4 IgG4
+              span.colored.color-tag-IgA IgA
+              span.colored.color-tag-IgE IgE
+
+          .full-info__table-item
+            .full-info__table-title.notes-title Title
+            .full-info__table-data.notes
+              span Full length
+          .full-info__table-item
+            .full-info__table-title.notes-title Title
+            .full-info__table-data.notes
+              span RNA
+          .full-info__table-item
+            .full-info__table-title.notes-title Software
+            .full-info__table-data.notes
+              span Included
+  .kits.kits--also.container
+    .subtitle.notes
+      span CHECK ALSO
+    .kits__grid.kits__grid--scroll
+      .kits__grid-item
+        .kit.kit--scroll
+          .kit__header.kit__header--pink
+            .kit__subtitle 24 Reactions
+            .kit__title.h2 Human TCR Kit
+          ul.kit__list
+            li UMI 5’Race
+            li IG heavy &amp; light
+            li Blood/cells/tissue/FF
+            li 250+250 sequencing
+            li Full length + isotypes
+            li High accuracy
+          .kit__btns
+            button.kit__button.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Human TCR Kit") Inquire
+            a.kit__button.notes.bordered-link(href="") Learn more ↳
+      .kits__grid-item
+        .kit.kit--scroll
+          .kit__header.kit__header--blue
+            .kit__subtitle 24 Reactions
+            .kit__title.h2 Human 7 genes
+          ul.kit__list
+            li UMI 5’Race
+            li IG heavy &amp; light
+            li Blood/cells/tissue/FF
+            li 250+250 sequencing
+            li Full length + isotypes
+            li High accuracy
+          .kit__btns
+            button.kit__button.bordered-link.bordered-link--black.inquire-button(type="button", data-subject="Human 7 genes Kit") Inquire
+            a.kit__button(href="./human7genes").bordered-link Learn more ↳
+
+block bodyEnd
+
+block bodyVendorScripts
+
+block bodyCustomScripts

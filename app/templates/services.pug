@@ -1,6 +1,7 @@
 extends ./layout/layout.pug
 
 block globalVars
+  - PAGE_TITLE = 'MiLaboratories — Services'
 
 block variables
   - let isService = true;
@@ -16,12 +17,12 @@ block variables
 block content
   .services.container
     .subtitle.notes
-      a(href="./home.html") ↲ INDEX
+      a(href="./") ↲ INDEX
     .kits__title.title
       .title__left.h1
         | Services
       .title__right.text
-        | Quantitative and reproducible, human, monkey (macaque), and mouse, TCR and BCR repertoire profiling using advanced unbiased amplification technology with unique molecular identifiers (UMI)
+        | Quantitative and reproducible, human, monkey and mouse, TCR and BCR repertoire profiling using advanced unbiased amplification technology with unique molecular identifiers (UMI)
     .marquee.marquee3k( data-speed="0.25" data-pausable="true")
       .notes Advanced data analysis and enterpretation&nbsp;&nbsp;⁕&nbsp;&nbsp;Repertoire extraction and basic analysis&nbsp;&nbsp;⁕&nbsp;&nbsp;Sample proceccing and sequencing&nbsp;&nbsp;⁕&nbsp;&nbsp;Experiment planning&nbsp;&nbsp;⁕
     .services__form-block
@@ -31,7 +32,7 @@ block content
         .services__form-material.notes Starting material
         .services__form-chains.notes Chains available
         .services__form-species.notes Species available
-      form.services__form( action="#" method="post" )
+      form.services__form( action="#" method="post" id="services-form" )
         fieldset.services__form-fieldset
           .services__form-legend.services__form-method
             .subtitle.notes
@@ -40,69 +41,71 @@ block content
             .notes.services__form-list
               span &ensp;⁕ Quantitative
               span &ensp;⁕ Error-free
-              span &ensp;⁕ Full-lenght
+              span &ensp;⁕ Full-length
               span &ensp;⁕ Hypermutations
               span &ensp;⁕ All isotypes
           .services__form-item.services__form-material
             .subtitle.notes.services__form-list
               span Starting material
-            input(type="checkbox" id="High_quality_RNA-1" name="Starting_material-1" value="High quality RNA")
+            input(type="checkbox" id="High_quality_RNA-1" name="race#Starting_material-1" value="High quality RNA")
             label.notes( for="High_quality_RNA-1") High quality RNA
-              span.services__form-item-note ⁕ Extracted from pbmc
-              span.services__form-item-note ⁕ Sorted cells
-              span.services__form-item-note ⁕ Whole blood paxgene (r) tubes
+              span.services__form-item-note Extracted from:
+              span.services__form-item-note ⁕ PBMC
+              span.services__form-item-note ⁕ CELLS
+              span.services__form-item-note ⁕ WHOLE BLOOD PAXGENE (R) TUBES
               span.services__form-item-note ⁕ FF tissue
 
           .services__form-item.services__form-chains
             .subtitle.notes
               span Chains available
-            input(type="checkbox" id="TCR_alpha/beta-1" name="Chains_available-1" value="TCR alpha/beta")
+            input(type="checkbox" id="TCR_alpha/beta-1" name="race#Chains_available-1" value="TCR alpha/beta")
             label.notes( for="TCR_alpha/beta-1") TCR alpha/beta
-            input(type="checkbox" id="TCR_gamma/delta-1" name="Chains_available-1" value="TCR gamma/delta")
+            input(type="checkbox" id="TCR_gamma/delta-1" name="race#Chains_available-1" value="TCR gamma/delta")
             label.notes( for="TCR_gamma/delta-1") TCR gamma/delta
-            input(type="checkbox" id="IG_heavy-1" name="Chains_available-1" value="IG heavy")
-            label.notes( for="IG_heavy-1") IG heavy
-            input(type="checkbox" id="IG_Light-1" name="Chains_available-1" value="IG Light")
-            label.notes( for="IG_Light-1") IG Light
+            input(type="checkbox" id="IG_heavy-1" name="race#Chains_available-1" value="IG heavy")
+            label.notes( for="IG_heavy-1") IG heavy/light
           .services__form-item.services__form-species
             .subtitle.notes.services__form-list
               span Species available
-            input(type="checkbox" id="Human-1" name="Species_available-1" value="Human")
+            input(type="checkbox" id="Human-1" name="race#Species_available-1" value="Human")
             label.notes( for="Human-1") Human
-            input(type="checkbox" id="Monkey-1" name="Species_available-1" value="Monkey")
+            input(type="checkbox" id="Monkey-1" name="race#Species_available-1" value="Monkey")
             label.notes( for="Monkey-1") Monkey
-            input(type="checkbox" id="Mouse-1" name="Species_available-1" value="Mouse")
+            input(type="checkbox" id="Mouse-1" name="race#Species_available-1" value="Mouse")
             label.notes( for="Mouse-1") Mouse
-            input(type="checkbox" id="Other-1" name="Species_available-1" value="Other")
-            label.notes( for="Other-1") Rat
-            input(type="checkbox" id="Rat-1" name="Species_available-1" value="Rat")
-            label.notes( for="Rat-1") Other
+            input(type="checkbox" id="Rat-1" name="race#Species_available-1" value="Rat")
+            label.notes( for="Rat-1") Rat
+            input(type="checkbox" id="Others-1" name="race#Species_available-1" value="Others")
+            label.notes( for="Others-1") Others
         fieldset.services__form-fieldset
           .services__form-legend.services__form-method
             .subtitle.notes.services__form-list
               span Method used
             .h2 RNA<br> Multiplex
             .notes.services__form-list
-              span ⁕ Sensitivity
-              span ⁕ CDR3 only
-              span ⁕ Low quality RNA works
+              span &ensp;⁕ Sensitivity
+              span &ensp;⁕ CDR3 only
           .services__form-item.services__form-material
             .subtitle.notes.services__form-list
               span Starting material
-            input(type="checkbox" id="Low_quality_RNA-2" name="Starting_material-2" value="Low quality RNA")
+            input(type="checkbox" id="Low_quality_RNA-2" name="rna#Starting_material-2" value="Low quality RNA")
             label.notes( for="Low_quality_RNA-2") Low quality RNA
-              span.services__form-item-note ⁕ or high quality RNA from low cell numbers
+              span.services__form-item-note Extracted from:
+              span.services__form-item-note ⁕ FF TISSUE
+              span.services__form-item-note ⁕ FFPE
+            input(type="checkbox" id="rna-multiplex-small-rna-amount" name="rna#Starting_material-2" value="SMALL RNA AMOUNT")
+            label.notes( for="rna-multiplex-small-rna-amount") SMALL RNA AMOUNT
 
           .services__form-item.services__form-chains
             .subtitle.notes.services__form-list
               span Chains available
-            input(type="checkbox" id="TCR_alpha/beta-2" name="Chains_available-2" value="TCR alpha/beta")
+            input(type="checkbox" id="TCR_alpha/beta-2" name="rna#Chains_available-2" value="TCR alpha/beta")
             label.notes( for="TCR_alpha/beta-2") TCR alpha/beta
 
           .services__form-item.services__form-species
             .subtitle.notes.services__form-list
               span Species available
-            input(type="checkbox" id="Human-2" name="Species_available-2" value="Human")
+            input(type="checkbox" id="Human-2" name="rna#Species_available-2" value="Human")
             label.notes( for="Human-2") Human
         fieldset.services__form-fieldset
           .services__form-legend.services__form-method
@@ -110,32 +113,36 @@ block content
               span Method used
             .h2 DNA<br> Multiplex
             .notes.services__form-list
-              span ⁕ Quantitative
-              span ⁕ CDR3 only
-              span ⁕ All-in-on
+              span &ensp;⁕ Sensitivity
+              span &ensp;⁕ CDR3 only
           .services__form-item.services__form-material
             .subtitle.notes.services__form-list
               span Starting material
-            input(type="checkbox" id="Low_quality_RNA-3" name="Starting_material-3" value="Low quality RNA")
-            label.notes( for="Low_quality_RNA-3") DNA
-              span.services__form-item-note ⁕ or high quality RNA from low cell numbers
+            input(type="checkbox" id="dna-multiplex-dna" name="dna#Starting_material-3" value="DNA")
+            label.notes( for="dna-multiplex-dna") DNA
+              span.services__form-item-note Extracted from:
+                span.services__form-item-note ⁕ BLOOD
+                span.services__form-item-note ⁕ CELLS
+                span.services__form-item-note ⁕ TISSUE
+                span.services__form-item-note ⁕ FF
+                span.services__form-item-note ⁕ FFPE
 
           .services__form-item.services__form-chains
             .subtitle.notes.services__form-list
               span Chains available
-            input(type="checkbox" id="TCR_alpha/beta-3" name="Chains_available-3" value="7 genes in one")
-            label.notes( for="TCR_alpha/beta-3") 7 genes in one
+            input(type="checkbox" id="TCR_alpha/beta-3" name="dna#Chains_available-3" value="TCR ALPHA/BETA")
+            label.notes( for="TCR_alpha/beta-3") TCR ALPHA/BETA
 
           .services__form-item.services__form-species
             .subtitle.notes.services__form-list
               span Species available
-            input(type="checkbox" id="Human-3" name="Species_available-3" value="Human")
+            input(type="checkbox" id="Human-3" name="dna#Species_available-3" value="Human")
             label.notes( for="Human-3") Human
         .services__btn-sticky
           button.services__form-btn.bordered-link.bordered-link--black.modal-btn(type="button") Inquire
       .services__clear.bordered-link
         button(type="button") Clean all
-      span.services__writeus.notes OR <A href="">Write us</a> If you need something special
+      span.services__writeus.notes OR <A href="/contacts#mail">Write us</a> If you need something special
 
   .terms
     .container
@@ -168,20 +175,20 @@ block content
         .navigation__list-item
           .navigation__list-title.h1 Software
           .navigation__list-text.notes Analysis of high-throughput sequencing data
-          .navigation__list-number.text 02
-          a.navigation__list-item-link(href="./software-temp.html")
+          .navigation__list-number.text 01
+          a.navigation__list-item-link(href="./software")
             span.navigation__list-next ↳
-        .navigation__list-item
+        //.navigation__list-item
           .navigation__list-title.h1 Custom R&amp;D
           .navigation__list-text.notes Immune repertoire pipeline for your investigation
           .navigation__list-number.text 03
-          a.navigation__list-item-link(href="./customR&D.html")
+          a.navigation__list-item-link(href="./customR&D")
             span.navigation__list-next ↳
         .navigation__list-item
           .navigation__list-title.h1 Services
           .navigation__list-text.notes Order TCR and BCR profiling service
-          .navigation__list-number.text 04
-          a.navigation__list-item-link(href="./services.html")
+          .navigation__list-number.text 02
+          a.navigation__list-item-link(href="./services")
             span.navigation__list-next ↳
 
   include ./partials/modal.pug

@@ -1,0 +1,96 @@
+---
+kind: pipeline
+type: docker
+name: test
+
+platform:
+  os: linux
+  arch: amd64
+
+trigger:
+  event:
+    - push
+
+image_pull_secrets:
+  - quay-dockerconfig
+
+anchors:
+  aws_credentials: &aws_credentials
+    AWS_DEFAULT_REGION:
+      from_secret: aws-region
+    AWS_ACCESS_KEY_ID:
+      from_secret: aws-key-id
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: aws-secret-key
+
+  gradle_task: &node_task
+    image: node:14-alpine
+    environment:
+      # For interaction with repositories
+      <<: *aws_credentials
+
+  cache_settings: &cache_settings
+    # debug: true
+    cache_key: '{{ .Commit.Branch }}'
+    access_key:
+      from_secret: aws-key-id
+    secret_key:
+      from_secret: aws-secret-key
+    bucket:
+      from_secret: aws-cache-bucket
+    region:
+      from_secret: aws-region
+    local_root: /drone/src
+    mount:
+      - node_modules
+
+steps:
+  - name: restore_cache
+    image: meltwater/drone-cache
+    pull: true
+    settings:
+      restore: true
+      <<: *cache_settings
+
+  - <<: *node_task
+    name: build_ru
+    commands:
+      - npm install
+      - npm run dist
+
+  - name: upload_ru
+    image: amazon/aws-cli
+    commands:
+      - aws s3 sync dist s3://$${DEPLOY_S3_CDN_BUCKET}/milaboratories.com/ru/ --delete --acl public-read
+    environment:
+      <<: *aws_credentials
+      DEPLOY_S3_CDN_BUCKET:
+        from_secret: cdn-s3-bucket
+
+  - <<: *node_task
+    name: build_en
+    commands:
+      - npm install
+      - npm run dist_en
+
+  - name: upload_en
+    image: amazon/aws-cli
+    commands:
+      - aws s3 sync dist s3://$${DEPLOY_S3_CDN_BUCKET}/milaboratories.com/en/ --delete --acl public-read
+    environment:
+      <<: *aws_credentials
+      DEPLOY_S3_CDN_BUCKET:
+        from_secret: cdn-s3-bucket
+
+  - name: cdn_cache_invalidation
+    image: amazon/aws-cli
+    commands:
+      - aws cloudfront create-invalidation --distribution-id ECWELJ2YGDR3O --paths "/*"
+    environment:
+      <<: *aws_credentials
+
+  - name: rebuild_cache
+    image: meltwater/drone-cache
+    settings:
+      rebuild: true
+      <<: *cache_settings

@@ -1,6 +1,7 @@
 extends ./layout/layout.pug
 
 block globalVars
+  - PAGE_TITLE = 'MiLaboratories — Custom R&D'
 
 block variables
   - let isCustom = true;
@@ -13,7 +14,7 @@ block bodyStart
 block content
   .custom.container
     .subtitle.notes
-      a(href="./home.html") ↲ INDEX
+      a(href="./") ↲ INDEX
     .title.title--no-text
       .title__left.h1
         | CUSTOM R&amp;D

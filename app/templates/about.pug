@@ -1,6 +1,7 @@
 extends ./layout/layout.pug
 
 block globalVars
+  - PAGE_TITLE = 'MiLaboratories — About'
 
 block variables
   - let isAbout = true;
@@ -13,7 +14,7 @@ block bodyStart
 block content
   .team.container
     .subtitle.notes.subtitle--no-text
-      a(href="./home.html") ↲ INDEX
+      a(href="./") ↲ INDEX
     .title
       .title__left.h1.title--bordered
         | ABOUT
