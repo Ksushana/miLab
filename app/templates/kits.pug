@@ -5,7 +5,7 @@ block globalVars
 
 block variables
   - let isKits = true;
-  - let isPink = true;
+  - let isGreen = true;
 
 block headEnd
 
@@ -13,13 +13,14 @@ block bodyStart
 
 block content
   .kits.container
-    .subtitle.notes
-      a(href="./") ↲ INDEX
-    .kits__title.title
+    img.kits__big-img.big-img-block(src="assets/t_b_cells@1x.png", srcset="assets/t_b_cells@2x.png 2x" alt="")
+    .kits__title.title.big-img
       .title__left.h1
         | KITS
       .title__right.text
         | DIY with our kits: from tube to plots.
+      .subtitle.notes
+        a(href="./") ↲ INDEX
     .kits__grid
       .kits__grid-item
         .kit
@@ -106,22 +107,25 @@ block content
     .navigation__list
       .container
         .navigation__list-item
+          img.navigation__img.navigation__img--software( width="690" src="assets/balls-nav@1x.png", srcset="assets/balls-nav@2x.png 2x" alt="")
           .navigation__list-title.h1 Software
           .navigation__list-text.notes Analysis of high-throughput sequencing data
           .navigation__list-number.text 01
           a.navigation__list-item-link(href="./software")
             span.navigation__list-next ↳
-        //.navigation__list-item
-          .navigation__list-title.h1 Custom R&amp;D
-          .navigation__list-text.notes Immune repertoire pipeline for your investigation
-          .navigation__list-number.text 03
-          a.navigation__list-item-link(href="./customR&D")
-            span.navigation__list-next ↳
         .navigation__list-item
+          img.navigation__img.navigation__img--services( width="406" src="assets/t-killer-nav@1x.png", srcset="assets/t-killer-nav@2x.png 2x" alt="")
           .navigation__list-title.h1 Services
           .navigation__list-text.notes Inquire TCR and BCR profiling service
           .navigation__list-number.text 02
           a.navigation__list-item-link(href="./services")
+            span.navigation__list-next ↳
+        .navigation__list-item
+          img.navigation__img.navigation__img--about( width="900" src="assets/dna-nav@1x.png", srcset="assets/dna-nav@2x.png 2x" alt="")
+          .navigation__list-title.h1 About
+          .navigation__list-text.notes state-of-the-art bioinformatics solutions
+          .navigation__list-number.text 03
+          a.navigation__list-item-link(href="./about")
             span.navigation__list-next ↳
 
 

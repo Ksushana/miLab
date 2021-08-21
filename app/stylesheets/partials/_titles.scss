@@ -1,16 +1,18 @@
 .title {
   position: relative;
-  display: flex;
+  display: block;
   margin-top: -13px;
   @include breakpoint-down($breakpoint-lg-max) {
     margin-top: -10px;
   }
   @include breakpoint-down($breakpoint-md-max) {
-    margin-top: -7px;
+    margin-top: 20px;
   }
 
   @include breakpoint-down($breakpoint-sm-max) {
-    flex-wrap: wrap;
+    display: flex;
+    padding-top: 8px;
+    flex-direction: column;
   }
 
   span {
@@ -27,24 +29,21 @@
   }
 
   &__left {
-    padding: 58px 60px 58px 0;
-    border-right: 1px solid $color-base;
-    width: 694px;
-    flex-shrink: 0;
+    border-right: none;
+    width: 46%;
+    padding: 15px 60px 15px 0;
     @include breakpoint-down($breakpoint-lg-max) {
       width: 400px;
-      padding: 48px 60px 48px 0;
+      padding: 16px 60px 10px 0;
       width: 511px;
     }
     @include breakpoint-down($breakpoint-md-max) {
-      width: 355px;
 
     }
     @include breakpoint-down($breakpoint-sm-max) {
       width: 100%;
-      border-right: none;
-      padding: 45px 0 36px 0;
-      border-bottom: 1px solid $color-base;
+      padding-top: 40px;
+      padding-bottom: 0;
     }
   }
 
@@ -58,17 +57,19 @@
   }
 
   &__right {
-    padding: 55px 0 58px 78px;
+    padding: 21px 0 36px 0;
+      width: 46%;
     color: rgba($color-base, 0.9);
     @include breakpoint-down($breakpoint-lg-max) {
-      padding: 48px 0 48px 60px;
+      padding: 28px 0 34px 0;
     }
     @include breakpoint-down($breakpoint-md-max) {
-      padding: 60px 0 25px 37px;
+      padding: 20px 0 25px 0;
     }
     @include breakpoint-down($breakpoint-sm-max) {
       width: 100%;
-      padding: 35px 0 16px;
+      padding-top: 10px;
+      padding-bottom: 20px;
     }
 
     &--btn {
@@ -122,7 +123,6 @@
   &--bordered {
     @include breakpoint-down($breakpoint-sm-max) {
       padding-bottom: 36px;
-      border-bottom: 1px solid $color-base;
     }
   }
 
@@ -131,10 +131,15 @@
       border-right: none;
       width: 100%;
       padding: 58px 0;
-      border-bottom: 1px solid $color-base;
       @include breakpoint-down($breakpoint-lg-max) {
         padding: 48px 0 32px;
       }
+    }
+  }
+  .subtitle {
+    @include breakpoint-down($breakpoint-sm-max) {
+      order: -1;
+
     }
   }
 }

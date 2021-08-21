@@ -311,4 +311,18 @@
       }
     }
   }
+
+  &__big-img {
+    width: 57%;
+    right: 0;
+    max-width: 958px;
+    top: 0;
+    @include breakpoint-down($breakpoint-sm-max) {
+      top: -47px;
+      right: -121px;
+      max-width: 460px;
+      width: 125%;
+      max-height: 300px;
+    }
+  }
 }

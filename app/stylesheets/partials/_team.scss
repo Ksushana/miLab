@@ -10,11 +10,9 @@
     margin-bottom: 45px;
   }
   .title__right {
-    padding-top:23px;
-    padding-bottom: 23px;
     @include breakpoint-down($breakpoint-lg-max) {
-      padding-top:46px;
-      padding-bottom: 46px;
+      padding-top:25px;
+      padding-bottom: 36px;
     }
     @include breakpoint-down($breakpoint-md-max) {
       padding-top:40px;

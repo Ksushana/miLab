@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: auto 40%;
   @include breakpoint-down($breakpoint-lg-max) {
+    grid-template-columns: auto 45%;
   }
   @include breakpoint-down($breakpoint-md-max) {
     grid-template-columns: 470px auto;
@@ -41,23 +42,29 @@
     height: 660px;
     display: flex;
     @include breakpoint-down($breakpoint-lg-max) {
+      padding-top: 30px;
       height: 540px;
     }
     @include breakpoint-down($breakpoint-md-max) {
-      height: 275px;
+      height: 317px;
     }
     @include breakpoint-down($breakpoint-sm-max) {
       justify-content: center;
+      padding-top: 0;
     }
-    // img {
-    //   width: 100%;
-    //   @include breakpoint-down($breakpoint-sm-max) {
-    //     max-width: 400px;
-    //   }
-    // }
   }
 
   &__img {
-    width: 100%;
+    width: auto;
+    height: 90%;
+    @include breakpoint-down($breakpoint-lg-max) {
+      height: 100%;
+    }
+    @include breakpoint-down($breakpoint-md-max) {
+      margin-left: auto;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      margin-right: auto;
+    }
   }
 }

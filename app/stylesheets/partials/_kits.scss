@@ -140,9 +140,9 @@
       @include breakpoint-down($breakpoint-sm-max) {
         .kit {
           width: 269px;
-          height: 414px;
+          height: 430px;
           padding: 28px 0 32px;
-          background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob-scroll.png);
+          // background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob-scroll.png);
         }
         .kit__header {
           margin-right: 50px;
@@ -172,6 +172,17 @@
       display: flex;
       justify-content: center;
       margin-right: 0;
+    }
+  }
+  &__big-img {
+    right: 3%;
+    max-width: 53%;
+    top: 0;
+    @include breakpoint-down($breakpoint-sm-max) {
+      top: -55px;
+      right: -84px;
+      max-width: 106%;
+      max-height: 300px;
     }
   }
 }

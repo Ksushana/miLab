@@ -36,6 +36,9 @@ body {
 
 .content {
   padding-top: 40px;
+  @include breakpoint-down($breakpoint-sm-max) {
+    padding-top: 20px;
+  }
 }
 
 .inactive {

@@ -468,5 +468,18 @@
       transform: translateX(0);
     }
   }
+  &__big-img {
+    width: 43%;
+    right: 7%;
+    max-width: 624px;
+    top: 0;
+    @include breakpoint-down($breakpoint-sm-max) {
+      top: -57px;
+      right: -12px;
+      max-width: 367px;
+      width: 94%;
+      max-height: 300px;
+    }
+  }
 }
 

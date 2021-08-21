@@ -1,44 +1,36 @@
 .kit {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
-  background-blend-mode: soft-light, normal;
-  background-repeat: no-repeat;
   border-radius: $border-radius;
   width: 462px;
   height: 671px;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   padding: 62px 0 52px;
+  background-color: $color-white;
 
   @include breakpoint-down(1820px) {
     width: 375px;
     height: 542px;
     padding: 52px 0 38px;
-    background-size: cover;
   }
   @include breakpoint-down(1439px) {
     width: 335px;
     height: 460px;
     padding: 33px 0 36px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob.png);
   }
   @include breakpoint-down(1279px) {
     width: 247px;
     height: 348px;
     padding: 25px 0 15px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-tablet.png);
   }
   @include breakpoint-down($breakpoint-sm-max) {
     width: 335px;
     height: 460px;
     padding: 33px 0 36px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob.png);
   }
   @include breakpoint-down($breakpoint-xxs-max) {
     width: 269px;
     height: 414px;
     padding: 28px 0 32px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob-scroll.png);
   }
 
   &__header {
@@ -294,7 +286,7 @@
     @include breakpoint-between(900px, 1439px) {
       width: 375px;
       height: 542px;
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
+      // background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
       background-size: contain;
       .kit__title {
         font-size: 34px;
@@ -316,7 +308,7 @@
     @include breakpoint-down(1300px) {
       width: 375px;
       height: 542px;
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
+      // background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
       background-size: contain;
       .kit__title {
         font-size: 34px;
@@ -338,7 +330,7 @@
     @include breakpoint-down(1280px) {
       width: 375px;
       height: 542px;
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
+      // background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit.png);
       background-size: contain;
       .kit__title {
         font-size: 34px;
@@ -360,7 +352,7 @@
     @include breakpoint-between(900px, 1280px) {
       width: 305px;
       height: 454px;
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-narrow.png);
+      // background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-narrow.png);
       padding: 33px 0;
       .kit__header {
         margin-right: 25px;
@@ -388,7 +380,7 @@
         width: 269px;
         height: 414px;
         padding: 28px 0 32px;
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob-scroll.png);
+        // background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob-scroll.png);
       .kit__header {
         margin-right: 50px;
         padding-left: 15px;
@@ -417,7 +409,7 @@
     @include breakpoint-down(767px) {
       width: 305px;
       height: 454px;
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-narrow.png);
+      // background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-narrow.png);
       padding: 33px 0;
       .kit__header {
         margin-right: 25px;
@@ -446,7 +438,7 @@
       width: 269px;
       height: 414px;
       padding: 28px 0 32px;
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob-scroll.png);
+      // background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-mob-scroll.png);
     .kit__header {
       margin-right: 50px;
       padding-left: 15px;
@@ -476,8 +468,8 @@
   &--scroll {
     @include breakpoint-down(1439px) {
       width: 337px;
-      height: 473px;
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-tablet.png);
+      height: 490px;
+      // background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(#{$image-path}/kit-tablet.png);
       background-size: cover;
       padding: 33px 0 38px;
       .kit__header {

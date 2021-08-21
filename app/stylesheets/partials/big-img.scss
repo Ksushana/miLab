@@ -1,0 +1,6 @@
+.big-img-block {
+  position: absolute;
+  z-index: 5;
+  @include breakpoint-down($breakpoint-sm-max) {
+  }
+}

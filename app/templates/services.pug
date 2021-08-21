@@ -5,24 +5,22 @@ block globalVars
 
 block variables
   - let isService = true;
-  - let isBlue2 = true;
+  - let isOrange = true;
 
 block headEnd
 
 block bodyStart
 
-block variables
-  - let isServices = true;
-
 block content
   .services.container
-    .subtitle.notes
-      a(href="./") ↲ INDEX
+    img.services__big-img.big-img-block(src="assets/t-killer@1x.png", srcset="assets/t-killer@2x.png 2x" alt="")
     .kits__title.title
       .title__left.h1
         | Services
       .title__right.text
         | Quantitative and reproducible, human, monkey and mouse, TCR and BCR repertoire profiling using advanced unbiased amplification technology with unique molecular identifiers (UMI). Sensitive RNA-based and DNA-based multiplex PCR solutions.
+      .subtitle.notes
+        a(href="./") ↲ INDEX
     .marquee.marquee3k( data-speed="0.25" data-pausable="true")
       .notes Advanced data analysis and enterpretation&nbsp;&nbsp;⁕&nbsp;&nbsp;Repertoire extraction and basic analysis&nbsp;&nbsp;⁕&nbsp;&nbsp;Sample proceccing and sequencing&nbsp;&nbsp;⁕&nbsp;&nbsp;Experiment planning&nbsp;&nbsp;⁕
     .services__form-block
@@ -172,22 +170,25 @@ block content
     .navigation__list
       .container
         .navigation__list-item
-          .navigation__list-title.h1 Software
-          .navigation__list-text.notes Analysis of high-throughput sequencing data
+          img.navigation__img.navigation__img--kits( width="552" src="assets/cells-nav@1x.png", srcset="assets/cells-nav@2x.png 2x" alt="")
+          .navigation__list-title.h1 Kits
+          .navigation__list-text.notes Human RNA and DNA,Macaca RNA
           .navigation__list-number.text 01
-          a.navigation__list-item-link(href="./software")
-            span.navigation__list-next ↳
-        //.navigation__list-item
-          .navigation__list-title.h1 Custom R&amp;D
-          .navigation__list-text.notes Immune repertoire pipeline for your investigation
-          .navigation__list-number.text 03
-          a.navigation__list-item-link(href="./customR&D")
+          a.navigation__list-item-link(href="./kits")
             span.navigation__list-next ↳
         .navigation__list-item
-          .navigation__list-title.h1 Services
-          .navigation__list-text.notes Order TCR and BCR profiling service
+          img.navigation__img.navigation__img--software( width="690" src="assets/balls-nav@1x.png", srcset="assets/balls-nav@2x.png 2x" alt="")
+          .navigation__list-title.h1 Software
+          .navigation__list-text.notes Analysis of high-throughput sequencing data
           .navigation__list-number.text 02
-          a.navigation__list-item-link(href="./services")
+          a.navigation__list-item-link(href="./software")
+            span.navigation__list-next ↳
+        .navigation__list-item
+          img.navigation__img.navigation__img--about( width="900" src="assets/dna-nav@1x.png", srcset="assets/dna-nav@2x.png 2x" alt="")
+          .navigation__list-title.h1 About
+          .navigation__list-text.notes state-of-the-art bioinformatics solutions
+          .navigation__list-number.text 03
+          a.navigation__list-item-link(href="./about")
             span.navigation__list-next ↳
 
   include ./partials/modal.pug
