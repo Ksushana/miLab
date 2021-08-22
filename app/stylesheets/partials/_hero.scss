@@ -54,7 +54,7 @@
     }
   }
 
-  &__img {
+  svg {
     width: auto;
     height: 90%;
     @include breakpoint-down($breakpoint-lg-max) {
