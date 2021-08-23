@@ -58,7 +58,7 @@
 
   &__right {
     padding: 21px 0 36px 0;
-      width: 46%;
+    width: 50%;
     color: rgba($color-base, 0.9);
     @include breakpoint-down($breakpoint-lg-max) {
       padding: 28px 0 34px 0;
