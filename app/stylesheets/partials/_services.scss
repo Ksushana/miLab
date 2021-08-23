@@ -469,10 +469,15 @@
     }
   }
   &__big-img {
-    width: 43%;
-    right: 7%;
-    max-width: 624px;
+    width: 56%;
+    right: 4%;
+    max-width: 700px;
     top: 0;
+    @include breakpoint-down($breakpoint-lg-max) {
+      width: 56%;
+      right: -2%;
+      max-width: 750px;
+    }
     @include breakpoint-down($breakpoint-sm-max) {
       top: -57px;
       right: -12px;
