@@ -139,9 +139,6 @@
     border-radius: 10px;
     padding: 3px 30px 0;
     min-height: 48px;
-    @include breakpoint-down($breakpoint-lg-max) {
-      margin-right: 5%;
-    }
     @include breakpoint-down($breakpoint-md-max) {
       margin-right: auto;
       margin-left: auto;
