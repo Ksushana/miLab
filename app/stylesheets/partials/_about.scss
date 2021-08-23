@@ -108,9 +108,9 @@
   }
   &__big-img {
     width: 105%;
-    right: -3%;
+    right: 0%;
     top: -4px;
-    max-width: 1480px;
+    max-width: 1260px;
     @include breakpoint-down($breakpoint-md-max) {
       width: 110%;
       right: 20px;

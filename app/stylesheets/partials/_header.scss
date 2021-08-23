@@ -138,6 +138,7 @@
     backdrop-filter: blur(4px);
     border-radius: 10px;
     padding: 3px 30px 0;
+    min-height: 48px;
     @include breakpoint-down($breakpoint-lg-max) {
       margin-right: 5%;
     }
@@ -145,6 +146,7 @@
       margin-right: auto;
       margin-left: auto;
       flex-grow:0;
+      min-height: 35px;
     }
     @include breakpoint-down($breakpoint-sm-max) {
       display: block;
@@ -196,7 +198,9 @@
   &__contact-link {
     margin: 0 0 0 27px;
     width: 145px;
-    height: 43px;
+    height: 48px;
+    display: flex;
+    align-items: center;
 
     a {
       margin: 9px 21px;
@@ -209,7 +213,7 @@
 
     @include breakpoint-down($breakpoint-lg-max) {
       width: 104px;
-      height: 35px;
+      height: 48px;
     }
     @include breakpoint-down($breakpoint-md-max) {
       width: 93px;
