@@ -205,6 +205,9 @@
 
       @include breakpoint-down($breakpoint-sm-max) {
         padding: 12px 26px;
+        border: 1px solid #0F0E12;
+        border-radius: 10px;
+        margin-left: 0;
       }
     }
 
