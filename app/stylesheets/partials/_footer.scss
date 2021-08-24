@@ -58,23 +58,24 @@
     }
   }
 
-  &__logo {
-    svg {
-      width: 242px;
-      height: 50px;
-      @include breakpoint-down($breakpoint-lg-max) {
-        width: 160px;
-      height: 33px;
-      }
-      @include breakpoint-down($breakpoint-md-max) {
-        width: 142px;
-        height: 30px;
-      }
-      @include breakpoint-down($breakpoint-md-max) {
-        width: 170px;
-        height: 35px;
-      }
-    }
+  .header__logo {
+    padding-left: 0;
+    // svg {
+    //   width: 242px;
+    //   height: 50px;
+    //   @include breakpoint-down($breakpoint-lg-max) {
+    //     width: 160px;
+    //   height: 33px;
+    //   }
+    //   @include breakpoint-down($breakpoint-md-max) {
+    //     width: 142px;
+    //     height: 30px;
+    //   }
+    //   @include breakpoint-down($breakpoint-md-max) {
+    //     width: 170px;
+    //     height: 35px;
+    //   }
+    // }
   }
 
   &__logo-sk {
