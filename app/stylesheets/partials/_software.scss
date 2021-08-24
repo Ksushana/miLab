@@ -322,7 +322,7 @@
       right: -5%;
       max-width: 850px;
     }
-    @include breakpoint-down($breakpoint-sm-max) {
+    @include breakpoint-down(600px) {
       top: -47px;
       right: -121px;
       max-width: 460px;

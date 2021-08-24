@@ -183,6 +183,9 @@
       width: 50%;
     }
     @include breakpoint-down($breakpoint-sm-max) {
+      width: 60%;
+    }
+    @include breakpoint-down(600px) {
       top: -55px;
       right: -84px;
       max-width: 106%;
