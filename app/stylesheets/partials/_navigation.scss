@@ -1,6 +1,7 @@
 .navigation {
   margin-bottom: 88px;
   margin-top: 30px;
+  overflow: hidden;
   @include breakpoint-down($breakpoint-md-max) {
     margin-bottom: 65px;
   }

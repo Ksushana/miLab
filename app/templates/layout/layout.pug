@@ -2,7 +2,7 @@ extends ./base.pug
 
 
 block body
-  .layout
+  .layout( class=(isOverflowHidden ? "overflow" : "" ))
     include ./../partials/header.pug
 
     main.content(class={'content-not-found': NOT_FOUND})

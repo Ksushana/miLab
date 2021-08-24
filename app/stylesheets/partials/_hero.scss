@@ -1,15 +1,20 @@
 .hero {
   display: grid;
   grid-template-columns: auto 40%;
+  grid-template-rows: auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "a b"
+    "c c";
   @include breakpoint-down($breakpoint-lg-max) {
     grid-template-columns: auto 45%;
   }
   @include breakpoint-down($breakpoint-md-max) {
-    grid-template-columns: 470px auto;
+    grid-template-columns: 50% 50%;
   }
   @include breakpoint-down($breakpoint-sm-max) {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   &__title {
     @include breakpoint-up($breakpoint-xl-min) {
@@ -38,9 +43,25 @@
       padding: 0;
     }
   }
+
+  &__title-container {
+    grid-area: a;
+    @include breakpoint-down($breakpoint-md-max) {
+      margin: 0;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      order: 2;
+      margin-right: auto;
+      margin-left: 0 !important;
+    }
+  }
   &__animation {
     height: 660px;
     display: flex;
+    position: sticky;
+    top: 60px;
+    grid-area: b;
+    z-index: 100000;
     @include breakpoint-down($breakpoint-lg-max) {
       padding-top: 30px;
       height: 540px;
@@ -51,6 +72,7 @@
     @include breakpoint-down($breakpoint-sm-max) {
       justify-content: center;
       padding-top: 0;
+      position: static;
     }
   }
 
@@ -61,10 +83,25 @@
       height: 100%;
     }
     @include breakpoint-down($breakpoint-md-max) {
-      margin-left: auto;
+      margin: 0 auto;
     }
     @include breakpoint-down($breakpoint-sm-max) {
       margin-right: auto;
     }
+  }
+
+  .about__text {
+    @include breakpoint-down($breakpoint-md-max) {
+      padding-right:45%;
+    }
+    @include breakpoint-down($breakpoint-sm-max) {
+      padding-right: 0;
+    }
+  }
+  .about {
+    @include breakpoint-down($breakpoint-sm-max) {
+      order: 3
+    }
+
   }
 }
