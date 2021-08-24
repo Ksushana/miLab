@@ -63,7 +63,7 @@
     width: 100%;
     height: auto;
     margin-bottom: 60px;
-    border: 1.5px solid #000000;
+    border: 2px solid #000000;
     border-radius: 200px;
     overflow: hidden;
     position: relative;
@@ -80,6 +80,7 @@
       height: 100%;
       object-fit: cover;
       filter: grayscale(1);
+      object-position: center;
     }
     @include breakpoint-down($breakpoint-lg-max) {
       width: 228px;
