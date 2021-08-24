@@ -24,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 130px;
+    flex-wrap: wrap;
     @include breakpoint-down($breakpoint-lg-max) {
       margin-top: 96px;
     }
@@ -39,12 +40,13 @@
 
   &__list-item {
     width: 27%;
+    margin-bottom: 50px;
     @include breakpoint-down($breakpoint-lg-max) {
       width: 30%;
     }
     @include breakpoint-down($breakpoint-sm-max) {
       width: 50%;
-      margin-bottom: 50px;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
