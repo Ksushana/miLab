@@ -224,6 +224,11 @@
       height: 42px;
       margin-top: 85px;
       margin-bottom: 55px;
+      &:hover {
+        a:after {
+          display: none;
+        }
+      }
     }
   }
 

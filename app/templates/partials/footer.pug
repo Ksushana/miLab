@@ -2,7 +2,8 @@ footer.footer( class=(isService ? "sticky" : null) )
   .footer__container.container
     .footer__left
       .footer__logos
-        a(href="./").footer__logo
+        a(href="./").header__logo
+          span( class=(isLila ? "lila" : isBlue ? "blue" : isOrange ? "orange" : isGreen ? "green" : isLightGreen ? "light-green" : isPeach ? "peach" : "purple"))
           include ./../../inline-svgs/logo.svg
         if (config.location === 'ru')
           a(href="#").footer__logo-sk
